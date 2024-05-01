@@ -1,0 +1,26 @@
+---
+import { type HTMLTag, type Polymorphic } from "astro/types";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  children: any;
+  class?: string;
+  as: Tag;
+}>;
+
+const { as: HTMLTag = "div", class: cssClasses, ...props } = Astro.props;
+---
+
+<HTMLTag
+  class:list={[
+    "grid",
+    "gap-x-5",
+    "grid-cols-6",
+    "lg:gap-x-8",
+    "lg:grid-cols-12",
+    "responsive-wrapper",
+    cssClasses,
+  ]}
+  {...props}
+>
+  <slot />
+</HTMLTag>

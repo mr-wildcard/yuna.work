@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .responsive-wrapper {
+    @apply px-5 md:px-8 lg:px-[50px] 2xl:px-0;
+  }
+}
