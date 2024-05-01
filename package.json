@@ -23,7 +23,7 @@
     "@astrojs/ts-plugin": "1.6.1",
     "@playwright/test": "1.43.1",
     "@rollup/plugin-yaml": "4.1.2",
-    "@types/node": "20.12.7",
+    "@types/node": "20.12.8",
     "astro": "^4.4.15",
     "astro-icon": "1.1.0",
     "autoprefixer": "^10.4.18",
