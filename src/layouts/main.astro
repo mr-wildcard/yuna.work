@@ -32,23 +32,6 @@ const { title, description, og_description, og_title } = Astro.props;
     <!-- <link>'s favicons ? -->
 
     <title>{title}</title>
-
-    <style is:inline>
-      @font-face {
-        font-family: "SatoshiVariable";
-        src: url("/fonts/satoshi-variable.woff2") format("woff2");
-        font-weight: 500 900;
-      }
-
-      html {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      body {
-        font-family: "SatoshiVariable", "sans-serif";
-      }
-    </style>
   </head>
   <body>
     <slot />

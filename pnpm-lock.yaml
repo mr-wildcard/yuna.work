@@ -11,6 +11,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.5.10
         version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.5)
+      '@fontsource-variable/dm-sans':
+        specifier: 5.0.6
+        version: 5.0.6
       sharp:
         specifier: 0.33.3
         version: 0.33.3
@@ -392,6 +395,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/dm-sans@5.0.6':
+    resolution: {integrity: sha512-+CNVseJRlYGB4gUZ2L7yTeCHHBKAMVVhqUz85nb/OoU0hketJrWCHOUJwF5W2MpZCeE0JqJmDFAsEdx8znkrGw==}
 
   '@iconify/tools@3.0.7':
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}
@@ -3016,6 +3022,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.20.2':
     optional: true
+
+  '@fontsource-variable/dm-sans@5.0.6': {}
 
   '@iconify/tools@3.0.7':
     dependencies:

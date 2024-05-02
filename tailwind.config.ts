@@ -9,20 +9,10 @@ export default {
     extend: {},
     fontSize: {
       base: `${BASE}px`,
-      "body-small": [
-        rem(15),
-        {
-          lineHeight: "140%",
-          fontWeight: 400,
-        },
-      ],
-      "body-normal": [
-        rem(18),
-        {
-          lineHeight: "140%",
-          fontWeight: 400,
-        },
-      ],
+    },
+    fontFamily: {
+      sans: ["DM Sans Variable", "sans-serif"],
+      arial: ["Arial", "sans-serif"],
     },
   },
   plugins: [],
