@@ -13,11 +13,11 @@ const { as: HTMLTag = "div", class: cssClasses, ...props } = Astro.props;
 <HTMLTag
   class:list={[
     "grid",
-    "gap-x-5",
-    "grid-cols-6",
-    "lg:gap-x-8",
+    "grid-cols-4",
+    "gap-x-2.5",
+    "sm:grid-cols-8",
+    "sm:gap-x-5",
     "lg:grid-cols-12",
-    "responsive-wrapper",
     cssClasses,
   ]}
   {...props}

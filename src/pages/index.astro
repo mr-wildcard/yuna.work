@@ -1,12 +1,19 @@
 ---
 import MainLayout from "layouts/main.astro";
+import Grid from "components/@common/Grid.astro";
 ---
 
 <MainLayout
-  title="Home sweet home"
+  title="Home"
   description="Page description"
   og_title="Open Graph Title"
   og_description="Open Graph Description"
 >
-  <p class="body-normal">Hey</p>
+  <div class="container">
+    <Grid>
+      <div class="bg-neutral3 col-span-full">
+        <div>Hey</div>
+      </div>
+    </Grid>
+  </div>
 </MainLayout>

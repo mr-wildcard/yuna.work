@@ -28,6 +28,23 @@
 }
 
 @layer utilities {
+  .container {
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
+
+    @screen lg {
+      max-width: 904px;
+    }
+
+    @screen xl {
+      max-width: 1160px;
+    }
+
+    @screen 2xl {
+      max-width: 1320px;
+    }
+  }
+
   .display-large-highlight {
     font-size: 36px;
     line-height: 120%;
