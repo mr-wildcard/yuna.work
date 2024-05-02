@@ -6,7 +6,11 @@ const rem = (px: number) => `${px / BASE}rem`;
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        "2xl": "1440px",
+      },
+    },
     fontSize: {
       base: `${BASE}px`,
     },
