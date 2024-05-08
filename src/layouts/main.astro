@@ -1,5 +1,6 @@
 ---
 import "styles/base.css";
+import Header from "components/Header/index.astro";
 
 interface Props {
   title: string;
@@ -34,6 +35,8 @@ const { title, description, og_description, og_title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
+
     <slot />
   </body>
 </html>

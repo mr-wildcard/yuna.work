@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  name: "logo" | "??";
+  width: number;
+  height: number;
+}
+
+const { name, width, height, ...props } = Astro.props;
+---
+
+<Icon
+  focusable="false"
+  aria-hidden="true"
+  width={width}
+  height={height}
+  name={name}
+  {...props}
+/>

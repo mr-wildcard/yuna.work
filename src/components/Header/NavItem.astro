@@ -1,0 +1,41 @@
+---
+const { pathname } = Astro.url;
+const { to, class: cssClasses = [], variant } = Astro.props;
+
+interface Props {
+  to: string;
+  variant: "primary" | "secondary";
+  class?: string;
+}
+
+const isSelected = pathname === to;
+
+const HTMLTag = isSelected ? "span" : "a";
+
+const variantCSSClasses =
+  variant === "primary"
+    ? ["display-small"]
+    : ["title-normal", "text-secondary"];
+
+const underlineCSSClasses = [
+  "after:block",
+  "after:w-full",
+  "after:h-[5px]",
+  "after:rounded-full",
+  "after:bg-secondary",
+];
+---
+
+<HTMLTag
+  href={!isSelected ? to : undefined}
+  class:list={[
+    "inline-block",
+    { selected: isSelected },
+    isSelected ? underlineCSSClasses : undefined,
+    { "after:mt-[5px]": isSelected && variant === "primary" },
+    ...variantCSSClasses,
+    ...cssClasses,
+  ]}
+>
+  <slot />
+</HTMLTag>

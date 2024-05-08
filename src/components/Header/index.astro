@@ -1,0 +1,89 @@
+---
+import { Icon } from "astro-icon/components";
+import NavItem from "./NavItem.astro";
+import Logo from "./Logo.astro";
+---
+
+<header id="header" data-menu-opened="false" class="relative bg-neutral1">
+  <div class="container">
+    <div class="flex justify-between items-center pt-5 mb-1">
+      <div id="logo">
+        <Logo />
+      </div>
+      <button
+        id="mobile-menu-opener"
+        aria-expanded="false"
+        class="menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
+      >
+        <span class="text-closed">Menu</span>
+        <span class="text-opened">Fermer</span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" role="navigation" class="overflow-y-auto w-full">
+    <div class="container">
+      <header class="menu-label text-secondary mb-[50px]">Menu</header>
+      <div class="container">
+        <ul class="text-primary flex flex-col gap-[30px]">
+          <li>
+            <NavItem to="/" variant="primary">Expertises</NavItem>
+          </li>
+          <li class="mb-[5px]">
+            <NavItem to="/missions" variant="primary">Missions</NavItem>
+          </li>
+          <li>
+            <NavItem to="/mentions-legales" variant="secondary"
+              >Mentions légales</NavItem
+            >
+          </li>
+          <li>
+            <NavItem to="/plan-du-site" variant="secondary"
+              >Plan du site</NavItem
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .text-opened {
+    display: none;
+  }
+
+  #mobile-menu {
+    @apply bg-neutral3;
+
+    display: none;
+  }
+
+  #header[data-menu-opened="true"] {
+    @apply bg-neutral3;
+
+    .text-opened {
+      display: block;
+    }
+
+    .text-closed {
+      display: none;
+    }
+
+    #mobile-menu {
+      display: block;
+    }
+
+    #logo {
+      visibility: hidden;
+    }
+
+    #mobile-menu-opener {
+      @apply bg-neutral1 text-primary shadow-primary;
+
+      box-shadow: 0 0 0 2px inset;
+    }
+  }
+</style>
+
+<script src="./index.ts"></script>
