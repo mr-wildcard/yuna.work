@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon as AstroIcon } from "astro-icon/components";
 
 export interface Props {
   name: "logo" | "??";
@@ -10,4 +10,10 @@ export interface Props {
 const { name, width, height, ...props } = Astro.props;
 ---
 
-<Icon aria-hidden="true" width={width} height={height} name={name} {...props} />
+<AstroIcon
+  aria-hidden="true"
+  width={width}
+  height={height}
+  name={name}
+  {...props}
+/>
