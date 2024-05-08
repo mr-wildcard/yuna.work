@@ -16,8 +16,6 @@
   }
 
   html {
-    @apply text-base;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -96,6 +94,7 @@
   }
 
   .title-small {
+    font-size: 18px;
     line-height: 140%;
     font-weight: 700;
   }
@@ -128,6 +127,7 @@
   .body-normal-highlight {
     line-height: 160%;
     font-weight: 500;
+    font-size: 18px;
   }
 
   .tag-label-highlight {
@@ -145,9 +145,11 @@
   .menu-label-highlight {
     line-height: normal;
     font-weight: 700;
+    font-size: 18px;
   }
 
   .menu-label {
+    font-size: 18px;
     line-height: 140%;
     font-weight: 400;
   }
@@ -183,7 +185,7 @@
     .menu-label-highlight,
     .title-small,
     .menu-label {
-      @apply text-base;
+      font-size: 18px;
     }
   }
 
