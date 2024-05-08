@@ -10,11 +10,4 @@ export interface Props {
 const { name, width, height, ...props } = Astro.props;
 ---
 
-<Icon
-  focusable="false"
-  aria-hidden="true"
-  width={width}
-  height={height}
-  name={name}
-  {...props}
-/>
+<Icon aria-hidden="true" width={width} height={height} name={name} {...props} />
