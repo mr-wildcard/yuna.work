@@ -13,7 +13,7 @@ import Contact from "../Contact.astro";
       <button
         id="mobile-menu-opener"
         aria-expanded="false"
-        class="menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
+        class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
       >
         <span class="text-closed">Menu</span>
         <span class="text-opened">Fermer</span>
@@ -21,9 +21,13 @@ import Contact from "../Contact.astro";
     </div>
   </div>
 
-  <nav id="mobile-menu" role="navigation" class="overflow-y-auto w-full">
+  <nav
+    id="mobile-menu"
+    role="navigation"
+    class="bg-neutral3 overflow-y-auto w-full"
+  >
     <div class="container">
-      <header class="menu-label text-secondary mb-[50px]">Menu</header>
+      <header class="text-menu-label text-secondary mb-[50px]">Menu</header>
       <div class="container">
         <ul class="text-primary flex flex-col gap-[30px]">
           <li>
@@ -33,14 +37,14 @@ import Contact from "../Contact.astro";
             <NavItem to="/missions" variant="primary">Missions</NavItem>
           </li>
           <li>
-            <NavItem to="/mentions-legales" variant="secondary"
-              >Mentions légales</NavItem
-            >
+            <NavItem to="/mentions-legales" variant="secondary">
+              Mentions légales
+            </NavItem>
           </li>
           <li>
-            <NavItem to="/plan-du-site" variant="secondary"
-              >Plan du site</NavItem
-            >
+            <NavItem to="/plan-du-site" variant="secondary">
+              Plan du site
+            </NavItem>
           </li>
         </ul>
       </div>

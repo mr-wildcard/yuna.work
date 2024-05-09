@@ -43,155 +43,49 @@
     }
   }
 
-  .display-large-highlight {
-    font-size: 36px;
-    line-height: 120%;
-    font-weight: 500;
-  }
-
-  .display-large {
-    font-size: 36px;
-    line-height: 120%;
-    font-weight: 400;
-  }
-
-  .display-medium {
-    font-size: 32px;
-    line-height: 120%;
-    font-weight: 400;
-  }
-
-  .display-small {
+  .text-display-small,
+  .text-body-normal {
     @apply font-arial;
-
-    font-size: 30px;
-    line-height: 140%;
-    font-weight: 700;
-  }
-
-  .headline-small {
-    font-size: 24px;
-    line-height: 120%;
-    font-weight: 400;
-  }
-
-  .headline-small-highlight {
-    font-size: 22px;
-    line-height: 120%;
-    font-weight: 700;
-  }
-
-  .headline-large {
-    font-size: 26px;
-    line-height: 120%;
-    font-weight: 400;
-  }
-
-  .headline-large-highlight {
-    font-size: 24px;
-    line-height: 140%;
-    font-weight: 700;
-  }
-
-  .title-small {
-    font-size: 18px;
-    line-height: 140%;
-    font-weight: 700;
-  }
-
-  .title-normal {
-    font-size: 20px;
-    line-height: 140%;
-    font-weight: 500;
-  }
-
-  .title-large {
-    font-size: 20px;
-    line-height: 140%;
-    font-weight: 700;
-  }
-
-  .body-small {
-    font-size: 15px;
-    line-height: 140%;
-    font-weight: 400;
-  }
-
-  .body-normal {
-    @apply font-arial;
-
-    line-height: 140%;
-    font-weight: 400;
-  }
-
-  .body-normal-highlight {
-    line-height: 160%;
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  .tag-label-highlight {
-    font-size: 16px;
-    line-height: 140%;
-    font-weight: 500;
-  }
-
-  .tag-label {
-    font-size: 16px;
-    line-height: 140%;
-    font-weight: 400;
-  }
-
-  .menu-label-highlight {
-    line-height: normal;
-    font-weight: 700;
-    font-size: 18px;
-  }
-
-  .menu-label {
-    font-size: 18px;
-    line-height: 140%;
-    font-weight: 400;
   }
 
   @screen lg {
-    .display-large-highlight,
-    .display-large {
+    .text-display-large-highlight,
+    .text-display-large {
       font-size: 60px;
     }
 
-    .display-medium {
+    .text-display-medium {
       font-size: 42px;
     }
 
-    .display-small {
+    .text-display-small {
       font-size: 40px;
     }
 
-    .headline-small,
-    .headline-small-highlight {
+    .text-headline-small,
+    .text-headline-small-highlight {
       font-size: 24px;
     }
 
-    .headline-large,
-    .headline-large-highlight {
+    .text-headline-large,
+    .text-headline-large-highlight {
       font-size: 30px;
     }
 
-    .body-small {
+    .text-body-small {
       font-size: 13px;
     }
 
-    .menu-label-highlight,
-    .title-small,
-    .menu-label {
+    .text-menu-label-highlight,
+    .text-title-small,
+    .text-menu-label {
       font-size: 18px;
     }
   }
 
   @screen xl {
-    .display-large-highlight,
-    .display-large {
+    .text-display-large-highlight,
+    .text-display-large {
       font-size: 72px;
     }
   }
