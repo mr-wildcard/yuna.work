@@ -1,0 +1,30 @@
+---
+import Grid from "./@common/Grid.astro";
+interface Props {
+  view: "full" | "inline";
+}
+
+const { view } = Astro.props;
+---
+
+{
+  view === "inline" && (
+    <section class="bg-primary text-neutral1 rounded-[20px] py-[30px] px-5">
+      <Grid class="gap-y-[30px]">
+        <div class="col-span-full">
+          <h2 class="headline-large">
+            Une question, une proposition de mission ou de prise de parole ?
+          </h2>
+        </div>
+        <p class="col-span-full">
+          <a
+            href="mailto:hello@yuna.work"
+            class="headline-large-highlight hover:text-neutral4"
+          >
+            hello@yuna.work
+          </a>
+        </p>
+      </Grid>
+    </section>
+  )
+}

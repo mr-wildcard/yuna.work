@@ -19,6 +19,7 @@ export default {
       neutral1: "#fefaf5",
       neutral2: "#f4efea",
       neutral3: "#d9e1dd",
+      neutral4: "#b7c5be",
     },
   },
   plugins: [],
