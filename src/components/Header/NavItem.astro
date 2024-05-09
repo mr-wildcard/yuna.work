@@ -8,7 +8,7 @@ interface Props {
   class?: string;
 }
 
-const isSelected = pathname === to;
+const isSelected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 
 const HTMLTag = isSelected ? "span" : "a";
 
