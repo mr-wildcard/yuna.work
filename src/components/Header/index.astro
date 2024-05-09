@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import NavItem from "./NavItem.astro";
 import Logo from "./Logo.astro";
+import Contact from "../Contact.astro";
 ---
 
 <header id="header" data-menu-opened="false" class="relative bg-neutral1">
@@ -43,6 +44,10 @@ import Logo from "./Logo.astro";
             >
           </li>
         </ul>
+      </div>
+
+      <div class="mt-[60px]">
+        <Contact view="inline" />
       </div>
     </div>
   </nav>
