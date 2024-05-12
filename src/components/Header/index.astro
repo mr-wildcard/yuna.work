@@ -6,7 +6,7 @@ import Contact from "../Contact.astro";
 
 <header id="header" data-menu-opened="false" class="flex flex-col bg-neutral1">
   <div class="container">
-    <div class="flex justify-between items-center pt-5 mb-1">
+    <div id="header-content" class="flex justify-between items-center py-5">
       <div id="logo">
         <Logo />
       </div>
@@ -74,6 +74,10 @@ import Contact from "../Contact.astro";
 
   #header[data-menu-opened="true"] {
     @apply bg-neutral3;
+
+    #header-content {
+      padding-bottom: 4px;
+    }
 
     .text-opened,
     #mobile-menu {
