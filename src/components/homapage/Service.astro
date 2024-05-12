@@ -1,0 +1,33 @@
+---
+import Grid from "components/@common/Grid.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  skills: string;
+}
+
+const { skills, title, description } = Astro.props;
+---
+
+<Grid>
+  <div class="col-span-full">
+    <h3 class="text-headline-large-highlight mb-[30px]">{title}</h3>
+  </div>
+  <div class="col-span-full">
+    <p class="text-body-normal mb-5">{description}</p>
+  </div>
+  <div class="col-span-full">
+    <ul>
+      {skills.map((skill) => <li class="pl-[43px]">{skill}</li>)}
+    </ul>
+  </div>
+</Grid>
+
+<style>
+  li {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDI3IDYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjAuOTUiIHk9IjEuMjIyNDYiIHdpZHRoPSIyNS4xIiBoZWlnaHQ9IjMuMSIgcng9IjEuNTUiIGZpbGw9IiMwRjJFMjAiIHN0cm9rZT0iIzBGMkUyMCIgc3Ryb2tlLXdpZHRoPSIxLjkiLz4KPC9zdmc+Cg==");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+</style>
