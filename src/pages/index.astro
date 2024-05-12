@@ -1,7 +1,9 @@
 ---
 import MainLayout from "layouts/main.astro";
-import DiscreetDots from "../components/@common/DiscreetDots.astro";
-import Grid from "../components/@common/Grid.astro";
+import DiscreetDots from "components/@common/DiscreetDots.astro";
+import Grid from "components/@common/Grid.astro";
+import Separator from "components/@common/Separator.astro";
+import Service from "../components/homapage/Service.astro";
 ---
 
 <MainLayout
@@ -10,9 +12,134 @@ import Grid from "../components/@common/Grid.astro";
   og_title="Open Graph Title"
   og_description="Open Graph Description"
 >
-  <div class="container">
-    <div class="flex justify-end">
-      <DiscretDots x={7} y={6} />
+  <div class="mb-[25px]">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <div class="flex justify-end">
+            <DiscreetDots x={7} y={6} />
+          </div>
+        </div>
+      </Grid>
+    </div>
+  </div>
+  <div class="mb-[30px]">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <h1 class="text-display-large">
+            Je suis Yuna Orsini. <br /> Je suis <span
+              class="text-display-large-highlight"
+              >designer stratégique senior & lead UX.</span
+            >
+          </h1>
+        </div>
+      </Grid>
+    </div>
+  </div>
+  <div class="mb-5">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <p class="text-body-normal mb-[25px]">
+            J’aime relever des défis complexes – UX, techniques,
+            organisationnels... J’élabore des stratégies adaptées, j’y aligne
+            les actions et j’architecture des produits et services numériques
+            efficaces, sobres et accessibles. Attentive aux détails et aux
+            autres, j'aide les équipes à concrétiser la vision produit et à
+            grandir.
+          </p>
+          <p class="text-body-normal mb-[25px]">
+            Je m’appuie sur 13 années d’expérience* où j’ai exploré plusieurs
+            facettes du design comme planneuse stratégique en agences, product
+            strategist en freelance ou responsable UX en startup tech.
+          </p>
+        </div>
+        <div class="col-span-3">
+          <p class="text-body-small text-secondary">
+            *22 années, si créer des sites sur Dreamweaver à la sortie du
+            collège puis en coder pour le fun au lycée et à la fac, ça compte.
+          </p>
+        </div>
+      </Grid>
+    </div>
+  </div>
+  <div class="mb-5">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <div class="flex justify-end">
+            <DiscreetDots x={7} y={4} />
+          </div>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="2xl:container">
+      <Separator />
+    </div>
+  </div>
+
+  <div class="mb-[50px]">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <h2 class="text-title-large">Mes services</h2>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-20">
+    <div class="container">
+      <ul class="space-y-[30px] text-body-normal-highlight">
+        <li>
+          <Service
+            title="Expertise UX"
+            description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, où cohabitent des enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests… je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
+            skills={[
+              "Méthodologies UX",
+              "UX research",
+              "Design UX",
+              "Design thinking",
+            ]}
+          />
+
+          <div class="mt-[50px]">
+            <Separator />
+          </div>
+        </li>
+        <li>
+          <Service
+            title="Vision stratégique"
+            description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime échanger, questionner, apprendre des personnes qui m’entourent et les faire grandir."
+            skills={[
+              "Analyse stratégique",
+              "Mentorat et consulting",
+              "Esprit d’entreprendre",
+              "Design ops",
+            ]}
+          />
+
+          <div class="mt-[50px]">
+            <Separator />
+          </div>
+        </li>
+        <li>
+          <Service
+            title="Design éthique"
+            description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception de manière attentive et raisonnée. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
+            skills={[
+              "Design accessible",
+              "Éco-conception",
+              "Responsabilités du numérique",
+              "Communication",
+            ]}
+          />
+        </li>
+      </ul>
     </div>
   </div>
 </MainLayout>
