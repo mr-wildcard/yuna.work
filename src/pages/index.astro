@@ -1,5 +1,7 @@
 ---
 import MainLayout from "layouts/main.astro";
+import DiscretDots from "components/@common/DiscretDots.astro";
+import Grid from "../components/@common/Grid.astro";
 ---
 
 <MainLayout
@@ -8,5 +10,9 @@ import MainLayout from "layouts/main.astro";
   og_title="Open Graph Title"
   og_description="Open Graph Description"
 >
-  Homepage
+  <div class="container">
+    <div class="flex justify-end">
+      <DiscretDots x={7} y={6} />
+    </div>
+  </div>
 </MainLayout>

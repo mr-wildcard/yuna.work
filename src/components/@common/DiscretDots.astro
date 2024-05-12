@@ -1,0 +1,25 @@
+---
+const { x, y } = Astro.props;
+
+interface Props {
+  x: number;
+  y: number;
+}
+
+const spacing = 22;
+const size = 3;
+
+let width = x * size + (x - 1) * spacing;
+let height = y * size + (y - 1) * spacing;
+---
+
+<div style={{ width: `${width}px`, height: `${height}px` }}></div>
+
+<style>
+  div {
+    background-position: 0 0;
+    background-size: 25px 25px;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjIgMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8Y2lyY2xlIGN4PSIxLjUiIGN5PSIxLjUiIHI9IjEuNSIgZmlsbD0iIzBmMmUyMDI2IiAvPgo8L3N2Zz4K");
+  }
+</style>
