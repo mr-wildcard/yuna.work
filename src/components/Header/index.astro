@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 import Contact from "../Contact.astro";
 ---
 
-<header id="header" data-menu-opened="false" class="relative bg-neutral1">
+<header id="header" data-menu-opened="false" class="flex flex-col bg-neutral1">
   <div class="container">
     <div class="flex justify-between items-center pt-5 mb-1">
       <div id="logo">
@@ -57,29 +57,31 @@ import Contact from "../Contact.astro";
 </header>
 
 <style>
-  .text-opened {
+  .text-opened,
+  #mobile-menu {
     display: none;
   }
 
-  #mobile-menu {
-    @apply bg-neutral3;
+  #header {
+    height: 100vh;
+  }
 
-    display: none;
+  @supports (height: 100dvh) {
+    #header {
+      height: 100dvh;
+    }
   }
 
   #header[data-menu-opened="true"] {
     @apply bg-neutral3;
 
-    .text-opened {
+    .text-opened,
+    #mobile-menu {
       display: block;
     }
 
     .text-closed {
       display: none;
-    }
-
-    #mobile-menu {
-      display: block;
     }
 
     #logo {
