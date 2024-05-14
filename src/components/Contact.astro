@@ -1,7 +1,7 @@
 ---
 import Grid from "./@common/Grid.astro";
 interface Props {
-  view: "full" | "inline";
+  view: "inline" | "intermediary" | "full";
 }
 
 const { view } = Astro.props;
@@ -16,14 +16,43 @@ const { view } = Astro.props;
             Une question, une proposition de mission ou de prise de parole ?
           </h2>
         </div>
-        <p class="col-span-full">
+        <div class="col-span-full">
           <a
             href="mailto:hello@yuna.work"
             class="text-headline-large-highlight hover:text-neutral4 underline"
           >
             hello@yuna.work
           </a>
-        </p>
+        </div>
+      </Grid>
+    </section>
+  )
+}
+
+{
+  view === "intermediary" && (
+    <section class="bg-primary text-neutral1 rounded-[20px] py-[30px] px-5">
+      <Grid class="gap-y-[20px]">
+        <div class="col-span-full">
+          <h2 class="text-headline-large">
+            Une question, une proposition de mission ou de prise de parole ?
+          </h2>
+        </div>
+        <div class="col-span-full">
+          <p class="text-body-normal">
+            Je suis particulièrement intéressée par la thématique des
+            responsabilités du numérique, les projets à impact, les modèles
+            alternatifs et les initiatives socialement engagées.
+          </p>
+        </div>
+        <div class="col-span-full">
+          <a
+            href="mailto:hello@yuna.work"
+            class="text-headline-large-highlight hover:text-neutral4 underline"
+          >
+            hello@yuna.work
+          </a>
+        </div>
       </Grid>
     </section>
   )

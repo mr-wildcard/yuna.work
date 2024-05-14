@@ -2,9 +2,11 @@
 import MainLayout from "layouts/main.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
 import Grid from "components/@common/Grid.astro";
+import Contact from "components/Contact.astro";
 import Separator from "components/@common/Separator.astro";
 import Service from "components/homepage/Service.astro";
 import Certifications from "components/homepage/Certifications.astro";
+import Testimonial from "components/homepage/Testimonial.astro";
 ---
 
 <MainLayout
@@ -151,5 +153,71 @@ import Certifications from "components/homepage/Certifications.astro";
     <div class="container">
       <Certifications />
     </div>
-  </div></MainLayout
->
+  </div>
+
+  <div class="mb-[100px]">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <Contact view="intermediary" />
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="2xl:container">
+      <Separator />
+    </div>
+  </div>
+
+  <div class="mb-[100px]">
+    <div class="container">
+      <h2 class="text-title-large mb-[50px]">Travailler avec moi</h2>
+      <Grid as="ul" class="gap-y-4">
+        <li class="col-span-full">
+          <Testimonial
+            quote="J’ai eu la chance de travailler avec Yuna Orsini à plusieurs reprises. Collaborer avec elle est très gratifiant. Son exigence permet des échanges aussi agréables que fructueux. Elle pose les bonnes questions, lance des défis et encourage ses partenaires. Avec sa vision à long terme, elle établit des bases solides pour que les marques se développent de manière cohérente et efficace.”"
+            author="Christophe Pernaudet, directeur créatif et concepteur-rédacteur"
+            context="Christophe a été un partenaire et prestataire sur plusieurs projets"
+          />
+        </li>
+        <li class="col-span-full">
+          <Testimonial
+            quote="Tout simplement ravis de la collaboration avec Yuna. La qualité de son travail, de l'accompagnement de clients novices en la matière, des livrables et des analyses constructives et son dynamisme ont été un vrai plus pour ce projet.”"
+            author="Alexandre Pronine, manager technique senior"
+            context="Alexandre a été à plusieurs reprises mon client"
+          />
+        </li>
+        <li class="col-span-full">
+          <Testimonial
+            quote="Yuna est brillante, intègre et cultivée. Elle se préoccupe sincèrement des personnes, qu'il s'agisse des gens avec qui elle travaille (collaborateurs) ou des gens pour qui elle travaille (utilisateurs). Et en plus, elle est patiente et pédagogue !”"
+            author="Arnaud Levy, co-fondateur de noesya"
+            context="Arnaud a été mon enseignant, puis mon employeur, puis un partenaire de projets"
+          />
+        </li>
+        <li class="col-span-full">
+          <Testimonial
+            quote="Yuna fait partie de mes collaborations professionnelles les plus enrichissantes. En plus de ses connaissances autant stratégiques que techniques, Yuna est tellement passionnée et investie qu'elle fait toujours ressortir le meilleur de chaque personne dans son équipe.”"
+            author="Declan Owens, consultant en transition écologique"
+            context="Declan était mon collègue pendant plusieurs années"
+          />
+        </li>
+        <li class="col-span-full">
+          <Testimonial
+            quote="En plus de son rôle de Head of UX, Yuna nous a permis à travers de nombreux ateliers de design thinking de transcrire des choses complexes et diffuses, en des idées simples, comprises de tous et activables. Quelle que soit la thématique (stratégie, produit, design, UX...), le résultat est toujours au RDV.”"
+            author="Maxime Moné, co-fondateur de Poool"
+            context="Maxime était mon employeur pendant plusieurs années"
+          />
+        </li>
+        <li class="col-span-full">
+          <Testimonial
+            quote="Yuna est une personne volontaire, perfectionniste, investie, qui cherche toujours à aller plus loin. Elle sait aussi faire grandir les gens travaillant directement sous sa responsabilité et orchestre avec respect le travail des équipes intervenant sur ses projets.”"
+            author="Aurélie, responsable de BU chez Conserto"
+            context="Aurélie a été ma manager pendant plusieurs années, puis à plusieurs reprises ma cliente"
+          />
+        </li>
+      </Grid>
+    </div>
+  </div>
+</MainLayout>
