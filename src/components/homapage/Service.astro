@@ -15,11 +15,17 @@ const { skills, title, description } = Astro.props;
     <h3 class="text-headline-large-highlight mb-[30px]">{title}</h3>
   </div>
   <div class="col-span-full">
-    <p class="text-body-normal mb-5">{description}</p>
+    <p class="text-body-normal text-paragraph mb-5">{description}</p>
   </div>
   <div class="col-span-full">
     <ul>
-      {skills.map((skill) => <li class="pl-[43px]">{skill}</li>)}
+      {
+        skills.map((skill) => (
+          <li>
+            <span class="text-paragraph pl-[43px]">{skill}</span>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </Grid>
