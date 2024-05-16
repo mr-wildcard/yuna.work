@@ -1,5 +1,7 @@
 ---
+import { getImage } from "astro:assets";
 import Grid from "components/@common/Grid.astro";
+import ListStyle from "images/list-style.svg";
 
 interface Props {
   title: string;
@@ -8,6 +10,8 @@ interface Props {
 }
 
 const { skills, title, description } = Astro.props;
+
+const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
 <Grid>
@@ -30,9 +34,9 @@ const { skills, title, description } = Astro.props;
   </div>
 </Grid>
 
-<style>
+<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
   li {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDI3IDYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjAuOTUiIHk9IjEuMjIyNDYiIHdpZHRoPSIyNS4xIiBoZWlnaHQ9IjMuMSIgcng9IjEuNTUiIGZpbGw9IiMwRjJFMjAiIHN0cm9rZT0iIzBGMkUyMCIgc3Ryb2tlLXdpZHRoPSIxLjkiLz4KPC9zdmc+Cg==");
+    background-image: var(--url);
     background-repeat: no-repeat;
     background-position: 0 center;
   }

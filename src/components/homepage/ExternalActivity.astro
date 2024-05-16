@@ -1,0 +1,42 @@
+---
+import { getImage } from "astro:assets";
+import ListStyle from "images/list-style.svg";
+
+interface Props {
+  title: string;
+  items: Array<{
+    title: string;
+    description: string;
+  }>;
+}
+
+const { title, items } = Astro.props;
+
+const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
+---
+
+<div class="p-[30px] rounded-card bg-neutral2">
+  <h3 class="text-headline-small-highlight mb-10">
+    {title}
+  </h3>
+  <ul class="space-y-[30px]">
+    {
+      items.map((item) => (
+        <li>
+          <h4 class="text-title-small mb-1.5">{item.title}</h4>
+          <p class="text-body-normal text-paragraph">{item.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
+  li {
+    padding-left: 37px;
+
+    background-image: var(--url);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+</style>

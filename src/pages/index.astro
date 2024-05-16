@@ -8,7 +8,8 @@ import Separator from "components/@common/Separator.astro";
 import Service from "components/homepage/Service.astro";
 import Certifications from "components/homepage/Certifications.astro";
 import Testimonial from "components/homepage/Testimonial.astro";
-import Fierte from "../components/homepage/Fierte.astro";
+import Fierte from "components/homepage/Fierte.astro";
+import ExternalActivity from "components/homepage/ExternalActivity.astro";
 ---
 
 <MainLayout
@@ -274,6 +275,47 @@ import Fierte from "../components/homepage/Fierte.astro";
               />
             </li>
           </ul>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-[100px]">
+    <div class="container">
+      <Grid class="gap-y-4">
+        <div class="col-span-full">
+          <ExternalActivity
+            title="Interventions pédagogiques"
+            items={[
+              {
+                title: "Interventions en écoles depuis 2012",
+                description:
+                  "Cours, suivi annuel, workshops, jurys d’admission en BUT MMI Bordeaux, à l’ECV Digital et à l’ESD Bordeaux (Bac+1 à Bac+5)",
+              },
+              {
+                title: "Engagement bénévole à Reboot! depuis 2021",
+                description:
+                  "Événement étudiant de la communication responsable, Reboot! forme chaque année des milliers d’étudiantes et étudiants",
+              },
+            ]}
+          />
+        </div>
+        <div class="col-span-full">
+          <ExternalActivity
+            title="Prises de parole en public"
+            items={[
+              {
+                title: "Dernière conférence donnée",
+                description:
+                  "“Au-delà des clichés sur l’éco-conception : des exemples créatifs pour changer notre vision” (BDX I/O 2023)",
+              },
+              {
+                title: "Dernière table ronde modérée",
+                description:
+                  "“Communautés éthiques : s'organiser pour ne plus nuire” (Reboot! 2023)",
+              },
+            ]}
+          />
         </div>
       </Grid>
     </div>

@@ -10,6 +10,9 @@ export default {
       boxShadow: {
         cta: "0 0 0 2px inset",
       },
+      borderRadius: {
+        card: "20px",
+      },
     },
     fontFamily: {
       sans: ["DM Sans Variable", "sans-serif"],
