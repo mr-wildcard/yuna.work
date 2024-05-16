@@ -10,6 +10,7 @@ import Certifications from "components/homepage/Certifications.astro";
 import Testimonial from "components/homepage/Testimonial.astro";
 import Fierte from "components/homepage/Fierte.astro";
 import ExternalActivity from "components/homepage/ExternalActivity.astro";
+import Footer from "components/Footer/index.astro";
 ---
 
 <MainLayout
@@ -321,9 +322,21 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
     </div>
   </div>
 
-  <div class="mb-[172px]">
+  <div class="mb-[22px]">
     <div class="container">
       <Contact view="full" />
+    </div>
+  </div>
+
+  <div class="mb-[22px]">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <div class="flex justify-end">
+            <DiscreetDots x={7} y={6} />
+          </div>
+        </div>
+      </Grid>
     </div>
   </div>
 </MainLayout>

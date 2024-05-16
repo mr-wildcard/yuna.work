@@ -1,6 +1,7 @@
 ---
 import "styles/base.css";
 import Header from "components/Header/index.astro";
+import Footer from "components/Footer/index.astro";
 
 interface Props {
   title: string;
@@ -38,5 +39,7 @@ const { title, description, og_description, og_title } = Astro.props;
     <Header />
 
     <slot />
+
+    <Footer />
   </body>
 </html>

@@ -1,0 +1,27 @@
+---
+import NavItem from "./NavItem.astro";
+import Link from "../@common/Link.astro";
+---
+
+<footer class="border-t border-top-primary">
+  <div class="container">
+    <nav class="pt-[38px] pb-[50px]">
+      <ul class="flex flex-col items-center space-y-[44px]">
+        <li>
+          <NavItem to="/mentions-legales"> Mentions légales </NavItem>
+        </li>
+        <li>
+          <NavItem to="/plan-du-site"> Plan du site </NavItem>
+        </li>
+        <li>
+          <Link
+            variant="full-radius"
+            to="https://www.linkedin.com/in/yunaorsini/"
+          >
+            Retrouvez-moi sur LinkedIn
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,36 @@
+---
+const { pathname } = Astro.url;
+
+interface Props {
+  to: string;
+  class?: string;
+}
+
+const { to, class: cssClasses = [] } = Astro.props;
+
+const isSelected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
+
+const HTMLTag = isSelected ? "span" : "a";
+
+const underlineCSSClasses = [
+  "after:block",
+  "after:w-full",
+  "after:h-[5px]",
+  "after:rounded-full",
+  "after:bg-primary",
+];
+---
+
+<HTMLTag
+  href={!isSelected ? to : undefined}
+  class:list={[
+    "text-body-normal",
+    { selected: isSelected },
+    { "underline underline-offset-2": !isSelected },
+    isSelected ? underlineCSSClasses : undefined,
+    { "after:mt-[5px]": isSelected },
+    ...cssClasses,
+  ]}
+>
+  <slot />
+</HTMLTag>
