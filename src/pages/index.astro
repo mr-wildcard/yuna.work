@@ -90,67 +90,67 @@ import Testimonial from "components/homepage/Testimonial.astro";
 
   <div class="mb-[50px]">
     <div class="container">
+      <h2 class="text-title-large mb-[50px]">Mes services</h2>
+
       <Grid>
         <div class="col-span-full">
-          <h2 class="text-title-large">Mes services</h2>
+          <ul class="space-y-[30px] text-body-normal-highlight">
+            <li>
+              <Service
+                title="Expertise UX"
+                description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, où cohabitent des enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests… je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
+                skills={[
+                  "Méthodologies UX",
+                  "UX research",
+                  "Design UX",
+                  "Design thinking",
+                ]}
+              />
+
+              <div class="mt-[50px]">
+                <Separator />
+              </div>
+            </li>
+            <li>
+              <Service
+                title="Vision stratégique"
+                description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime échanger, questionner, apprendre des personnes qui m’entourent et les faire grandir."
+                skills={[
+                  "Analyse stratégique",
+                  "Mentorat et consulting",
+                  "Esprit d’entreprendre",
+                  "Design ops",
+                ]}
+              />
+
+              <div class="mt-[50px]">
+                <Separator />
+              </div>
+            </li>
+            <li>
+              <Service
+                title="Design éthique"
+                description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception de manière attentive et raisonnée. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
+                skills={[
+                  "Design accessible",
+                  "Éco-conception",
+                  "Responsabilités du numérique",
+                  "Communication",
+                ]}
+              />
+            </li>
+          </ul>
         </div>
       </Grid>
     </div>
   </div>
 
-  <div class="mb-20">
-    <div class="container">
-      <ul class="space-y-[30px] text-body-normal-highlight">
-        <li>
-          <Service
-            title="Expertise UX"
-            description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, où cohabitent des enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests… je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
-            skills={[
-              "Méthodologies UX",
-              "UX research",
-              "Design UX",
-              "Design thinking",
-            ]}
-          />
-
-          <div class="mt-[50px]">
-            <Separator />
-          </div>
-        </li>
-        <li>
-          <Service
-            title="Vision stratégique"
-            description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime échanger, questionner, apprendre des personnes qui m’entourent et les faire grandir."
-            skills={[
-              "Analyse stratégique",
-              "Mentorat et consulting",
-              "Esprit d’entreprendre",
-              "Design ops",
-            ]}
-          />
-
-          <div class="mt-[50px]">
-            <Separator />
-          </div>
-        </li>
-        <li>
-          <Service
-            title="Design éthique"
-            description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception de manière attentive et raisonnée. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
-            skills={[
-              "Design accessible",
-              "Éco-conception",
-              "Responsabilités du numérique",
-              "Communication",
-            ]}
-          />
-        </li>
-      </ul>
-    </div>
-  </div>
-
   <div class="mb-[120px]">
     <div class="container">
+      <h2 class="text-title-small">
+        Je suis formée, certifiée ou diplômée par
+      </h2>
+
       <Certifications />
     </div>
   </div>
