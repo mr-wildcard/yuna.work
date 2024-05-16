@@ -7,6 +7,9 @@ export default {
       screens: {
         "2xl": "1440px",
       },
+      boxShadow: {
+        cta: "0 0 0 2px inset",
+      },
     },
     fontFamily: {
       sans: ["DM Sans Variable", "sans-serif"],

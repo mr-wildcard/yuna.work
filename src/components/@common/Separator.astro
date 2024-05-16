@@ -1,1 +1,9 @@
-<hr class="border-primary" />
+---
+interface Props {
+  class?: string;
+}
+
+const { class: cssClasses } = Astro.props;
+---
+
+<hr class:list={["border-primary", cssClasses]} />

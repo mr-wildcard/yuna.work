@@ -1,12 +1,14 @@
 ---
 import MainLayout from "layouts/main.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
+import Link from "components/@common/Link.astro";
 import Grid from "components/@common/Grid.astro";
 import Contact from "components/Contact.astro";
 import Separator from "components/@common/Separator.astro";
 import Service from "components/homepage/Service.astro";
 import Certifications from "components/homepage/Certifications.astro";
 import Testimonial from "components/homepage/Testimonial.astro";
+import Fierte from "../components/homepage/Fierte.astro";
 ---
 
 <MainLayout
@@ -217,6 +219,62 @@ import Testimonial from "components/homepage/Testimonial.astro";
             context="Aurélie a été ma manager pendant plusieurs années, puis à plusieurs reprises ma cliente"
           />
         </li>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="2xl:container">
+      <Separator />
+    </div>
+  </div>
+
+  <div class="mb-[100px]">
+    <div class="container">
+      <h2 class="text-title-large mb-[50px]">Mes fiertés professionnelles</h2>
+      <Grid>
+        <div class="col-span-full">
+          <ul class="space-y-[30px]">
+            <li>
+              <Fierte
+                title="En 2020, j’ai co-fondé l’initiative freelance Team UX"
+                description="Nous y affirmons un positionnement de design éthique fort avec un engagement sur l’accessibilité, l’inclusion, les fair patterns et l’éco-conception et nous excellons dans la refonte de produits dits complexes. À ce jour, Team UX a été l’extension UX de plus de 20 équipes produits dans 15 secteurs d’activité différents. Ma plus grande fierté professionnelle !"
+              />
+
+              <Link
+                class="mt-[30px]"
+                variant="full-radius"
+                to="https://team-ux.com"
+              >
+                Faire appel à Team UX
+              </Link>
+
+              <Separator class="mt-[50px]" />
+            </li>
+            <li>
+              <Fierte
+                title="J’ai porté 3 ans la stratégie UX de la startup Poool"
+                description="J’ai intégré la core team de la startup Poool, aujourd’hui leader du paywall en France, en tant que responsable UX. Mon action a été structurante pour obtenir la première levée de fonds : définition de la vision et de la roadmap produit, refonte totale et conception d’une suite de produits SaaS, structuration des processus de conception, culture design thinking..."
+              />
+
+              <Separator class="mt-[50px]" />
+            </li>
+            <li>
+              <Fierte
+                title="J’ai créé le pôle strat’ de l’agence MOONDA en 2013"
+                description="J’ai proposé de créer mon poste dans cette agence digitale, entre newbiz et projets clients. En tant que planneuse stratégique puis UX designer, j’ai développé une culture stratégique dans l’objectif de placer les marques du côté de leur clientèle. J’y ai aussi porté avec succès le chantier “communication & innovation”, créant une nouvelle dynamique interne et externe."
+              />
+
+              <Separator class="mt-[50px]" />
+            </li>
+            <li>
+              <Fierte
+                title="J’aide les plus juniors à monter en compétences depuis 2012"
+                description="J’aime accompagner les personnes à grandir, que ce soit dans les structures dans lesquelles je travaille ou bien dans le cadre de mentorats individuels. J’interviens dans des écoles pour partager mon expérience et rencontrer de nouvelles promotions. Je m’investis aussi bénévolement au sein de Reboot!, l’événement étudiant de la communication responsable."
+              />
+            </li>
+          </ul>
+        </div>
       </Grid>
     </div>
   </div>
