@@ -14,26 +14,26 @@ const isExternal = to.startsWith("http");
 
 {
   variant === "full-radius" && (
-    <a
-      class:list={[
-        "text-menu-label-highlight",
-        "flex items-center",
-        "space-x-2.5",
-        "rounded-full",
-        "shadow-cta",
-        "w-fit",
-        "py-2",
-        "px-5",
-        "hover:bg-neutral3",
-        cssClasses,
-      ]}
-      href={to}
-      target={isExternal ? "_blank" : undefined}
-    >
-      <span>
-        <slot />
+    <a href={to} target={isExternal ? "_blank" : undefined}>
+      <span
+        class:list={[
+          "text-menu-label-highlight",
+          "flex items-center",
+          "space-x-2.5",
+          "rounded-full",
+          "shadow-cta",
+          "w-fit",
+          "py-2",
+          "px-5",
+          "hover:bg-neutral3",
+          cssClasses,
+        ]}
+      >
+        <span>
+          <slot />
+        </span>
+        <Icon name="open_in_new" size="18" />
       </span>
-      <Icon name="open_in_new" size="18" />
     </a>
   )
 }
