@@ -12,12 +12,21 @@ const isSelected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 
 const HTMLTag = isSelected ? "span" : "a";
 
-const underlineCSSClasses = [
+const selectedCSSClasses = [
   "after:block",
   "after:w-full",
-  "after:h-[5px]",
+  "after:h-[3px]",
   "after:rounded-full",
   "after:bg-primary",
+];
+
+const unselectedCSSClasses = [
+  "px-5",
+  "py-2",
+  "underline",
+  "underline-offset-2",
+  "hover:no-underline",
+  "hover:bg-neutral3",
 ];
 ---
 
@@ -25,10 +34,8 @@ const underlineCSSClasses = [
   href={!isSelected ? to : undefined}
   class:list={[
     "text-body-normal",
-    { selected: isSelected },
-    { "underline underline-offset-2": !isSelected },
-    isSelected ? underlineCSSClasses : undefined,
-    { "after:mt-[5px]": isSelected },
+    "rounded-full",
+    isSelected ? selectedCSSClasses : unselectedCSSClasses,
     ...cssClasses,
   ]}
 >
