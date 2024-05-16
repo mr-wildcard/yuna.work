@@ -1,5 +1,9 @@
 ---
+import { Picture } from "astro:assets";
 import Grid from "./@common/Grid.astro";
+import Icon from "./@common/Icon.astro";
+import ImageContactYuna from "images/contact-yuna.png";
+
 interface Props {
   view: "inline" | "intermediary" | "full";
 }
@@ -52,6 +56,57 @@ const { view } = Astro.props;
           >
             hello@yuna.work
           </a>
+        </div>
+      </Grid>
+    </section>
+  )
+}
+
+{
+  view === "full" && (
+    <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
+      <Grid>
+        <div class="col-span-full">
+          <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
+        </div>
+        <div class="col-span-full">
+          <div class="mb-[30px]">
+            <Picture
+              density={[1, 2]}
+              src={ImageContactYuna}
+              alt="Yuna Orsini"
+              width={193}
+              height={157}
+              formats={["avif", "webp"]}
+            />
+          </div>
+        </div>
+        <div class="col-span-full">
+          <h3 class="text-headline-large mb-[30px]">
+            Une question, une proposition de mission ou de prise de parole ?
+          </h3>
+        </div>
+        <div class="col-span-full">
+          <p class="text-title-normal mb-5">
+            Écrivez-moi par email à
+            <a class="underline" href="mailto:hello@yuna.work">
+              hello@yuna.work
+            </a>
+          </p>
+        </div>
+        <div class="col-span-full">
+          <p class="text-title-normal">
+            Vous pouvez aussi me contacter sur
+            <a
+              class="underline "
+              href="https://www.linkedin.com/in/yunaorsini/"
+            >
+              <span class="space-x-2">
+                <span>LinkedIn</span>
+                <Icon class="inline" size={22} name="open_in_new" />
+              </span>
+            </a>
+          </p>
         </div>
       </Grid>
     </section>
