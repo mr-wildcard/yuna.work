@@ -31,6 +31,8 @@ function onUserScrolls(): void {
   }
 }
 
-window.addEventListener("scroll", onUserScrolls);
+export default function run(): void {
+  window.addEventListener("scroll", onUserScrolls);
 
-onUserScrolls();
+  onUserScrolls();
+}

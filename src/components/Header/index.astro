@@ -62,7 +62,9 @@ import Contact from "../Contact.astro";
 
 <script>
   if (!CSS.supports("animation-timeline", "scroll(y root)")) {
-    import("./scripts/sticky-header.fallback");
+    import("./scripts/sticky-header.fallback").then(
+      ({ default: stickThatHeader }) => stickThatHeader(),
+    );
   }
 </script>
 
