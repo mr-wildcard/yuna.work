@@ -4,7 +4,11 @@ import Logo from "./Logo.astro";
 import Contact from "../Contact.astro";
 ---
 
-<header id="header" data-menu-opened="false" class="flex flex-col bg-neutral1">
+<header
+  id="header"
+  data-menu-opened="false"
+  class="sticky top-0 flex flex-col bg-neutral1"
+>
   <div class="container">
     <div id="header-content" class="flex justify-between items-center py-5">
       <div id="logo">
@@ -56,6 +60,12 @@ import Contact from "../Contact.astro";
   </nav>
 </header>
 
+<script>
+  if (!CSS.supports("animation-timeline", "scroll(y root)")) {
+    import("./scripts/sticky-header.fallback");
+  }
+</script>
+
 <style>
   .text-opened,
   #mobile-menu {
@@ -87,6 +97,30 @@ import Contact from "../Contact.astro";
 
     #mobile-menu-opener {
       @apply bg-neutral1 text-primary shadow-primary shadow-cta;
+    }
+  }
+
+  @supports (animation-timeline: scroll(y root)) {
+    #header {
+      animation-duration: 1ms;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-range: 0px 1px;
+      animation-timeline: scroll(y root);
+    }
+
+    #header:not([data-menu-opened="true"]) {
+      animation-name: sticky-bg-header;
+    }
+  }
+
+  @keyframes sticky-bg-header {
+    from {
+      @apply bg-neutral1;
+    }
+
+    to {
+      @apply bg-neutral2 border-b border-b-primary;
     }
   }
 </style>
