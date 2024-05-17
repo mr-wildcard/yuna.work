@@ -66,10 +66,10 @@ const { view } = Astro.props;
   view === "full" && (
     <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
       <Grid>
-        <div class="col-span-full">
+        <div class="col-span-full sm:col-span-6">
           <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full sm:col-span-6">
           <div class="mb-[30px]">
             <Picture
               densities={[1, 2]}
@@ -81,12 +81,12 @@ const { view } = Astro.props;
             />
           </div>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full sm:col-span-6">
           <h3 class="text-headline-large mb-[30px]">
             Une question, une proposition de mission ou de prise de parole ?
           </h3>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full sm:col-span-6">
           <p class="text-title-normal mb-5">
             Écrivez-moi par email à
             <a class="underline" href="mailto:hello@yuna.work">
@@ -94,7 +94,7 @@ const { view } = Astro.props;
             </a>
           </p>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full sm:col-span-6">
           <p class="text-title-normal">
             Vous pouvez aussi me contacter sur
             <a

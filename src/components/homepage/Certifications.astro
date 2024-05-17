@@ -8,59 +8,56 @@ import ImageINR from "images/certifications/inr.png";
 import ImageOpquast from "images/certifications/opquast.png";
 ---
 
-<Grid>
-  <div class="col-span-full">
-    <ul class="flex justify-around flex-wrap items-center mt-[30px]">
-      <li>
-        <Picture
-          src={ImageAccess42}
-          class="w-[66px] h-[48px]"
-          densities={[1, 2]}
-          alt="Access 42"
-        />
-      </li>
-      <li>
-        <Picture
-          src={ImageIDF}
-          class="w-[141px] h-[46px]"
-          densities={[1, 2]}
-          alt="Interaction Design Foundation"
-        />
-      </li>
-      <li>
-        <Picture
-          src={ImageOpquast}
-          class="w-[100px] h-[25px]"
-          densities={[1, 2]}
-          alt="Opquast"
-        />
-      </li>
-      <li>
-        <Picture
-          src={ImageINR}
-          class="w-[100px] h-[36px]"
-          densities={[1, 2]}
-          alt="INR"
-        />
-      </li>
-      <li>
-        <Picture
-          src={ImageDesignersEthiques}
-          class="w-[100px] h-[45px]"
-          densities={[1, 2]}
-          alt="Designers Éthiques"
-        />
-      </li>
-    </ul>
-  </div>
-</Grid>
+<ul class="flex justify-around sm:justify-normal flex-wrap items-center mt-2.5">
+  <li>
+    <Picture
+      src={ImageAccess42}
+      class="w-[66px] h-[48px]"
+      densities={[1, 2]}
+      alt="Access 42"
+    />
+  </li>
+  <li>
+    <Picture
+      src={ImageIDF}
+      class="w-[141px] h-[46px]"
+      densities={[1, 2]}
+      alt="Interaction Design Foundation"
+    />
+  </li>
+  <li>
+    <Picture
+      src={ImageOpquast}
+      class="w-[100px] h-[25px]"
+      densities={[1, 2]}
+      alt="Opquast"
+    />
+  </li>
+  <li>
+    <Picture
+      src={ImageINR}
+      class="w-[100px] h-[36px]"
+      densities={[1, 2]}
+      alt="INR"
+    />
+  </li>
+  <li>
+    <Picture
+      src={ImageDesignersEthiques}
+      class="w-[100px] h-[45px]"
+      densities={[1, 2]}
+      alt="Designers Éthiques"
+    />
+  </li>
+</ul>
 
 <style>
   ul {
-    @apply -mx-4;
+    @apply -mx-4 sm:-mx-6;
   }
+
   li {
-    @apply m-4 mb-[20px];
+    @apply m-4 mb-[20px] sm:m-6;
 
     img {
       margin-left: auto;
