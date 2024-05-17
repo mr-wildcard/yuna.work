@@ -1,5 +1,9 @@
 ---
 import MainLayout from "layouts/main.astro";
+import Grid from "../components/@common/Grid.astro";
+import Link from "../components/@common/Link.astro";
+import Contact from "../components/Contact.astro";
+import DiscreetDots from "../components/@common/DiscreetDots.astro";
 ---
 
 <MainLayout
@@ -8,5 +12,54 @@ import MainLayout from "layouts/main.astro";
   og_title="Open Graph Title"
   og_description="Open Graph Description"
 >
-  Missions
+  <div class="my-[30px]">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <h1 class="text-display-large mb-[30px]">Plan du site</h1>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-20">
+    <div class="container">
+      <Grid>
+        <div class="col-span-full">
+          <ul class="list-disc list-inside pl-6">
+            <li>
+              <a href="/" class="underline underline-offset-2">
+                Expertises (page d’accueil)
+              </a>
+            </li>
+            <li>
+              <a href="/missions" class="underline underline-offset-2">
+                Missions
+              </a>
+            </li>
+            <li>Plan de site (cette page)</li>
+            <li>
+              <a href="/mentions-legales" class="underline underline-offset-2">
+                Mentions légales
+              </a>
+            </li>
+          </ul>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="container">
+      <Contact view="inline" />
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="container">
+      <div class="flex justify-end">
+        <DiscreetDots x={7} y={6} />
+      </div>
+    </div>
+  </div>
 </MainLayout>
