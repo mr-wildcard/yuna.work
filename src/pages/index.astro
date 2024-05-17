@@ -18,7 +18,7 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
   og_title="Open Graph Title"
   og_description="Open Graph Description"
 >
-  <div class="mb-[25px]">
+  <div class="mb-[25px] sm:hidden">
     <div class="container">
       <Grid>
         <div class="col-span-full">
@@ -30,26 +30,33 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
     </div>
   </div>
 
-  <div class="mb-[30px]">
+  <div class="mb-[30px] sm:mb-[46px]">
     <div class="container">
-      <Grid>
-        <div class="col-span-full">
-          <h1 class="text-display-large">
-            Je suis Yuna Orsini. <br /> Je suis <span
-              class="text-display-large-highlight"
-              >designer stratégique senior & lead UX.</span
-            >
-          </h1>
+      <div class="relative hidden sm:block">
+        <div class="absolute right-0">
+          <DiscreetDots x={7} y={6} />
         </div>
-      </Grid>
+      </div>
+      <div class="pt-[100px]">
+        <Grid>
+          <div class="col-span-full sm:col-span-7">
+            <h1 class="text-display-large">
+              Je suis Yuna Orsini. <br /> Je suis <span
+                class="text-display-large-highlight"
+                >designer stratégique senior & lead UX.</span
+              >
+            </h1>
+          </div>
+        </Grid>
+      </div>
     </div>
   </div>
 
-  <div class="mb-5">
+  <div class="mb-5 sm:mb-20">
     <div class="container">
       <Grid>
-        <div class="col-span-full">
-          <p class="text-body-normal text-paragraph mb-[25px]">
+        <div class="col-span-full sm:col-span-5">
+          <p class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px]">
             J’aime relever des défis complexes – UX, techniques,
             organisationnels… J’élabore des stratégies adaptées, j’y aligne les
             actions et j’architecture des produits et services numériques
@@ -57,23 +64,28 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
             autres, j'aide les équipes à concrétiser la vision produit et à
             grandir.
           </p>
-          <p class="text-body-normal text-paragraph mb-[25px]">
+          <p class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px]">
             Je m’appuie sur 13 années d’expérience* où j’ai exploré plusieurs
             facettes du design comme planneuse stratégique en agences, product
             strategist en freelance ou responsable UX en startup tech.
           </p>
         </div>
-        <div class="col-span-3">
+        <div class="col-span-3 sm:col-span-4">
           <p class="text-body-small text-secondary">
             *22 années, si créer des sites sur Dreamweaver à la sortie du
             collège puis en coder pour le fun au lycée et à la fac, ça compte.
           </p>
         </div>
       </Grid>
+      <div class="relative hidden sm:block">
+        <div class="absolute bottom-0 right-0 translate-y-[30px]">
+          <DiscreetDots x={6} y={6} />
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="mb-5">
+  <div class="mb-5 sm:hidden">
     <div class="container">
       <Grid>
         <div class="col-span-full">
@@ -96,7 +108,7 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
       <h2 class="text-title-large mb-[50px]">Mes services</h2>
 
       <Grid>
-        <div class="col-span-full">
+        <div class="col-span-full sm:col-span-6">
           <ul class="space-y-[30px] text-body-normal-highlight">
             <li>
               <Service
