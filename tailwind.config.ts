@@ -104,7 +104,7 @@ export default {
         },
       ],
       "body-normal": [
-        "16px",
+        "18px",
         {
           lineHeight: "140%",
           fontWeight: "400",
