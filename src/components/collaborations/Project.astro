@@ -57,6 +57,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
           <ProjectTestimonial
             quote={firstTestimonial.quote}
             author={firstTestimonial.author}
+            lang={firstTestimonial.lang}
           />
         </div>
       ) : null
@@ -79,6 +80,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
                 <ProjectTestimonial
                   author={testimonial.author}
                   quote={testimonial.quote}
+                  lang={testimonial.lang}
                 />
               </li>
             ))}

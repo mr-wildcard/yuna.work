@@ -4,21 +4,22 @@ import Icon from "../@common/Icon.astro";
 export interface Props {
   quote: string;
   author: string;
+  lang?: string;
 }
 
-const { quote, author } = Astro.props;
+const { quote, author, lang } = Astro.props;
 ---
 
 <figure class="space-y-5">
   <Icon name="quote" size={18} class="block" />
   <blockquote>
-    <p class="text-body-normal text-paragraph">
+    <p class="text-body-normal text-paragraph" lang={lang}>
       {quote}
     </p>
   </blockquote>
 
   <figcaption class="text-title-normal text-paragraph">
-    <cite class="not-italic">
+    <cite class="not-italic" lang={lang}>
       {author}
     </cite>
   </figcaption>
