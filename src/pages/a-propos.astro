@@ -1,0 +1,119 @@
+---
+import MainLayout from "layouts/main.astro";
+import Grid from "components/@common/Grid.astro";
+import DiscreetDots from "components/@common/DiscreetDots.astro";
+import MissionsSummary from "components/collaborations/MissionsSummary.astro";
+import ClientsLogos from "../components/collaborations/ClientsLogos.astro";
+import Separator from "../components/@common/Separator.astro";
+import Projects from "../components/collaborations/Projects.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<MainLayout
+  title="À propos"
+  description="Page description"
+  og_title="Open Graph Title"
+  og_description="Open Graph Description"
+>
+  <div class="mt-[30px] mb-5">
+    <div class="container">
+      <h1 class="text-display-large mb-[30px]">À propos</h1>
+    </div>
+  </div>
+
+  <div class="mb-[50px]">
+    <div class="container">
+      <DiscreetDots x={10} y={4} />
+    </div>
+  </div>
+
+  <div class="mb-[50px]">
+    <div class="container">
+      <div class="space-y-[30px]">
+        <section>
+          <h2 class="mb-5 text-headline-large-highlight">
+            1989-2006 : Hello world!
+          </h2>
+          <p class="text-body-normal">
+            J’ai toujours aimé apprendre. Au collège, je dévore les livres et je
+            me passionne pour chaque matière enseignée au point qu’au même
+            moment, ma prof de français m’imagine devenir prof de français et
+            mon prof de maths me conseille de devenir prof... de maths. C’est
+            sans compter ma rencontre avec le Web ! Windows 95, le modem qui
+            bippe et quelques années plus tard, les forums phpBB de passionnés,
+            Dreamweaver... À 12 ans, je crée mes premiers sites.
+            <br />
+            <br />
+            Les années défilent. Au lycée, ma passion pour le numérique ne diminue
+            pas. Au moment de choisir mes études, c’est le vertige... puis le soulagement,
+            au hasard d’un forum d’orientation : “Quoi ? Je peux faire du webdesign,
+            coder des sites et ça me donne un diplôme à la fin ?”. À 17 ans, je file
+            en DUT Services et Réseaux de Communication et je vis ma meilleure vie.
+          </p>
+        </section>
+        <section>
+          <h2 class="mb-5 text-headline-large-highlight">
+            2007-2016 : “Je veux faire de la stratégie”
+          </h2>
+          <p class="text-body-normal">
+            En entreprises, je découvre les appels d’offres et les concepts de
+            com’. Je comprends que le frisson ne se trouve pas que dans la prod’
+            mais aussi dans la conception stratégique. Pour ça, je dois
+            poursuivre mes études. Je valide une Licence Information et
+            Communication. Je décroche des stages passionnants en stratégie
+            digitale à Paris et à Londres et j’obtiens en 2012 un Master
+            Stratégies et Produits de Communication. Je commence à travailler en
+            freelance pour les organisations dans lesquelles j’ai précédemment
+            été stagiaire. En 2013, je deviens planneuse stratégique en agence
+            de communication digitale.
+            <br />
+            <br />
+            Au bout de quelques années, le bullshit des compétitions me fatigue un
+            peu. Avec ma collègue Daniela, c’est le coup de foudre professionnel.
+            Nous nous passionnons pour l’UX design et le design thinking, plus proches
+            des gens, et nous développons ces expertises au sein de l’agence.
+          </p>
+        </section>
+        <section>
+          <h2 class="mb-5 text-headline-large-highlight">
+            2017-now : le meilleur des deux mondes ?
+          </h2>
+          <p class="text-body-normal">
+            En 2017, Daniela et moi sommes missionnées en freelance puis
+            débauchées par une startup tech où il y a tout à faire – c’est à ce
+            jour le leader du paywall en France. Encore quelques années de kiff
+            en tant que Head of UX, et nous nous lançons officiellement en 2020
+            dans le grand bain du freelancing !
+            <br />
+            <br />
+            Aujourd’hui, mon profil stratégique et technique est un atout dans les
+            projets complexes. La diversité de mes expériences et mon attrait pour
+            les relations humaines me confèrent une haute capacité d’adaptation,
+            de compréhension et de résolution des problèmes. Mon expertise dans les
+            champs dits éthiques du design (inclusion, accessibilité, fair patterns,
+            éco-conception) est une force que je continue à nourrir par des formations
+            régulières.
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<div class="mb-[23px]">
+  <div class="container">
+    <Contact view="inline" />
+  </div>
+</div>
+
+<div class="mb-[50px] sm:hidden">
+  <div class="container">
+    <Grid as="div">
+      <div class="col-span-full">
+        <div class="flex justify-end">
+          <DiscreetDots x={7} y={6} />
+        </div>
+      </div>
+    </Grid>
+  </div>
+</div>
