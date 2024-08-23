@@ -14,7 +14,7 @@ const { view } = Astro.props;
 {
   view === "inline" && (
     <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
-      <Grid class="gap-y-[30px]">
+      <Grid as="div" class="gap-y-[30px]">
         <div class="col-span-full">
           <h2 class="text-headline-large">
             Une question, une proposition de mission ou de prise de parole ?
@@ -36,7 +36,7 @@ const { view } = Astro.props;
 {
   view === "intermediary" && (
     <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
-      <Grid class="gap-y-[20px]">
+      <Grid as="div" class="gap-y-[20px]">
         <div class="col-span-full">
           <h2 class="text-headline-large">
             Une question, une proposition de mission ou de prise de parole ?
@@ -65,7 +65,7 @@ const { view } = Astro.props;
 {
   view === "full" && (
     <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
-      <Grid>
+      <Grid as="div">
         <div class="col-span-full sm:col-span-6">
           <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
         </div>
