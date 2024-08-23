@@ -2,9 +2,7 @@
 import MainLayout from "layouts/main.astro";
 import Grid from "components/@common/Grid.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
-import Area from "components/collaborations/Area.astro";
-import Separator from "components/@common/Separator.astro";
-import Contact from "components/Contact.astro";
+import MissionsSummary from "../components/collaborations/MissionsSummary.astro";
 ---
 
 <MainLayout
@@ -21,165 +19,25 @@ import Contact from "components/Contact.astro";
         </div>
         <div class="col-span-full">
           <p class="text-body-normal text-paragraph">
-            J’ai accompagné de nombreux comptes clients, de secteurs variés, sur
-            des missions diverses : créations d’applications ou d’outils
-            métiers, refontes de sites, audits d’écosystèmes internes ou
-            externes, stratégies digitales, consulting…
+            J’accompagne des équipes de toutes tailles, provenant de nombreux
+            secteurs et sur des périmètres riches et variés. Cette diversité de
+            projets est un choix, pour un plaisir et un challenge renouvelés à
+            chaque collaboration.
           </p>
         </div>
       </Grid>
     </div>
   </div>
 
-  <div class="mb-10">
+  <div class="mb-[50px]">
     <div class="container">
       <DiscreetDots x={10} y={4} />
     </div>
   </div>
 
-  <div class="mb-[30px]">
-    <div class="container">
-      <Grid as="div" class="gap-y-[50px]">
-        <div class="col-span-full">
-          <Area
-            title="Secteur public"
-            items={[
-              "Cap Atlantique",
-              "CCI de Bordeaux",
-              "Conseil Régional d’Aquitaine",
-              "Groupe des Chalets",
-            ]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Presse & Médias"
-            items={[
-              "Canal+ International",
-              "OwnPage",
-              "Poool",
-              "Un groupe national d’information B2B",
-            ]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Banques et assurances"
-            items={[
-              "Banque Populaire Aquitaine",
-              "Centre Atlantique",
-              "Groupe IMA",
-              "Un leader international du paiement",
-            ]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Matériel et équipement"
-            items={["DIAM Bouchage", "John Deere Europe", "Pirelli", "Legrand"]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Sport & bien-être"
-            items={[
-              "Dynamo Bordeaux",
-              "Union Bordeaux-Bègles",
-              "Un institut de bien-être holistique",
-            ]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Services B2B"
-            items={[
-              "DXOMARK",
-              "FIMECO Walter France",
-              "Orange Business Services",
-            ]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Mode & cosmétique"
-            items={["L’Oréal", "New Balance", "Sézane"]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Commerce et e-commerce"
-            items={["Bâtiland", "Monoprix", "Ômajor"]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Transport"
-            items={[
-              "Un GIE portuaire",
-              "Une société nationale de transport routier",
-            ]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area
-            title="Enseignement"
-            items={["KedgeBS", "School of System Change"]}
-          />
-        </div>
-        <div class="col-span-full">
-          <Area title="Médico-social" items={["MeyerDOM", "Sys1"]} />
-        </div>
-        <div class="col-span-full">
-          <Area title="Divertissement" items={["Orange jeux"]} />
-        </div>
-      </Grid>
-    </div>
-  </div>
-
-  <div class="mb-5">
-    <div class="container">
-      <div class="flex justify-end">
-        <DiscreetDots x={7} y={4} />
-      </div>
-    </div>
-  </div>
-
-  <div class="mb-6">
-    <div class="2xl:container">
-      <Separator />
-    </div>
-  </div>
-
-  <div class="mb-20">
-    <div class="container">
-      <h3 class="text-title-large mb-[50px]">Sélection de projets</h3>
-      <p class="text-body-normal text-paragraph mb-20">
-        Mes collaborations sont majoritairement placées sous clause de
-        confidentialité.
-      </p>
-      TBD
-    </div>
-  </div>
-
   <div class="mb-[100px]">
-    <div class="2xl:container">
-      <Separator />
-    </div>
-  </div>
-
-  <div class="mb-5">
     <div class="container">
-      <div class="flex justify-end">
-        <Contact view="full" />
-      </div>
-    </div>
-  </div>
-
-  <div class="mb-5">
-    <div class="container">
-      <div class="flex justify-end">
-        <DiscreetDots x={7} y={7} />
-      </div>
+      <MissionsSummary />
     </div>
   </div>
 </MainLayout>

@@ -1,0 +1,34 @@
+---
+import { getImage } from "astro:assets";
+import ListStyle from "images/list-style.svg";
+import Grid from "../@common/Grid.astro";
+
+const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
+---
+
+<Grid as="div">
+  <h2 class="col-span-full text-headline-small-highlight mb-5">
+    Exemples de missions
+  </h2>
+
+  <ul class="col-span-full space-y-6 text-body-normal-highlight">
+    <li>Accompagnement à la transformation “users”</li>
+    <li>Conception UX et test de PoCs, de prototypes</li>
+    <li>Audits d’écosystèmes internes ou externes</li>
+    <li>Refonte de sites, d’outils, d’applications métiers</li>
+    <li>Recherche UX et développement de la connaissance “users”</li>
+    <li>Animation de processus de design thinking, de design sprints</li>
+    <li>Mise en place de projets d’accessibilité et d’éco-conception</li>
+    <li>Design review, mentorat, consulting UX</li>
+  </ul>
+</Grid>
+
+<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
+  li {
+    @apply text-paragraph pl-[39px];
+
+    background-image: var(--url);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+</style>
