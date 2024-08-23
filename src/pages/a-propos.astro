@@ -1,12 +1,13 @@
 ---
+import { getImage } from "astro:assets";
 import MainLayout from "layouts/main.astro";
 import Grid from "components/@common/Grid.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
-import MissionsSummary from "components/collaborations/MissionsSummary.astro";
-import ClientsLogos from "../components/collaborations/ClientsLogos.astro";
-import Separator from "../components/@common/Separator.astro";
-import Projects from "../components/collaborations/Projects.astro";
 import Contact from "../components/Contact.astro";
+import ListStyle from "images/list-style.svg";
+import Separator from "../components/@common/Separator.astro";
+
+const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
 <MainLayout
@@ -27,7 +28,7 @@ import Contact from "../components/Contact.astro";
     </div>
   </div>
 
-  <div class="mb-[50px]">
+  <div class="mb-[60px]">
     <div class="container">
       <div class="space-y-[30px]">
         <section>
@@ -98,22 +99,64 @@ import Contact from "../components/Contact.astro";
       </div>
     </div>
   </div>
+
+  <div class="mb-[100px]">
+    <div class="container">
+      <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
+        <ul class="space-y-[30px]">
+          <li>
+            <span class="text-title-small">Diplômée</span> d’un Master en Stratégies
+            et Produits de Communication
+          </li>
+          <li>
+            <span class="text-title-small">Certifiée</span> en design accessible,
+            en numérique responsable et Opquast
+          </li>
+          <li>
+            <span class="text-title-small">Formée</span> au service design, à l’éco-conception,
+            aux tests d’utilisabilité, à la recherche UX et au design thinking
+          </li>
+          <li>
+            <span class="text-title-small">Promue</span> maman en 2021 ❤️
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <div class="2xl:container">
+      <Separator />
+    </div>
+  </div>
+
+  <div class="mb-[23px]">
+    <div class="container">
+      <Contact view="inline" />
+    </div>
+  </div>
+
+  <div class="mb-[50px] sm:hidden">
+    <div class="container">
+      <Grid as="div">
+        <div class="col-span-full">
+          <div class="flex justify-end">
+            <DiscreetDots x={7} y={6} />
+          </div>
+        </div>
+      </Grid>
+    </div>
+  </div>
 </MainLayout>
 
-<div class="mb-[23px]">
-  <div class="container">
-    <Contact view="inline" />
-  </div>
-</div>
+<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
+  li {
+    @apply text-body-normal;
 
-<div class="mb-[50px] sm:hidden">
-  <div class="container">
-    <Grid as="div">
-      <div class="col-span-full">
-        <div class="flex justify-end">
-          <DiscreetDots x={7} y={6} />
-        </div>
-      </div>
-    </Grid>
-  </div>
-</div>
+    padding-left: 37px;
+
+    background-image: var(--url);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+</style>
