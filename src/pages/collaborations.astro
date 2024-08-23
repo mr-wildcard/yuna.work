@@ -6,6 +6,7 @@ import MissionsSummary from "components/collaborations/MissionsSummary.astro";
 import ClientsLogos from "../components/collaborations/ClientsLogos.astro";
 import Separator from "../components/@common/Separator.astro";
 import Projects from "../components/collaborations/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <MainLayout
@@ -59,6 +60,30 @@ import Projects from "../components/collaborations/Projects.astro";
   <div class="mb-[100px]">
     <div class="container">
       <Projects />
+    </div>
+  </div>
+
+  <div class="mb-[100px]">
+    <div class="2xl:container">
+      <Separator />
+    </div>
+  </div>
+
+  <div class="mb-[23px]">
+    <div class="container">
+      <Contact view="full" />
+    </div>
+  </div>
+
+  <div class="mb-[50px] sm:hidden">
+    <div class="container">
+      <Grid as="div">
+        <div class="col-span-full">
+          <div class="flex justify-end">
+            <DiscreetDots x={7} y={6} />
+          </div>
+        </div>
+      </Grid>
     </div>
   </div>
 </MainLayout>
