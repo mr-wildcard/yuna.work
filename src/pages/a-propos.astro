@@ -6,6 +6,9 @@ import DiscreetDots from "components/@common/DiscreetDots.astro";
 import Contact from "../components/Contact.astro";
 import ListStyle from "images/list-style.svg";
 import Separator from "../components/@common/Separator.astro";
+import Fierte from "../components/a-propos/Fierte.astro";
+import Link from "../components/@common/Link.astro";
+import ExternalActivity from "../components/a-propos/ExternalActivity.astro";
 
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
@@ -103,7 +106,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
   <div class="mb-[100px]">
     <div class="container">
       <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
-        <ul class="space-y-[30px]">
+        <ul class="about-me-enum space-y-[30px]">
           <li>
             <span class="text-title-small">Diplômée</span> d’un Master en Stratégies
             et Produits de Communication
@@ -130,6 +133,191 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
     </div>
   </div>
 
+  <div class="mb-[100px]">
+    <div class="container">
+      <h2 class="text-title-large mb-[50px]">Mes fiertés professionnelles</h2>
+      <Grid as="div">
+        <div class="col-span-full sm:col-span-6">
+          <ul class="space-y-[30px]">
+            <li>
+              <Fierte
+                title="En 2020, j’ai co-fondé l’initiative freelance Team UX"
+                description="Nous y affirmons un positionnement de design éthique fort avec un engagement sur l’accessibilité, l’inclusion, les fair patterns et l’éco-conception et nous excellons dans la refonte de produits dits complexes. À ce jour, Team UX a été l’extension UX de plus de 20 équipes produits dans 15 secteurs d’activité différents. Ma plus grande fierté professionnelle !"
+              />
+
+              <Link
+                class="mt-[30px]"
+                variant="full-radius"
+                to="https://team-ux.com"
+              >
+                Faire appel à Team UX
+              </Link>
+
+              <Separator class="mt-[50px]" />
+            </li>
+            <li>
+              <Fierte
+                title="J’ai porté 3 ans la stratégie UX de la startup Poool"
+                description="J’ai intégré la core team de la startup Poool, aujourd’hui leader du paywall en France, en tant que responsable UX. Mon action a été structurante pour obtenir la première levée de fonds : définition de la vision et de la roadmap produit, refonte totale et conception d’une suite de produits SaaS, structuration des processus de conception, culture design thinking…"
+              />
+
+              <Separator class="mt-[50px]" />
+            </li>
+            <li>
+              <Fierte
+                title="J’ai créé le pôle strat’ de l’agence MOONDA en 2013"
+                description="J’ai proposé de créer mon poste dans cette agence digitale, entre newbiz et projets clients. En tant que planneuse stratégique puis UX designer, j’ai développé une culture stratégique dans l’objectif de placer les marques du côté de leur clientèle. J’y ai aussi porté avec succès le chantier “communication & innovation”, créant une nouvelle dynamique interne et externe."
+              />
+
+              <Separator class="mt-[50px]" />
+            </li>
+            <li>
+              <Fierte
+                title="J’aide les plus juniors à monter en compétences depuis 2012"
+                description="J’aime accompagner les personnes à grandir, que ce soit dans les structures dans lesquelles je travaille ou bien dans le cadre de mentorats individuels. J’interviens dans des écoles pour partager mon expérience et rencontrer de nouvelles promotions. Je m’investis aussi bénévolement au sein de Reboot!, l’événement étudiant de la communication responsable."
+              />
+            </li>
+          </ul>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-[100px]">
+    <div class="container">
+      <Grid as="div" class="gap-y-4">
+        <div class="col-span-full sm:col-span-6">
+          <ExternalActivity
+            title="Certifications, formations et diplômes"
+            items={[
+              {
+                title: "Certifications et formations professionnelles",
+                events: [
+                  {
+                    title: "Design d’interfaces accessibles",
+                    date: "Access42 (avril 2023)",
+                  },
+                  {
+                    title: "Maîtrise de la qualité en projet Web (Expert)",
+                    date: "Opquast (mars 2022)",
+                  },
+                  {
+                    title: "Numérique responsable",
+                    date: "La Rochelle Université (décembre 2021)",
+                  },
+                  {
+                    title: "Service Design",
+                    date: "IxDF (décembre 2021)",
+                  },
+                  {
+                    title: "Tests d’utilisabilité à distance Testapic",
+                    date: "UserTesting (mars 2021)",
+                  },
+                  {
+                    title: "User research",
+                    date: "IxDF (juillet 2019)",
+                  },
+                  {
+                    title: "Conducting usability testing",
+                    date: "IxDF (mars 2018)",
+                  },
+                  {
+                    title: "Design thinking",
+                    date: "IxDF (septembre 2017)",
+                  },
+                ],
+              },
+              {
+                title: "Ateliers professionnels",
+                events: [
+                  {
+                    title: "La Bataille de l’IA",
+                    date: "Latitudes (mai 2024)",
+                  },
+                  {
+                    title: "Climate Pitch",
+                    date: "Planet on Stage (décembre 2023)",
+                  },
+                  {
+                    title: "Low-carbon Web-Design Workshop",
+                    date: "Hey Low (mai 2023)",
+                  },
+                  {
+                    title: "Fresque du Numérique",
+                    date: "Asso Fresque du Numérique (janvier 2023)",
+                  },
+                  {
+                    title: "Fresque de l'Éthique dans le design numérique",
+                    date: "Designers Éthiques (septembre 2022)",
+                  },
+                  {
+                    title: "Fresque du Climat",
+                    date: "Asso Fresque du Climat (février 2022)",
+                  },
+                  {
+                    title: "Atelier pro éco-conception et design numérique",
+                    date: "Designers Éthiques (novembre 2021)",
+                  },
+                ],
+              },
+              {
+                title: "Diplômes et formation initiale",
+                events: [
+                  {
+                    title: "Master Stratégies et Produits de Communication",
+                    date: "ISIC, Bordeaux (2010 → 2012)",
+                  },
+                  {
+                    title: "Licence Information et Communication",
+                    date: "ISIC, Bordeaux (2009 → 2010)",
+                  },
+                  {
+                    title: "DUT Services et Réseaux de Communication",
+                    date: "MMI, Bordeaux (2007 → 2009)",
+                  },
+                ],
+              },
+            ]}
+          />
+        </div>
+        <div class="col-span-full sm:col-span-6">
+          <ExternalActivity
+            title="Interventions pédagogiques"
+            items={[
+              {
+                title: "Interventions en écoles depuis 2012",
+                description:
+                  "Cours, suivi annuel, workshops, jurys d’admission en BUT MMI Bordeaux, à l’ECV Digital et à l’ESD Bordeaux (Bac+1 à Bac+5)",
+              },
+              {
+                title: "Engagement bénévole à Reboot! depuis 2021",
+                description:
+                  "Événement étudiant de la communication responsable, Reboot! forme chaque année des milliers d’étudiantes et étudiants",
+              },
+            ]}
+          />
+        </div>
+        <div class="col-span-full sm:col-span-6">
+          <ExternalActivity
+            title="Prises de parole en public"
+            items={[
+              {
+                title: "Dernière conférence donnée",
+                description:
+                  "“Au-delà des clichés sur l’éco-conception : des exemples créatifs pour changer notre vision” (BDX I/O 2023)",
+              },
+              {
+                title: "Dernière table ronde modérée",
+                description:
+                  "“Communautés éthiques : s'organiser pour ne plus nuire” (Reboot! 2023)",
+              },
+            ]}
+          />
+        </div>
+      </Grid>
+    </div>
+  </div>
+
   <div class="mb-[23px]">
     <div class="container">
       <Contact view="inline" />
@@ -150,7 +338,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 </MainLayout>
 
 <style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
-  li {
+  .about-me-enum li {
     @apply text-body-normal;
 
     padding-left: 37px;
