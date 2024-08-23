@@ -2,7 +2,8 @@
 import MainLayout from "layouts/main.astro";
 import Grid from "components/@common/Grid.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
-import MissionsSummary from "../components/collaborations/MissionsSummary.astro";
+import MissionsSummary from "components/collaborations/MissionsSummary.astro";
+import ClientsLogos from "../components/collaborations/ClientsLogos.astro";
 ---
 
 <MainLayout
@@ -38,6 +39,12 @@ import MissionsSummary from "../components/collaborations/MissionsSummary.astro"
   <div class="mb-[100px]">
     <div class="container">
       <MissionsSummary />
+    </div>
+  </div>
+
+  <div class="mb-40">
+    <div class="container">
+      <ClientsLogos />
     </div>
   </div>
 </MainLayout>

@@ -1,0 +1,114 @@
+---
+import { Picture } from "astro:assets";
+import Grid from "../@common/Grid.astro";
+import ClientLogoElle from "images/collaborations/clients-logos/elle.png";
+import ClientLogoNeat from "images/collaborations/clients-logos/neat.png";
+import ClientLogoSezane from "images/collaborations/clients-logos/sezane.png";
+import ClientLogoOrange from "images/collaborations/clients-logos/orange.png";
+import ClientLogoSSC from "images/collaborations/clients-logos/school-of-system-change.png";
+import ClientLogoEkino from "images/collaborations/clients-logos/ekino.png";
+import ClientLogoInfopro from "images/collaborations/clients-logos/infopro.png";
+import ClientLogoWalter from "images/collaborations/clients-logos/walter-france.png";
+import ClientLogoDynamo from "images/collaborations/clients-logos/dynamo.png";
+import ClientLogoJohnDeere from "images/collaborations/clients-logos/john-deere.png";
+import ClientLogoCanalPlus from "images/collaborations/clients-logos/canalplus.png";
+import ClientLogoVigiePorts from "images/collaborations/clients-logos/vigie-ports.png";
+import ClientLogoSys1 from "images/collaborations/clients-logos/sys1.png";
+import ClientLogoDXOMARK from "images/collaborations/clients-logos/dxomark.png";
+import ClientLogoCapAtlantique from "images/collaborations/clients-logos/capatlantique.png";
+import ClientLogoSFRBusiness from "images/collaborations/clients-logos/sfr-business.png";
+import ClientLogoImatech from "images/collaborations/clients-logos/imatech.png";
+
+const logos = [
+  {
+    src: ClientLogoElle,
+    alt: "Elle",
+  },
+  {
+    src: ClientLogoNeat,
+    alt: "Neat",
+  },
+  {
+    src: ClientLogoSezane,
+    alt: "Sezane",
+  },
+  {
+    src: ClientLogoOrange,
+    alt: "Orange",
+  },
+  {
+    src: ClientLogoSSC,
+    alt: "School of System Change",
+  },
+  {
+    src: ClientLogoEkino,
+    alt: "Ekino",
+  },
+  {
+    src: ClientLogoInfopro,
+    alt: "Infopro Digital",
+  },
+  {
+    src: ClientLogoWalter,
+    alt: "Walter france",
+  },
+  {
+    src: ClientLogoDynamo,
+    alt: "Dynamo",
+  },
+  {
+    src: ClientLogoJohnDeere,
+    alt: "John Deere",
+  },
+  {
+    src: ClientLogoCanalPlus,
+    alt: "Canal+",
+  },
+  {
+    src: ClientLogoVigiePorts,
+    alt: "Vigie Ports",
+  },
+  {
+    src: ClientLogoSys1,
+    alt: "Sys1",
+  },
+  {
+    src: ClientLogoDXOMARK,
+    alt: "DXOMARK",
+  },
+  {
+    src: ClientLogoCapAtlantique,
+    alt: "Cap Atlantique",
+  },
+  {
+    src: ClientLogoSFRBusiness,
+    alt: "SFR Business",
+  },
+  {
+    src: ClientLogoImatech,
+    alt: "Imatech",
+  },
+];
+---
+
+<Grid as="ul" class="gap-y-[30px]">
+  {
+    logos.map((logo) => (
+      <li>
+        <Picture
+          src={logo.src}
+          width={logo.src.width >> 1}
+          height={logo.src.height >> 1}
+          densities={[1, 2]}
+          alt={logo.alt}
+        />
+      </li>
+    ))
+  }
+</Grid>
+
+<style>
+  li {
+    @apply col-span-2 h-[66px] flex justify-center items-center;
+  }
+</style>
