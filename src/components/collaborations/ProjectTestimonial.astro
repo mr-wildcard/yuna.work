@@ -1,0 +1,25 @@
+---
+import Icon from "../@common/Icon.astro";
+
+export interface Props {
+  quote: string;
+  author: string;
+}
+
+const { quote, author } = Astro.props;
+---
+
+<figure class="space-y-5">
+  <Icon name="quote" size={18} class="block" />
+  <blockquote>
+    <p class="text-body-normal text-paragraph">
+      {quote}
+    </p>
+  </blockquote>
+
+  <figcaption class="text-title-normal text-paragraph">
+    <cite class="not-italic">
+      {author}
+    </cite>
+  </figcaption>
+</figure>
