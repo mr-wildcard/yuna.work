@@ -1,15 +1,12 @@
 ---
 import MainLayout from "layouts/main.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
-import Link from "components/@common/Link.astro";
 import Grid from "components/@common/Grid.astro";
 import Contact from "components/Contact.astro";
 import Separator from "components/@common/Separator.astro";
 import Service from "components/homepage/Service.astro";
 import Certifications from "components/homepage/Certifications.astro";
 import Testimonial from "components/homepage/Testimonial.astro";
-import Fierte from "components/homepage/Fierte.astro";
-import ExternalActivity from "components/homepage/ExternalActivity.astro";
 ---
 
 <MainLayout
@@ -162,7 +159,9 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
 
   <div class="mb-[120px] sm:mb-[100px]">
     <div class="container">
-      <h2 class="text-title-small mb-2.5">Je suis formée ou certifiée par</h2>
+      <h2 class="text-title-small mb-2.5">
+        Je suis formée, certifiée ou diplômée par
+      </h2>
 
       <Grid as="div">
         <div class="col-span-full sm:col-span-6">
@@ -242,12 +241,7 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
     </div>
   </div>
 
-  <div class="mb-6">
-    <div class="2xl:container">
-      <Separator />
-    </div>
-  </div>
-
+  <!--
   <div class="mb-[100px]">
     <div class="container">
       <h2 class="text-title-large mb-[50px]">Mes fiertés professionnelles</h2>
@@ -338,6 +332,7 @@ import ExternalActivity from "components/homepage/ExternalActivity.astro";
       </Grid>
     </div>
   </div>
+  -->
 
   <div class="mb-[22px]">
     <div class="container">
