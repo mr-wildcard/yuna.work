@@ -43,7 +43,7 @@ export default {
       "display-small": [
         "30px",
         {
-          lineHeight: "140%",
+          lineHeight: "42px",
           fontWeight: "700",
         },
       ],

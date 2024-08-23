@@ -14,15 +14,15 @@ const HTMLTag = isSelected ? "span" : "a";
 
 const variantCSSClasses =
   variant === "primary"
-    ? ["text-display-small"]
+    ? ["text-display-small", { "text-secondary": isSelected }]
     : ["text-title-normal", "text-secondary"];
 
 const underlineCSSClasses = [
   "after:block",
   "after:w-full",
-  "after:h-[5px]",
+  "after:h-[4px]",
   "after:rounded-full",
-  "after:bg-primary",
+  "after:bg-secondary",
 ];
 ---
 
@@ -31,7 +31,6 @@ const underlineCSSClasses = [
   class:list={[
     "inline-block",
     isSelected ? underlineCSSClasses : undefined,
-    { "after:mt-[5px]": isSelected && variant === "primary" },
     ...variantCSSClasses,
     ...cssClasses,
   ]}
