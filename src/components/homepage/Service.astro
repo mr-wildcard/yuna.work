@@ -14,7 +14,7 @@ const { skills, title, description } = Astro.props;
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
-<Grid>
+<Grid as="div">
   <div class="col-span-full">
     <h3 class="text-headline-large-highlight mb-[30px]">{title}</h3>
   </div>
