@@ -2,6 +2,7 @@
 import NavItem from "./NavItem.astro";
 import Logo from "./Logo.astro";
 import Contact from "../Contact.astro";
+import Link from "../@common/Link.astro";
 ---
 
 <header
@@ -14,10 +15,32 @@ import Contact from "../Contact.astro";
       <div id="logo">
         <Logo />
       </div>
+
+      <ul class="hidden lg:flex">
+        <li class="mr-10">
+          <NavItem to="/" variant="primary">Mes expertises</NavItem>
+        </li>
+        <li class="mr-10">
+          <NavItem to="/collaborations" variant="primary">
+            Collaborations
+          </NavItem>
+        </li>
+        <li class="mr-[35px]">
+          <NavItem to="/a-propos" variant="primary">À propos</NavItem>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="text-menu-label-highlight text-neutral1 px-5 py-2 rounded-full bg-primary"
+            >Contactez-moi</a
+          >
+        </li>
+      </ul>
+
       <button
         id="mobile-menu-opener"
         aria-expanded="false"
-        class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
+        class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full lg:hidden"
       >
         <span class="text-closed">Menu</span>
         <span class="text-opened">Fermer</span>

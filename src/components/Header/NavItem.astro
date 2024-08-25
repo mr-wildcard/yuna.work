@@ -14,7 +14,12 @@ const HTMLTag = isSelected ? "span" : "a";
 
 const variantCSSClasses =
   variant === "primary"
-    ? ["text-display-small", { "text-secondary": isSelected }]
+    ? [
+        "text-display-small",
+        "lg:text-menu-label",
+        { "text-secondary": isSelected },
+        { "lg:text-paragraph": isSelected },
+      ]
     : ["text-body-normal", "text-secondary"];
 
 const underlineCSSClasses = [
@@ -23,6 +28,8 @@ const underlineCSSClasses = [
   "after:h-[4px]",
   "after:rounded-full",
   "after:bg-secondary",
+  "lg:after:bg-primary",
+  "lg:after:translate-y-[5px]",
 ];
 ---
 
