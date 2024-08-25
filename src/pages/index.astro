@@ -112,7 +112,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
     </div>
   </div>
 
-  <div class="mb-[50px]">
+  <div class="mb-[50px] lg:mb-[110px]">
     <div class="container">
       <h2 class="text-title-large mb-[50px]">Mes services</h2>
 
@@ -167,12 +167,16 @@ import Testimonial from "components/homepage/Testimonial.astro";
 
   <div class="mb-[120px] sm:mb-[100px]">
     <div class="container">
-      <h2 class="text-title-small mb-2.5">
-        Je suis formée, certifiée ou diplômée par
-      </h2>
-
       <Grid as="div">
-        <div class="col-span-full sm:col-span-6">
+        <div class="col-span-full lg:col-start-3">
+          <h2 class="text-title-small mb-2.5">
+            Je suis formée, certifiée ou diplômée par
+          </h2>
+        </div>
+
+        <div
+          class="col-span-full sm:col-span-6 lg:col-start-3 lg:col-span-full"
+        >
           <Certifications />
         </div>
       </Grid>
