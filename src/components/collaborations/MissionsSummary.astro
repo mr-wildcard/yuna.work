@@ -2,29 +2,34 @@
 import { getImage } from "astro:assets";
 import ListStyle from "images/list-style.svg";
 import Grid from "../@common/Grid.astro";
+import DiscreetDots from "../@common/DiscreetDots.astro";
 
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
-<Grid as="div">
+<Grid as="div" class="relative">
   <h2
     class="col-span-full xl:col-start-5 text-headline-small-highlight mb-5 xl:mb-6"
   >
     Exemples de missions
   </h2>
 
-  <ul
-    class="col-span-full xl:col-start-5 space-y-6 xl:space-y-0 text-body-normal-highlight"
-  >
-    <li>Accompagnement à la transformation “users”</li>
-    <li>Conception UX et test de PoCs, de prototypes</li>
-    <li>Audits d’écosystèmes internes ou externes</li>
-    <li>Refonte de sites, d’outils, d’applications métiers</li>
-    <li>Recherche UX et développement de la connaissance “users”</li>
-    <li>Animation de processus de design thinking, de design sprints</li>
-    <li>Mise en place de projets d’accessibilité et d’éco-conception</li>
-    <li>Design review, mentorat, consulting UX</li>
-  </ul>
+  <div class="col-span-full xl:col-start-5">
+    <div class="absolute hidden xl:block -top-4 -left-[100px]">
+      <DiscreetDots x={16} y={16} />
+    </div>
+
+    <ul class="space-y-6 xl:space-y-0 text-body-normal-highlight">
+      <li>Accompagnement à la transformation “users”</li>
+      <li>Conception UX et test de PoCs, de prototypes</li>
+      <li>Audits d’écosystèmes internes ou externes</li>
+      <li>Refonte de sites, d’outils, d’applications métiers</li>
+      <li>Recherche UX et développement de la connaissance “users”</li>
+      <li>Animation de processus de design thinking, de design sprints</li>
+      <li>Mise en place de projets d’accessibilité et d’éco-conception</li>
+      <li>Design review, mentorat, consulting UX</li>
+    </ul>
+  </div>
 </Grid>
 
 <style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
