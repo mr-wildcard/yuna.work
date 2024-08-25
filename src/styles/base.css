@@ -59,7 +59,9 @@
     }
 
     .text-display-small {
-      font-size: 40px;
+      @apply font-sans;
+
+      font-size: 30px;
     }
 
     .text-headline-small,
