@@ -36,21 +36,21 @@ const { view } = Astro.props;
 
 {
   view === "intermediary" && (
-    <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
+    <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5 xl:px-0 xl:py-10">
       <Grid as="div" class="gap-y-[20px]">
-        <div class="col-span-full">
+        <div class="col-span-full xl:col-start-2 xl:col-span-5">
           <h2 class="text-headline-large">
             Une question, une proposition de mission ou de prise de parole ?
           </h2>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full xl:col-span-5">
           <p class="text-body-normal">
             Je suis particulièrement intéressée par la thématique des
             responsabilités du numérique, les projets à impact, les modèles
             alternatifs et les initiatives socialement engagées.
           </p>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full xl:col-start-7 xl:col-span-5">
           <a
             href="mailto:hello@yuna.work"
             class="text-headline-large-highlight hover:text-neutral4 underline"
