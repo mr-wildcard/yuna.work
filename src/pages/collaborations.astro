@@ -18,11 +18,11 @@ import Projects from "../components/collaborations/Projects.astro";
   <div class="mt-[30px] mb-5">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full">
-          <h1 class="text-display-large mb-[30px]">Collaborations</h1>
+        <div class="col-span-full xl:col-start-2">
+          <h1 class="text-display-large mb-[30px] xl:mb-10">Collaborations</h1>
         </div>
-        <div class="col-span-full">
-          <p class="text-body-normal text-paragraph">
+        <div class="col-span-full xl:col-start-2 xl:col-span-6">
+          <p class="text-body-normal text-paragraph xl:mb-20">
             J’accompagne des équipes de toutes tailles, provenant de nombreux
             secteurs et sur des périmètres riches et variés. Cette diversité de
             projets est un choix, pour un plaisir et un challenge renouvelés à
@@ -33,19 +33,24 @@ import Projects from "../components/collaborations/Projects.astro";
     </div>
   </div>
 
-  <div class="mb-[50px]">
+  <div class="mb-[50px] xl:hidden">
     <div class="container">
       <DiscreetDots x={10} y={4} />
     </div>
   </div>
 
-  <div class="mb-[100px]">
+  <div class="relative mb-[100px] xl:mb-[140px]">
+    <div class="absolute hidden xl:block ml-5">
+      <DiscreetDots x={16} y={16} />
+    </div>
     <div class="container">
-      <MissionsSummary />
+      <div class="xl:pt-4">
+        <MissionsSummary />
+      </div>
     </div>
   </div>
 
-  <div class="mb-40">
+  <div class="mb-40 xl:mb-[207px]">
     <div class="container">
       <ClientsLogos />
     </div>
