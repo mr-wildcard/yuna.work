@@ -15,18 +15,18 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
 <Grid as="div">
-  <div class="col-span-full">
+  <div class="col-span-full sm:col-span-6 lg:col-start-3 lg:col-span-full">
     <h3 class="text-headline-large-highlight mb-[30px]">{title}</h3>
   </div>
-  <div class="col-span-full">
+  <div class="col-span-full sm:col-span-6 lg:col-start-3">
     <p class="text-body-normal text-paragraph mb-5">{description}</p>
   </div>
-  <div class="col-span-full">
+  <div class="col-span-full lg:col-start-10 lg:col-span-3">
     <ul>
       {
         skills.map((skill) => (
           <li>
-            <span>{skill}</span>
+            <p>{skill}</p>
           </li>
         ))
       }
@@ -38,9 +38,9 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
   li {
     background-image: var(--url);
     background-repeat: no-repeat;
-    background-position: 0 center;
+    background-position: 0 12px;
 
-    span {
+    p {
       @apply text-paragraph pl-[43px];
     }
   }
