@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import Grid from "./@common/Grid.astro";
 import Icon from "./@common/Icon.astro";
 import ImageContactYuna from "images/contact-yuna.png";
+import DiscreetDots from "./@common/DiscreetDots.astro";
 
 interface Props {
   view: "inline" | "intermediary" | "full";
@@ -64,51 +65,62 @@ const { view } = Astro.props;
 
 {
   view === "full" && (
-    <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
-      <Grid as="div">
-        <div class="col-span-full sm:col-span-6">
-          <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
-        </div>
-        <div class="col-span-full sm:col-span-6">
-          <div class="mb-[30px]">
-            <Picture
-              densities={[1, 2]}
-              src={ImageContactYuna}
-              alt="Yuna Orsini"
-              width={193}
-              height={157}
-              formats={["avif", "webp"]}
-            />
+    <div class="relative xl:pt-[116px] xl:pb-[100px]">
+      <div class="hidden xl:block absolute top-0 -right-[38px]">
+        <DiscreetDots x={16} y={26} />
+      </div>
+      <section class="bg-primary text-neutral1 rounded-card pt-[30px] py-10 px-5 xl:pt-[50px] xl:pb-[70px] xl:px-0">
+        <Grid as="div">
+          <div class="col-span-full sm:col-span-6 xl:hidden">
+            <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
           </div>
-        </div>
-        <div class="col-span-full sm:col-span-6">
-          <h3 class="text-headline-large mb-[30px]">
-            Une question, une proposition de mission ou de prise de parole ?
-          </h3>
-        </div>
-        <div class="col-span-full sm:col-span-6">
-          <p class="text-title-normal mb-5">
-            Écrivez-moi par email à
-            <a class="underline" href="mailto:hello@yuna.work">
-              hello@yuna.work
-            </a>
-          </p>
-        </div>
-        <div class="col-span-full sm:col-span-6">
-          <p class="text-title-normal">
-            Vous pouvez aussi me contacter sur
-            <a
-              class="underline "
-              href="https://www.linkedin.com/in/yunaorsini/"
-            >
-              <span class="space-x-2">
-                <span>LinkedIn</span>
-                <Icon class="inline" size={22} name="open_in_new" />
-              </span>
-            </a>
-          </p>
-        </div>
-      </Grid>
-    </section>
+          <div class="col-span-full xl:col-start-2 xl:col-span-2">
+            <div class="mb-[30px] xl:h-full xl:mb-0 xl:flex xl:items-center">
+              <Picture
+                densities={[1, 2]}
+                src={ImageContactYuna}
+                alt="Yuna Orsini"
+                width={193}
+                height={157}
+                formats={["avif", "webp"]}
+              />
+            </div>
+          </div>
+          <div class="col-span-full sm:col-span-6 xl:col-start-4 xl:col-span-6">
+            <h2 class="hidden xl:block text-title-large mb-[25px] xl:mb-[15px]">
+              Contactez-moi
+            </h2>
+
+            <div class="xl:col-start-4 xl:col-span-6">
+              <h3 class="text-display-medium mb-[30px]">
+                Une question, une proposition de mission ou de prise de parole ?
+              </h3>
+            </div>
+            <div class="xl:col-start-4">
+              <p class="text-headline-small mb-5 xl:mb-2.5">
+                Écrivez-moi par email à
+                <a class="underline font-bold" href="mailto:hello@yuna.work">
+                  hello@yuna.work
+                </a>
+              </p>
+            </div>
+            <div class="xl:col-start-4">
+              <p class="text-headline-small">
+                Ou vous pouvez me contacter sur
+                <a
+                  class="underline font-bold"
+                  href="https://www.linkedin.com/in/yunaorsini/"
+                >
+                  <span class="space-x-2">
+                    <span>LinkedIn</span>
+                    <Icon class="inline" size={22} name="open_in_new" />
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </Grid>
+      </section>
+    </div>
   )
 }
