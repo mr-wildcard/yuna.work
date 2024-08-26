@@ -65,17 +65,17 @@ const { view } = Astro.props;
 
 {
   view === "full" && (
-    <div class="relative xl:pt-[116px] xl:pb-[100px]">
-      <div class="hidden xl:block absolute top-0 -right-[38px]">
+    <div class="relative lg:pt-[116px] lg:pb-[100px]">
+      <div class="hidden lg:block absolute top-0 -right-[38px]">
         <DiscreetDots x={16} y={24} />
       </div>
-      <section class="bg-primary text-neutral1 rounded-card pt-[30px] py-10 px-5 xl:pt-[50px] xl:pb-[70px] xl:px-0">
+      <section class="bg-primary text-neutral1 rounded-card pt-[30px] py-10 px-5 lg:pt-[50px] lg:pb-[70px] lg:px-0">
         <Grid as="div">
-          <div class="col-span-full sm:col-span-6 xl:hidden">
+          <div class="col-span-full sm:col-span-6 lg:hidden">
             <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
           </div>
-          <div class="col-span-full xl:col-start-2 xl:col-span-2">
-            <div class="mb-[30px] xl:h-full xl:mb-0 xl:flex xl:items-center">
+          <div class="col-span-full lg:col-start-2 lg:col-span-2">
+            <div class="mb-[30px] lg:h-full lg:mb-0 lg:flex lg:items-center">
               <Picture
                 densities={[1, 2]}
                 src={ImageContactYuna}
@@ -86,27 +86,27 @@ const { view } = Astro.props;
               />
             </div>
           </div>
-          <div class="col-span-full sm:col-span-6 xl:col-start-4 xl:col-span-6">
-            <h2 class="hidden xl:block text-title-large mb-[25px] xl:mb-[15px]">
+          <div class="col-span-full sm:col-span-6 lg:col-start-4 lg:col-span-8 2xl:col-span-6">
+            <h2 class="hidden lg:block text-title-large mb-[25px] lg:mb-[15px]">
               Contactez-moi
             </h2>
 
-            <div class="xl:col-start-4 xl:col-span-6">
+            <div class="lg:col-start-4 lg:col-span-6">
               <h3 class="text-display-medium mb-[30px]">
                 Une question, une proposition de mission ou de prise de parole ?
               </h3>
             </div>
-            <div class="xl:col-start-4">
-              <p class="text-headline-small mb-5 xl:mb-2.5">
+            <div class="lg:col-start-4">
+              <p class="text-headline-small mb-5 lg:mb-2.5">
                 Écrivez-moi par email à
                 <a class="underline font-bold" href="mailto:hello@yuna.work">
                   hello@yuna.work
                 </a>
               </p>
             </div>
-            <div class="xl:col-start-4">
+            <div class="lg:col-start-4">
               <p class="text-headline-small">
-                Ou vous pouvez me contacter sur
+                Ou contactez-moi sur
                 <a
                   class="underline font-bold"
                   href="https://www.linkedin.com/in/yunaorsini/"
