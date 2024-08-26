@@ -19,125 +19,136 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
   og_title="Open Graph Title"
   og_description="Open Graph Description"
 >
-  <div class="mt-[30px] mb-5">
+  <div class="my-[30px] lg:mt-[95px] lg:mb-10">
     <div class="container">
-      <h1 class="text-display-large mb-[30px]">À propos</h1>
+      <Grid as="div">
+        <div class="col-span-full lg:col-start-2">
+          <h1 class="text-display-large">À propos</h1>
+        </div>
+      </Grid>
     </div>
   </div>
 
-  <div class="mb-[50px]">
+  <div class="mb-[50px] lg:hidden">
     <div class="container">
       <DiscreetDots x={10} y={4} />
     </div>
   </div>
 
-  <div class="mb-[60px]">
+  <div class="mb-[140px]">
     <div class="container">
-      <div class="space-y-[30px]">
-        <section>
-          <h2 class="mb-5 text-headline-large-highlight">
-            1989-2006 : Hello world!
-          </h2>
-          <p class="text-body-normal">
-            J’ai toujours aimé apprendre. Au collège, je dévore les livres et je
-            me passionne pour chaque matière enseignée au point qu’au même
-            moment, ma prof de français m’imagine devenir prof de français et
-            mon prof de maths me conseille de devenir prof... de maths. C’est
-            sans compter ma rencontre avec le Web ! Windows 95, le modem qui
-            bippe et quelques années plus tard, les forums phpBB de passionnés,
-            Dreamweaver... À 12 ans, je crée mes premiers sites.
-            <br />
-            <br />
-            Les années défilent. Au lycée, ma passion pour le numérique ne diminue
-            pas. Au moment de choisir mes études, c’est le vertige... puis le soulagement,
-            au hasard d’un forum d’orientation : “Quoi ? Je peux faire du webdesign,
-            coder des sites et ça me donne un diplôme à la fin ?”. À 17 ans, je file
-            en DUT Services et Réseaux de Communication et je vis ma meilleure vie.
-          </p>
-        </section>
-        <section>
-          <h2 class="mb-5 text-headline-large-highlight">
-            2007-2016 : “Je veux faire de la stratégie”
-          </h2>
-          <p class="text-body-normal">
-            En entreprises, je découvre les appels d’offres et les concepts de
-            com’. Je comprends que le frisson ne se trouve pas que dans la prod’
-            mais aussi dans la conception stratégique. Pour ça, je dois
-            poursuivre mes études. Je valide une Licence Information et
-            Communication. Je décroche des stages passionnants en stratégie
-            digitale à Paris et à Londres et j’obtiens en 2012 un Master
-            Stratégies et Produits de Communication. Je commence à travailler en
-            freelance pour les organisations dans lesquelles j’ai précédemment
-            été stagiaire. En 2013, je deviens planneuse stratégique en agence
-            de communication digitale.
-            <br />
-            <br />
-            Au bout de quelques années, le bullshit des compétitions me fatigue un
-            peu. Avec ma collègue Daniela, c’est le coup de foudre professionnel.
-            Nous nous passionnons pour l’UX design et le design thinking, plus proches
-            des gens, et nous développons ces expertises au sein de l’agence.
-          </p>
-        </section>
-        <section>
-          <h2 class="mb-5 text-headline-large-highlight">
-            2017-now : le meilleur des deux mondes ?
-          </h2>
-          <p class="text-body-normal">
-            En 2017, Daniela et moi sommes missionnées en freelance puis
-            débauchées par une startup tech où il y a tout à faire – c’est à ce
-            jour le leader du paywall en France. Encore quelques années de kiff
-            en tant que Head of UX, et nous nous lançons officiellement en 2020
-            dans le grand bain du freelancing !
-            <br />
-            <br />
-            Aujourd’hui, mon profil stratégique et technique est un atout dans les
-            projets complexes. La diversité de mes expériences et mon attrait pour
-            les relations humaines me confèrent une haute capacité d’adaptation,
-            de compréhension et de résolution des problèmes. Mon expertise dans les
-            champs dits éthiques du design (inclusion, accessibilité, fair patterns,
-            éco-conception) est une force que je continue à nourrir par des formations
-            régulières.
-          </p>
-        </section>
-      </div>
+      <Grid as="div">
+        <div class="col-span-full lg:col-start-2 lg:col-span-6">
+          <div class="mb-[60px] space-y-[30px] lg:mb-0">
+            <section>
+              <h2 class="mb-5 text-headline-large-highlight">
+                1989-2006 : Hello world!
+              </h2>
+              <p class="text-body-normal">
+                J’ai toujours aimé apprendre. Au collège, je dévore les livres
+                et je me passionne pour chaque matière enseignée au point qu’au
+                même moment, ma prof de français m’imagine devenir prof de
+                français et mon prof de maths me conseille de devenir prof... de
+                maths. C’est sans compter ma rencontre avec le Web ! Windows 95,
+                le modem qui bippe et quelques années plus tard, les forums
+                phpBB de passionnés, Dreamweaver... À 12 ans, je crée mes
+                premiers sites.
+                <br />
+                <br />
+                Les années défilent. Au lycée, ma passion pour le numérique ne diminue
+                pas. Au moment de choisir mes études, c’est le vertige... puis le
+                soulagement, au hasard d’un forum d’orientation : “Quoi ? Je peux
+                faire du webdesign, coder des sites et ça me donne un diplôme à la
+                fin ?”. À 17 ans, je file en DUT Services et Réseaux de Communication
+                et je vis ma meilleure vie.
+              </p>
+            </section>
+            <section>
+              <h2 class="mb-5 text-headline-large-highlight">
+                2007-2016 : “Je veux faire de la stratégie”
+              </h2>
+              <p class="text-body-normal">
+                En entreprises, je découvre les appels d’offres et les concepts
+                de com’. Je comprends que le frisson ne se trouve pas que dans
+                la prod’ mais aussi dans la conception stratégique. Pour ça, je
+                dois poursuivre mes études. Je valide une Licence Information et
+                Communication. Je décroche des stages passionnants en stratégie
+                digitale à Paris et à Londres et j’obtiens en 2012 un Master
+                Stratégies et Produits de Communication. Je commence à
+                travailler en freelance pour les organisations dans lesquelles
+                j’ai précédemment été stagiaire. En 2013, je deviens planneuse
+                stratégique en agence de communication digitale.
+                <br />
+                <br />
+                Au bout de quelques années, le bullshit des compétitions me fatigue
+                un peu. Avec ma collègue Daniela, c’est le coup de foudre professionnel.
+                Nous nous passionnons pour l’UX design et le design thinking, plus
+                proches des gens, et nous développons ces expertises au sein de l’agence.
+              </p>
+            </section>
+            <section>
+              <h2 class="mb-5 text-headline-large-highlight">
+                2017-now : le meilleur des deux mondes ?
+              </h2>
+              <p class="text-body-normal">
+                En 2017, Daniela et moi sommes missionnées en freelance puis
+                débauchées par une startup tech où il y a tout à faire – c’est à
+                ce jour le leader du paywall en France. Encore quelques années
+                de kiff en tant que Head of UX, et nous nous lançons
+                officiellement en 2020 dans le grand bain du freelancing !
+                <br />
+                <br />
+                Aujourd’hui, mon profil stratégique et technique est un atout dans
+                les projets complexes. La diversité de mes expériences et mon attrait
+                pour les relations humaines me confèrent une haute capacité d’adaptation,
+                de compréhension et de résolution des problèmes. Mon expertise dans
+                les champs dits éthiques du design (inclusion, accessibilité, fair
+                patterns, éco-conception) est une force que je continue à nourrir
+                par des formations régulières.
+              </p>
+            </section>
+          </div>
+        </div>
+
+        <div class="col-span-full lg:col-start-9 lg:col-span-4">
+          <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
+            <ul class="about-me-enum space-y-[30px]">
+              <li>
+                <span class="text-title-small">Diplômée</span> d’un Master en Stratégies
+                et Produits de Communication
+              </li>
+              <li>
+                <span class="text-title-small">Certifiée</span> en design accessible,
+                en numérique responsable et Opquast
+              </li>
+              <li>
+                <span class="text-title-small">Formée</span> au service design, à
+                l’éco-conception, aux tests d’utilisabilité, à la recherche UX et
+                au design thinking
+              </li>
+              <li>
+                <span class="text-title-small">Promue</span> maman en 2021 ❤️
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Grid>
     </div>
   </div>
 
-  <div class="mb-[100px]">
-    <div class="container">
-      <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
-        <ul class="about-me-enum space-y-[30px]">
-          <li>
-            <span class="text-title-small">Diplômée</span> d’un Master en Stratégies
-            et Produits de Communication
-          </li>
-          <li>
-            <span class="text-title-small">Certifiée</span> en design accessible,
-            en numérique responsable et Opquast
-          </li>
-          <li>
-            <span class="text-title-small">Formée</span> au service design, à l’éco-conception,
-            aux tests d’utilisabilité, à la recherche UX et au design thinking
-          </li>
-          <li>
-            <span class="text-title-small">Promue</span> maman en 2021 ❤️
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="mb-6">
+  <div class="mb-6 lg:mb-5">
     <div class="2xl:container">
       <Separator />
     </div>
   </div>
 
-  <div class="mb-[100px]">
+  <div class="mb-[100px] lg:mb-[140px]">
     <div class="container">
       <h2 class="text-title-large mb-[50px]">Mes fiertés professionnelles</h2>
       <Grid as="div">
-        <div class="col-span-full sm:col-span-6">
+        <div
+          class="col-span-full sm:col-span-6 lg:col-start-3 lg:col-span-full"
+        >
           <ul class="space-y-[30px]">
             <li>
               <Fierte
@@ -183,10 +194,10 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
     </div>
   </div>
 
-  <div class="mb-[100px]">
+  <div class="mb-[100px] lg:mb-40">
     <div class="container">
-      <Grid as="div" class="gap-y-4">
-        <div class="col-span-full sm:col-span-6">
+      <Grid as="div" class="gap-y-4 lg:grid-rows-3">
+        <div class="col-span-full sm:col-span-6 lg:row-span-full">
           <ExternalActivity
             title="Certifications, formations et diplômes"
             items={[
@@ -318,7 +329,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
     </div>
   </div>
 
-  <div id="contact" class="mb-[23px]">
+  <div id="contact" class="mb-[23px] lg:mb-4">
     <div class="container">
       <Contact view="full" />
     </div>
@@ -335,16 +346,16 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
       </Grid>
     </div>
   </div>
+
+  <style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
+    .about-me-enum li {
+      @apply text-body-normal;
+
+      padding-left: 37px;
+
+      background-image: var(--url);
+      background-repeat: no-repeat;
+      background-position: 0 10px;
+    }
+  </style>
 </MainLayout>
-
-<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
-  .about-me-enum li {
-    @apply text-body-normal;
-
-    padding-left: 37px;
-
-    background-image: var(--url);
-    background-repeat: no-repeat;
-    background-position: 0 10px;
-  }
-</style>
