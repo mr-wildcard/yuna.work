@@ -7,19 +7,24 @@ import DiscreetDots from "../@common/DiscreetDots.astro";
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
-<Grid as="div" class="relative">
+<Grid as="div">
   <h2
-    class="col-span-full xl:col-start-5 text-headline-small-highlight mb-5 xl:mb-6"
+    class="col-span-full lg:col-start-5 text-headline-small-highlight mb-5 lg:mb-6"
   >
     Exemples de missions
   </h2>
 
-  <div class="col-span-full xl:col-start-5">
-    <div class="absolute hidden xl:block -top-4 -left-[100px]">
-      <DiscreetDots x={16} y={16} />
+  <div class="col-span-full lg:col-start-5 relative">
+    <div
+      class="absolute hidden lg:block xl:hidden -top-[90px] -right-[calc(-100%-100px)]"
+    >
+      <DiscreetDots x={11} y={15} />
     </div>
 
-    <ul class="space-y-6 xl:space-y-0 text-body-normal-highlight">
+    <div class="absolute hidden xl:block -top-4 -right-[calc(-100%-100px)]">
+      <DiscreetDots x={16} y={16} />
+    </div>
+    <ul class="space-y-4 lg:space-y-0 text-body-normal-highlight">
       <li>Accompagnement à la transformation “users”</li>
       <li>Conception UX et test de PoCs, de prototypes</li>
       <li>Audits d’écosystèmes internes ou externes</li>

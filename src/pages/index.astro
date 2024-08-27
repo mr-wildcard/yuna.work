@@ -39,7 +39,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
           <DiscreetDots x={16} y={24} />
         </div>
         <div
-          class="col-span-full sm:col-span-7 lg:col-span-full 2xl:col-start-2 2xl:col-span-9"
+          class="col-span-full sm:col-span-7 lg:col-start-2 lg:col-span-full xl:col-start-2 xl:col-span-10 2xl:col-start-2 2xl:col-span-9"
         >
           <h1 class="text-display-large">
             Je suis Yuna Orsini. <br /> Je suis <span
@@ -55,7 +55,9 @@ import Testimonial from "components/homepage/Testimonial.astro";
   <div class="mb-5 sm:mb-20">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full sm:col-span-5 2xl:col-start-2 2xl:col-span-5">
+        <div
+          class="col-span-full sm:col-span-5 lg:col-start-2 xl:col-start-2 lg:col-span-6"
+        >
           <p class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px]">
             J’aime relever des défis complexes – UX, techniques,
             organisationnels… J’élabore des stratégies adaptées, j’y aligne les
@@ -67,7 +69,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
           <p class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px]">
             Je m’appuie sur 13 années d’expérience* où j’ai exploré plusieurs
             facettes du design comme planneuse stratégique en agences, product
-            strategist en freelance ou responsable UX en startup tech.
+            designer en freelance ou responsable UX en startup tech.
           </p>
         </div>
         <div class="col-span-3 sm:col-span-4 lg:col-span-full">
@@ -118,7 +120,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
         <li>
           <Service
             title="Expertise UX"
-            description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, où cohabitent des enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests… je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
+            description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, aux enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests... je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
             skills={[
               "Méthodologies UX",
               "UX research",
@@ -134,7 +136,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
         <li>
           <Service
             title="Vision stratégique"
-            description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime échanger, questionner, apprendre des personnes qui m’entourent et les faire grandir."
+            description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime questionner, apprendre des personnes qui m’entourent et les faire grandir."
             skills={[
               "Analyse stratégique",
               "Mentorat et consulting",
@@ -150,7 +152,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
         <li>
           <Service
             title="Design éthique"
-            description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception de manière attentive et raisonnée. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
+            description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception attentifs et raisonnés. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
             skills={[
               "Design accessible",
               "Éco-conception",
@@ -207,16 +209,9 @@ import Testimonial from "components/homepage/Testimonial.astro";
           <ul class="space-y-4 lg:space-y-5">
             <li>
               <Testimonial
-                quote="J’ai eu la chance de travailler avec Yuna Orsini à plusieurs reprises. Collaborer avec elle est très gratifiant. Son exigence permet des échanges aussi agréables que fructueux. Elle pose les bonnes questions, lance des défis et encourage ses partenaires. Avec sa vision à long terme, elle établit des bases solides pour que les marques se développent de manière cohérente et efficace.”"
+                quote="Collaborer avec Yuna est très gratifiant. Son exigence permet des échanges aussi agréables que fructueux. Elle pose les bonnes questions, lance des défis et encourage ses partenaires. Avec sa vision à long terme, elle établit des bases solides pour que les marques se développent de manière cohérente et efficace.”"
                 author="Christophe Pernaudet, directeur créatif et concepteur-rédacteur"
-                context="Christophe a été un partenaire et prestataire sur plusieurs projets"
-              />
-            </li>
-            <li>
-              <Testimonial
-                quote="Tout simplement ravis de la collaboration avec Yuna. La qualité de son travail, de l'accompagnement de clients novices en la matière, des livrables et des analyses constructives et son dynamisme ont été un vrai plus pour ce projet.”"
-                author="Alexandre Pronine, manager technique senior"
-                context="Alexandre a été à plusieurs reprises mon client"
+                context="Christophe a été un partenaire sur plusieurs projets"
               />
             </li>
             <li>
@@ -230,20 +225,20 @@ import Testimonial from "components/homepage/Testimonial.astro";
               <Testimonial
                 quote="Yuna fait partie de mes collaborations professionnelles les plus enrichissantes. En plus de ses connaissances autant stratégiques que techniques, Yuna est tellement passionnée et investie qu'elle fait toujours ressortir le meilleur de chaque personne dans son équipe.”"
                 author="Declan Owens, consultant en transition écologique"
-                context="Declan était mon collègue pendant plusieurs années"
+                context="Declan a été mon collègue pendant plusieurs années"
               />
             </li>
             <li>
               <Testimonial
                 quote="En plus de son rôle de Head of UX, Yuna nous a permis à travers de nombreux ateliers de design thinking de transcrire des choses complexes et diffuses, en des idées simples, comprises de tous et activables. Quelle que soit la thématique (stratégie, produit, design, UX…), le résultat est toujours au RDV.”"
                 author="Maxime Moné, co-fondateur de Poool"
-                context="Maxime était mon employeur pendant plusieurs années"
+                context="Maxime a été mon employeur pendant plusieurs années"
               />
             </li>
             <li>
               <Testimonial
                 quote="Yuna est une personne volontaire, perfectionniste, investie, qui cherche toujours à aller plus loin. Elle sait aussi faire grandir les gens travaillant directement sous sa responsabilité et orchestre avec respect le travail des équipes intervenant sur ses projets.”"
-                author="Aurélie, responsable de BU chez Conserto"
+                author="Aurélie Oudry, responsable de BU chez Conserto"
                 context="Aurélie a été ma manager pendant plusieurs années, puis à plusieurs reprises ma cliente"
               />
             </li>

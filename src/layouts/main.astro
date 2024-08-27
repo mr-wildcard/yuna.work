@@ -28,6 +28,7 @@ const { title, description, og_description, og_title } = Astro.props;
     <meta property="og:description" content={og_description} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={`${Astro.site}images/sn-share.png`} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="sitemap" href={`${Astro.site}sitemap-index.xml`} />
 
     <!-- <link> for CSS print ? -->

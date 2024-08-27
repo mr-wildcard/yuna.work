@@ -22,7 +22,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
 ---
 
 <Grid as="div">
-  <div class="col-span-full xl:col-span-4">
+  <div class="col-span-full lg:col-start-2 lg:col-span-4 xl:col-start-3">
     <div class="mb-[30px] relative">
       {
         isOngoing ? (
@@ -38,7 +38,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
     </div>
   </div>
 
-  <div class="col-span-full xl:col-span-6">
+  <div class="col-span-full lg:col-span-7 xl:col-span-6">
     <h3 class="text-display-small mb-5">
       {title}
     </h3>
@@ -68,9 +68,9 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
     {
       otherTestimonials.length > 0 ? (
         <details class="mt-[30px]">
-          <summary class="w-fit flex items-center px-5 py-2 space-x-[10px] rounded-full border-primary border-2">
+          <summary class="w-fit flex items-center px-5 py-2 space-x-[10px] rounded-full border-primary border-2 hover:bg-neutral3">
             <span class="text-menu-label-highlight">
-              Déplier plus de témoignages
+              Voir plus de témoignages
             </span>
             <span class="flex items-center justify-center w-[22px] h-[22px]">
               <Icon name="chevron_down" width={10} height={6} />
@@ -103,6 +103,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
   }
 
   summary {
+    cursor: pointer;
     user-select: none;
     list-style: none;
 
