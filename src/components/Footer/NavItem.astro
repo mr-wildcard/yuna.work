@@ -12,7 +12,17 @@ const isSelected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 
 const HTMLTag = isSelected ? "span" : "a";
 
+const basicCSSClasses = [
+  "py-2",
+  "px-4",
+  "inline-block",
+  "text-body-normal",
+  "rounded-full",
+];
+
 const selectedCSSClasses = [
+  "after:absolute",
+  "after:left-0",
   "after:block",
   "after:w-full",
   "after:h-[3px]",
@@ -21,8 +31,6 @@ const selectedCSSClasses = [
 ];
 
 const unselectedCSSClasses = [
-  "py-2",
-  "xl:p-0",
   "underline",
   "underline-offset-2",
   "hover:no-underline",
@@ -33,11 +41,12 @@ const unselectedCSSClasses = [
 <HTMLTag
   href={!isSelected ? to : undefined}
   class:list={[
-    "text-body-normal",
-    "rounded-full",
-    isSelected ? selectedCSSClasses : unselectedCSSClasses,
+    ...basicCSSClasses,
     ...cssClasses,
+    !isSelected ? unselectedCSSClasses : undefined,
   ]}
 >
-  <slot />
+  <span class:list={["relative", isSelected ? selectedCSSClasses : undefined]}>
+    <slot />
+  </span>
 </HTMLTag>
