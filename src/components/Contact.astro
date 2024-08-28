@@ -36,21 +36,21 @@ const { view } = Astro.props;
 
 {
   view === "intermediary" && (
-    <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5 xl:px-0 xl:py-10">
-      <Grid as="div" class="gap-y-[20px]">
-        <div class="col-span-full xl:col-start-2 xl:col-span-5">
+    <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5 lg:px-0 lg:py-10">
+      <Grid as="div" class="gap-y-[20px] lg:gap-x-10">
+        <div class="col-span-full lg:col-start-2 lg:col-span-5">
           <h2 class="text-headline-large">
             Une question, une proposition de mission ou de prise de parole ?
           </h2>
         </div>
-        <div class="col-span-full xl:col-span-5">
+        <div class="col-span-full lg:col-span-5">
           <p class="text-body-normal">
             Je suis particulièrement intéressée par la thématique des
             responsabilités du numérique, les projets à impact, les modèles
             alternatifs et les initiatives socialement engagées.
           </p>
         </div>
-        <div class="col-span-full xl:col-start-7 xl:col-span-5">
+        <div class="col-span-full lg:col-start-7 lg:col-span-5">
           <a
             href="mailto:hello@yuna.work"
             class="text-headline-large-highlight hover:text-neutral4 underline"
@@ -65,11 +65,11 @@ const { view } = Astro.props;
 
 {
   view === "full" && (
-    <div class="relative lg:pt-[118px] lg:pb-[100px]">
-      <div class="hidden lg:block absolute top-0 -right-[38px]">
-        <DiscreetDots x={16} y={24} />
+    <div class="relative lg:pt-[118px] lg:pb-[100px] isolate">
+      <div class="z-0 hidden lg:block absolute top-0 -right-[38px]">
+        <DiscreetDots x={16} y={22} />
       </div>
-      <section class="bg-primary text-neutral1 rounded-card pt-[30px] py-10 px-5 lg:pt-[50px] lg:pb-[70px] lg:px-0">
+      <section class="relative bg-primary text-neutral1 rounded-card pt-[30px] py-10 px-5 lg:pt-[50px] lg:pb-[60px] xl:pt-[50px] xl:pb-[70px] lg:px-0">
         <Grid as="div">
           <div class="col-span-full sm:col-span-6 lg:hidden">
             <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
@@ -87,17 +87,17 @@ const { view } = Astro.props;
             </div>
           </div>
           <div class="col-span-full sm:col-span-6 lg:col-start-4 lg:col-span-8 2xl:col-span-6">
-            <h2 class="hidden lg:block text-title-large mb-[25px] lg:mb-[15px]">
+            <h2 class="hidden lg:block text-title-normal xl:text-title-large mb-[25px] lg:mb-[15px]">
               Contactez-moi
             </h2>
 
             <div class="lg:col-start-4 lg:col-span-6">
-              <h3 class="text-display-medium mb-[30px]">
+              <h3 class="text-display-medium lg:text-headline-large xl:text-display-medium mb-[30px]">
                 Une question, une proposition de mission ou de prise de parole ?
               </h3>
             </div>
             <div class="lg:col-start-4">
-              <p class="text-headline-small mb-5 lg:mb-2.5">
+              <p class="text-headline-small lg:text-body-normal xl:text-headline-small mb-5 lg:mb-1.5 xl:mb-2.5">
                 Écrivez-moi par email à
                 <a class="underline font-bold" href="mailto:hello@yuna.work">
                   hello@yuna.work
@@ -105,15 +105,25 @@ const { view } = Astro.props;
               </p>
             </div>
             <div class="lg:col-start-4">
-              <p class="text-headline-small">
+              <p class="text-headline-small lg:text-body-normal xl:text-headline-small">
                 Ou contactez-moi sur
                 <a
-                  class="underline font-bold"
+                  class=" font-bold"
                   href="https://www.linkedin.com/in/yunaorsini/"
                 >
-                  <span class="space-x-2">
+                  <span class="underline space-x-2 inline-flex items-center">
                     <span>LinkedIn</span>
-                    <Icon class="inline" size={22} name="open_in_new" />
+                    <Icon
+                      class="inline lg:hidden xl:inline"
+                      size={22}
+                      name="open_in_new"
+                    />
+
+                    <Icon
+                      class="hidden lg:inline xl:hidden"
+                      size={20}
+                      name="open_in_new"
+                    />
                   </span>
                 </a>
               </p>

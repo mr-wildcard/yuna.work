@@ -36,6 +36,9 @@ import Testimonial from "components/homepage/Testimonial.astro";
       </div>
       <Grid as="div" class="relative sm:pt-[100px] lg:pt-12">
         <div class="absolute hidden lg:block top-0 -right-10">
+          <DiscreetDots x={11} y={24} />
+        </div>
+        <div class="absolute hidden xl:block top-0 -right-10">
           <DiscreetDots x={16} y={24} />
         </div>
         <div
@@ -56,7 +59,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
     <div class="container">
       <Grid as="div">
         <div
-          class="col-span-full sm:col-span-5 lg:col-start-2 xl:col-start-2 lg:col-span-6"
+          class="col-span-full sm:col-span-5 lg:col-start-2 lg:col-span-6 xl:col-start-2 xl:col-span-6"
         >
           <p class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px]">
             J’aime relever des défis complexes – UX, techniques,
@@ -75,7 +78,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
         <div class="col-span-3 sm:col-span-4 lg:col-span-full">
           <Grid as="div">
             <div
-              class="col-span-full lg:col-start-9 lg:col-span-3 xl:col-start-10 xl:col-span-2"
+              class="col-span-full lg:col-start-10 lg:col-span-3 xl:col-start-10 xl:col-span-2"
             >
               <p class="text-body-small text-primary lg:mt-5">
                 *22 années, si créer des sites sur Dreamweaver à la sortie du
@@ -118,48 +121,54 @@ import Testimonial from "components/homepage/Testimonial.astro";
 
       <ul class="space-y-[30px] text-body-normal-highlight">
         <li>
-          <Service
-            title="Expertise UX"
-            description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, aux enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests... je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
-            skills={[
-              "Méthodologies UX",
-              "UX research",
-              "Design UX",
-              "Design thinking",
-            ]}
-          />
+          <Grid as="div">
+            <Service
+              title="Expertise UX"
+              description="J’ai une expérience éprouvée sur des projets UX complexes, notamment SaaS et B2B, aux enjeux ergonomiques, business, humains et organisationnels. Cadrage, recherche, ateliers, architecture de l’information, prototypage, tests... je conçois des produits efficaces avec des équipes multidisciplinaires et j’embarque personnes utilisatrices et parties prenantes."
+              skills={[
+                "Méthodologies UX",
+                "UX research",
+                "Design UX",
+                "Design thinking",
+              ]}
+            />
+          </Grid>
 
           <Grid as="div" class="mt-[50px]">
-            <Separator class="col-span-full lg:col-start-3" />
+            <Separator class="col-span-full lg:col-start-2" />
           </Grid>
         </li>
         <li>
-          <Service
-            title="Vision stratégique"
-            description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime questionner, apprendre des personnes qui m’entourent et les faire grandir."
-            skills={[
-              "Analyse stratégique",
-              "Mentorat et consulting",
-              "Esprit d’entreprendre",
-              "Design ops",
-            ]}
-          />
+          <Grid as="div">
+            <Service
+              title="Vision stratégique"
+              description="Stratège de formation, de métier et de caractère, j’analyse naturellement les situations. Je conceptualise des solutions pertinentes et pragmatiques pour optimiser parcours, services ou manières de collaborer. Je propose et porte des projets avec cohérence, j’aligne vision et actions. J’aime questionner, apprendre des personnes qui m’entourent et les faire grandir."
+              skills={[
+                "Analyse stratégique",
+                "Mentorat et consulting",
+                "Esprit d’entreprendre",
+                "Design ops",
+              ]}
+            />
+          </Grid>
 
           <Grid as="div" class="mt-[50px]">
-            <Separator class="col-span-full lg:col-start-3" />
+            <Separator class="col-span-full lg:col-start-2" />
           </Grid>
         </li>
         <li>
-          <Service
-            title="Design éthique"
-            description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception attentifs et raisonnés. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
-            skills={[
-              "Design accessible",
-              "Éco-conception",
-              "Responsabilités du numérique",
-              "Communication",
-            ]}
-          />
+          <Grid as="div">
+            <Service
+              title="Design éthique"
+              description="Formée à l’assurance qualité Web, au design d’interfaces accessibles et à l’éco-conception, je milite depuis des années pour un numérique meilleur. Je fais des choix de conception attentifs et raisonnés. Je sensibilise et accompagne les équipes et la clientèle dans cette direction plus acceptable : accessibilité, fair patterns, inclusivité, écoconception, soin, qualité…"
+              skills={[
+                "Design accessible",
+                "Éco-conception",
+                "Responsabilités du numérique",
+                "Communication",
+              ]}
+            />
+          </Grid>
         </li>
       </ul>
     </div>
@@ -168,14 +177,14 @@ import Testimonial from "components/homepage/Testimonial.astro";
   <div class="mb-[120px] sm:mb-[100px]">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full lg:col-start-3">
+        <div class="col-span-full lg:col-start-2">
           <h2 class="text-title-small mb-2.5">
             Je suis formée, certifiée ou diplômée par
           </h2>
         </div>
 
         <div
-          class="col-span-full sm:col-span-6 lg:col-start-3 lg:col-span-full"
+          class="col-span-full sm:col-span-6 lg:col-start-2 lg:col-span-full"
         >
           <Certifications />
         </div>
@@ -204,7 +213,7 @@ import Testimonial from "components/homepage/Testimonial.astro";
       <h2 class="text-title-large mb-[50px]">Travailler avec moi</h2>
       <Grid as="ul" class="gap-y-4 lg:gap-5">
         <div
-          class="col-span-full sm:col-span-6 lg:col-start-3 lg:col-span-full"
+          class="col-span-full sm:col-span-6 lg:col-start-2 lg:col-span-full xl:col-start-3"
         >
           <ul class="space-y-4 lg:space-y-5">
             <li>
