@@ -15,13 +15,13 @@ const { view } = Astro.props;
 {
   view === "inline" && (
     <section class="bg-primary text-neutral1 rounded-card py-[30px] px-5">
-      <Grid as="div" class="gap-y-[30px]">
-        <div class="col-span-full">
+      <Grid as="div" class="gap-y-[30px] lg:items-center">
+        <div class="col-span-full lg:col-start-2 lg:col-span-5">
           <h2 class="text-headline-large">
             Une question, une proposition de mission ou de prise de parole ?
           </h2>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full lg:col-start-7">
           <a
             href="mailto:hello@yuna.work"
             class="text-headline-large-highlight hover:text-neutral4 underline"
