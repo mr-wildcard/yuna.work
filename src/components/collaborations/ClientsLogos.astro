@@ -97,7 +97,7 @@ const logos = [
 
 <Grid
   as="ul"
-  class="gap-y-[30px] xl:gap-0 xl:flex xl:justify-center xl:flex-wrap xl:-mx-10 xl:-my-4 xl:px-10"
+  class="gap-y-[30px] xl:gap-0 xl:flex xl:justify-center xl:flex-wrap xl:-mx-9 xl:-my-4 2xl:-mx-10"
 >
   {
     logos.map((logo) => {
@@ -105,7 +105,7 @@ const logos = [
       const logoDesktopWidth = logo.src.width >> 1;
 
       return (
-        <li class="col-span-2 h-[66px] flex justify-center items-center xl:mx-10 xl:my-4">
+        <li class="col-span-2 h-[66px] flex justify-center items-center xl:mx-9 xl:my-4 2xl:mx-10">
           <Picture
             src={logo.src}
             widths={[logoMobileWidth, logoDesktopWidth]}

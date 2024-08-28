@@ -55,7 +55,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
 
     {
       firstTestimonial ? (
-        <div class="mt-[30px]">
+        <div class="mt-[30px] lg:mt-[50px]">
           <ProjectTestimonial
             quote={firstTestimonial.quote}
             author={firstTestimonial.author}
@@ -67,7 +67,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
 
     {
       otherTestimonials.length > 0 ? (
-        <details class="mt-[30px]">
+        <details class="mt-[30px] lg:mt-[50px]">
           <summary class="w-fit flex items-center px-5 py-2 space-x-[10px] rounded-full border-primary border-2 hover:bg-neutral3">
             <span class="text-menu-label-highlight">
               Voir plus de témoignages
