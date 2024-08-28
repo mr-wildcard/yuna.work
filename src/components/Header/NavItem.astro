@@ -1,12 +1,12 @@
 ---
-const { pathname } = Astro.url;
-const { to, class: cssClasses = [], variant } = Astro.props;
-
 interface Props {
   to: string;
   variant: "primary" | "secondary";
   class?: string;
 }
+
+const { pathname } = Astro.url;
+const { to, class: cssClasses = [], variant } = Astro.props;
 
 const isSelected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 
@@ -14,31 +14,34 @@ const HTMLTag = isSelected ? "span" : "a";
 
 const variantCSSClasses =
   variant === "primary"
-    ? [
-        "text-display-small",
-        "lg:text-menu-label",
-        { "text-secondary": isSelected },
-        { "lg:text-paragraph": isSelected },
-      ]
+    ? ["text-display-small", "lg:text-menu-label"]
     : ["text-body-normal", "text-secondary"];
 
-const underlineCSSClasses = [
+const basicCSSClasses = ["px-5", "py-2"];
+
+const isSelectedCSSClasses = [
   "after:block",
   "after:w-full",
   "after:h-[4px]",
   "after:rounded-full",
   "after:bg-secondary",
+  "lg:text-paragraph",
   "lg:after:bg-primary",
   "lg:after:translate-y-[5px]",
+  variant === "primary" ? ["text-secondary", "lg:text-paragraph"] : undefined,
 ];
+
+const anchorCSSClasses = ["lg:rounded-full", "lg:hover:bg-neutral3"];
 ---
 
 <HTMLTag
   href={!isSelected ? to : undefined}
   class:list={[
     "inline-block",
-    isSelected ? underlineCSSClasses : undefined,
+    ...basicCSSClasses,
     ...variantCSSClasses,
+    isSelected ? isSelectedCSSClasses : undefined,
+    !isSelected ? anchorCSSClasses : undefined,
     ...cssClasses,
   ]}
 >
