@@ -14,7 +14,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
   <div class="my-[30px] lg:mt-[95px]">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full">
+        <div class="col-span-full lg:col-start-2">
           <h1 class="text-display-large mb-[30px]">Plan du site</h1>
         </div>
       </Grid>
@@ -24,26 +24,38 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
   <div class="mb-20">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full">
+        <div class="col-span-full lg:col-start-2">
           <ul class="list-disc list-inside pl-6">
             <li>
-              <a href="/" class="underline underline-offset-2">
+              <a
+                href="/"
+                class="underline underline-offset-2 hover:text-neutral5"
+              >
                 Expertises (page d’accueil)
               </a>
             </li>
             <li>
-              <a href="/collaborations" class="underline underline-offset-2">
+              <a
+                href="/collaborations"
+                class="underline underline-offset-2 hover:text-neutral5"
+              >
                 Collaborations
               </a>
             </li>
             <li>
-              <a href="/a-propos" class="underline underline-offset-2">
+              <a
+                href="/a-propos"
+                class="underline underline-offset-2 hover:text-neutral5"
+              >
                 À propos
               </a>
             </li>
             <li>Plan de site (cette page)</li>
             <li>
-              <a href="/mentions-legales" class="underline underline-offset-2">
+              <a
+                href="/mentions-legales"
+                class="underline underline-offset-2 hover:text-neutral5"
+              >
                 Mentions légales
               </a>
             </li>

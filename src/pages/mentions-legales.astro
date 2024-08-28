@@ -14,7 +14,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
   <div class="my-[30px] lg:mt-[95px]">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full">
+        <div class="col-span-full lg:col-start-2">
           <h1 class="text-display-large mb-[30px]">Mentions légales</h1>
         </div>
       </Grid>
@@ -24,7 +24,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
   <div class="mb-20 text-paragraph text-body-normal">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full">
+        <div class="col-span-full lg:col-start-2">
           <div class="space-y-[30px]">
             <section>
               <h3 class="text-headline-large-highlight mb-4">Généralités</h3>
@@ -44,7 +44,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
                 <li>
                   Contacts : +33 642 29 86 31 - <a
                     href="mailto:hello@yuna.work"
-                    class="underline underline-offset-2"
+                    class="underline underline-offset-2 hover:text-neutral5"
                   >
                     hello@yuna.work
                   </a>
@@ -104,6 +104,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
                   Site développé avec talent et passion par <a
                     href="https://github.com/mr-wildcard"
                     target="_blank"
+                    class="hover:text-neutral5"
                   >
                     Julien Viala (nouvelle fenêtre)
                   </a>
@@ -111,11 +112,18 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
                 <li>
                   Nom de domaine chez <a
                     href="https://www.infomaniak.com/"
-                    target="_blank">Infomaniak (nouvelle fenêtre)</a
+                    target="_blank"
+                    class="hover:text-neutral5"
                   >
+                    Infomaniak (nouvelle fenêtre)
+                  </a>
                 </li>
                 <li>
-                  <a href="https://www.cloudflare.com/" target="_blank">
+                  <a
+                    href="https://www.cloudflare.com/"
+                    target="_blank"
+                    class="hover:text-neutral5"
+                  >
                     Hébergement chez Cloudflare (nouvelle fenêtre)
                   </a>
                   <ul>
