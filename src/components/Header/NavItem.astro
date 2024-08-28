@@ -12,32 +12,35 @@ const isSelected = pathname.replaceAll("/", "") === to?.replaceAll("/", "");
 
 const HTMLTag = isSelected ? "span" : "a";
 
+const basicCSSClasses = ["inline-block", "lg:px-5", "lg:py-2"];
+
 const variantCSSClasses =
   variant === "primary"
     ? ["text-display-small", "lg:text-menu-label"]
     : ["text-body-normal", "text-secondary"];
 
-const basicCSSClasses = ["lg:px-5", "lg:py-2"];
-
 const isSelectedCSSClasses = [
+  "lg:text-paragraph",
+  variant === "primary" ? ["text-secondary", "lg:text-paragraph"] : undefined,
+];
+
+const anchorCSSClasses = ["lg:rounded-full", "lg:hover:bg-neutral3"];
+
+const underlineCSSClasses = [
+  "after:absolute",
   "after:block",
   "after:w-full",
   "after:h-[4px]",
   "after:rounded-full",
   "after:bg-secondary",
-  "lg:text-paragraph",
   "lg:after:bg-primary",
   "lg:after:translate-y-[5px]",
-  variant === "primary" ? ["text-secondary", "lg:text-paragraph"] : undefined,
 ];
-
-const anchorCSSClasses = ["lg:rounded-full", "lg:hover:bg-neutral3"];
 ---
 
 <HTMLTag
   href={!isSelected ? to : undefined}
   class:list={[
-    "inline-block",
     ...basicCSSClasses,
     ...variantCSSClasses,
     isSelected ? isSelectedCSSClasses : undefined,
@@ -45,5 +48,7 @@ const anchorCSSClasses = ["lg:rounded-full", "lg:hover:bg-neutral3"];
     ...cssClasses,
   ]}
 >
-  <slot />
+  <span class:list={["relative", isSelected ? underlineCSSClasses : undefined]}>
+    <slot />
+  </span>
 </HTMLTag>

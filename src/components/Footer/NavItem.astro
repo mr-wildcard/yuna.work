@@ -16,25 +16,15 @@ const basicCSSClasses = [
   "py-2",
   "px-4",
   "inline-block",
-  "text-body-normal",
+  "text-tag-label",
+  "text-paragraph",
   "rounded-full",
-];
-
-const selectedCSSClasses = [
-  "after:absolute",
-  "after:left-0",
-  "after:block",
-  "after:w-full",
-  "after:h-[3px]",
-  "after:rounded-full",
-  "after:bg-primary",
 ];
 
 const unselectedCSSClasses = [
   "underline",
   "underline-offset-2",
-  "hover:no-underline",
-  "hover:bg-neutral3",
+  "hover:text-neutral5",
 ];
 ---
 
@@ -46,7 +36,5 @@ const unselectedCSSClasses = [
     !isSelected ? unselectedCSSClasses : undefined,
   ]}
 >
-  <span class:list={["relative", isSelected ? selectedCSSClasses : undefined]}>
-    <slot />
-  </span>
+  <slot />
 </HTMLTag>
