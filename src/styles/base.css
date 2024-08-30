@@ -43,7 +43,6 @@
     }
   }
 
-  .text-display-small,
   .text-body-normal {
     @apply font-arial;
   }

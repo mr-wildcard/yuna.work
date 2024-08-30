@@ -86,51 +86,45 @@ const { view } = Astro.props;
               />
             </div>
           </div>
-          <div class="col-span-full sm:col-span-6 lg:col-start-4 lg:col-span-8 2xl:col-span-6">
+          <div class="col-span-full sm:col-span-full md:col-span-7 lg:col-start-4 lg:col-span-8 2xl:col-span-6">
             <h2 class="hidden lg:block text-title-normal xl:text-title-large mb-[25px] lg:mb-[15px]">
               Contactez-moi
             </h2>
 
-            <div class="lg:col-start-4 lg:col-span-6">
-              <h3 class="text-display-medium lg:text-headline-large xl:text-display-medium mb-[30px]">
-                Une question, une proposition de mission ou de prise de parole ?
-              </h3>
-            </div>
-            <div class="lg:col-start-4">
-              <p class="text-headline-small lg:text-body-normal xl:text-headline-small mb-5 lg:mb-1.5 xl:mb-2.5">
-                Écrivez-moi par email à
-                <a
-                  class="underline font-bold hover:text-neutral4"
-                  href="mailto:hello@yuna.work"
-                >
-                  hello@yuna.work
-                </a>
-              </p>
-            </div>
-            <div class="lg:col-start-4">
-              <p class="text-headline-small lg:text-body-normal xl:text-headline-small">
-                Ou contactez-moi sur
-                <a
-                  class="font-bold hover:text-neutral4"
-                  href="https://www.linkedin.com/in/yunaorsini/"
-                >
-                  <span class="underline space-x-2 inline-flex items-center">
-                    <span>LinkedIn</span>
-                    <Icon
-                      class="inline lg:hidden xl:inline"
-                      size={22}
-                      name="open_in_new"
-                    />
+            <h3 class="text-display-medium lg:text-headline-large xl:text-display-medium mb-[30px]">
+              Une question, une proposition de mission ou de prise de parole ?
+            </h3>
+            <p class="text-headline-small lg:text-body-normal xl:text-headline-small mb-5 lg:mb-1.5 xl:mb-2.5">
+              Écrivez-moi par email à
+              <a
+                class="underline font-bold hover:text-neutral4"
+                href="mailto:hello@yuna.work"
+              >
+                hello@yuna.work
+              </a>
+            </p>
+            <p class="text-headline-small lg:text-body-normal xl:text-headline-small">
+              Ou contactez-moi sur
+              <a
+                class="font-bold hover:text-neutral4"
+                href="https://www.linkedin.com/in/yunaorsini/"
+              >
+                <span class="underline space-x-2 inline-flex items-center">
+                  <span>LinkedIn</span>
+                  <Icon
+                    class="inline lg:hidden xl:inline"
+                    size={22}
+                    name="open_in_new"
+                  />
 
-                    <Icon
-                      class="hidden lg:inline xl:hidden"
-                      size={20}
-                      name="open_in_new"
-                    />
-                  </span>
-                </a>
-              </p>
-            </div>
+                  <Icon
+                    class="hidden lg:inline xl:hidden"
+                    size={20}
+                    name="open_in_new"
+                  />
+                </span>
+              </a>
+            </p>
           </div>
         </Grid>
       </section>
