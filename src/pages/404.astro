@@ -1,1 +1,57 @@
-Lost and found
+---
+import MainLayout from "layouts/main.astro";
+import Grid from "../components/@common/Grid.astro";
+import Contact from "../components/Contact.astro";
+import DiscreetDots from "../components/@common/DiscreetDots.astro";
+---
+
+<MainLayout
+  title="Page non trouvée - Yuna Orsini - Stratégie et design UX freelance à Bordeaux"
+  description="Page non trouvée (erreur 404)"
+  og_title="Page non trouvée - Yuna Orsini - Stratégie et design UX freelance à Bordeaux"
+  og_description="Page non trouvée (erreur 404)"
+>
+  <div class="my-[30px] lg:mt-[95px]">
+    <div class="container">
+      <Grid as="div">
+        <div class="col-span-full xl:col-start-2">
+          <h1 class="text-display-large mb-[30px]">Page non trouvée...</h1>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div class="mb-20">
+    <div class="container">
+      <Grid as="div">
+        <div class="col-span-full xl:col-start-2">
+          <p class="text-body-normal">
+            Oups, c’est une erreur 404 !
+            <br />
+            <br />
+            Le contenu que vous recherchez n'existe pas ou a été déplacé.
+            <br />
+            <br />
+            Retournez à la <a class="underline hover:text-neutral5" href="/"
+              >page d'accueil</a
+            >.
+          </p>
+        </div>
+      </Grid>
+    </div>
+  </div>
+
+  <div id="contact" class="mb-6">
+    <div class="container">
+      <Contact view="inline" />
+    </div>
+  </div>
+
+  <div class="mb-6 lg:hidden">
+    <div class="container">
+      <div class="flex justify-end">
+        <DiscreetDots x={7} y={6} />
+      </div>
+    </div>
+  </div>
+</MainLayout>
