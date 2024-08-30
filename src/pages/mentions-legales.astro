@@ -14,21 +14,25 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
   <div class="my-[30px] lg:mt-[95px]">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full sm:col-span-7 md:col-span-6 lg:col-start-2">
+        <div
+          class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-full xl:col-start-2"
+        >
           <h1 class="text-display-large mb-[30px]">Mentions légales</h1>
         </div>
       </Grid>
     </div>
   </div>
 
-  <div class="mb-20 text-paragraph text-body-normal">
+  <div class="mb-20 text-paragraph">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full sm:col-span-7 md:col-span-6 lg:col-start-2">
+        <div
+          class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-full xl:col-start-2"
+        >
           <div class="space-y-[30px]">
             <section>
               <h3 class="text-headline-large-highlight mb-4">Généralités</h3>
-              <ul>
+              <ul class="text-body-normal">
                 <li>Directrice de la publication : Yuna Orsini</li>
                 <li>
                   SIRET (Système Informatique pour le Répertoire des Entreprises
@@ -56,7 +60,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
               <h3 class="text-headline-large-highlight mb-5">
                 Données personnelles
               </h3>
-              <p>
+              <p class="text-body-normal">
                 Vous disposez d'un droit d'accès, de rectification, de
                 modification et de suppression concernant les données qui vous
                 concernent personnellement. Ce droit peut être exercé par voie
@@ -71,7 +75,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
               <h3 class="text-headline-large-highlight mb-5">
                 Confidentialité
               </h3>
-              <ul>
+              <ul class="text-body-normal">
                 <li>
                   Vos données personnelles sont confidentielles et ne seront en
                   aucun cas communiquées à des tiers hormis pour la bonne
@@ -88,7 +92,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
               <h3 class="text-headline-large-highlight mb-5">
                 Délai de réponse
               </h3>
-              <p>
+              <p class="text-body-normal">
                 Je tâcherai de répondre au plus vite à vos demandes
                 d'informations, au maximum dans les 72 heures suivant la
                 réception de votre email.
@@ -99,7 +103,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
               <h3 class="text-headline-large-highlight mb-5">
                 Développement et hébergement
               </h3>
-              <ul>
+              <ul class="text-body-normal">
                 <li>
                   Site développé avec talent et passion par <a
                     href="https://github.com/mr-wildcard"
