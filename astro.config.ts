@@ -13,19 +13,7 @@ const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } = loadEnv(
 
 function getSiteURL() {
   if (process.env.CF_PAGES) {
-    if (process.env.CF_PAGES_BRANCH === "main") {
-      console.warn(
-        "You need to configure the production URL in astro config file",
-      );
-    } else {
-      console.warn(
-        "You need to configure the Cloudlfare Pages URL in astro config file using pattern `https://${process.env.CF_PAGES_BRANCH}.DOMAIN.pages.dev/`",
-      );
-    }
-  } else if (process.env.GITHUB_ACTION) {
-    console.warn(
-      "You need to configure the production URL in case build is done within a Github Action",
-    );
+    return process.env.CF_PAGES_URL;
   } else {
     return `http://${ASTRO_DEV_SERVER_LOCAL_HOST}:${ASTRO_DEV_SERVER_LOCAL_PORT}/`;
   }
