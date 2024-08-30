@@ -38,7 +38,9 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
   <div class="mb-[140px]">
     <div class="container">
       <Grid as="div">
-        <div class="col-span-full lg:col-start-2 lg:col-span-6">
+        <div
+          class="col-span-full sm:col-span-7 md:col-span-6 lg:col-start-2 lg:col-span-6"
+        >
           <div class="mb-[60px] space-y-[30px] lg:mb-0">
             <section>
               <h2 class="mb-5 text-headline-large-highlight">
@@ -110,7 +112,9 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
           </div>
         </div>
 
-        <div class="col-span-full lg:col-start-9 lg:col-span-4">
+        <div
+          class="col-span-full md:col-span-7 lg:col-span-full lg:col-start-9 lg:col-span-4"
+        >
           <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
             <ul class="about-me-enum space-y-[30px]">
               <li>
@@ -147,7 +151,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
       <h2 class="text-title-large mb-[50px]">Mes fiertés professionnelles</h2>
       <Grid as="div">
         <div
-          class="col-span-full sm:col-span-6 lg:col-start-2 lg:col-span-full xl:col-start-3"
+          class="col-span-full sm:col-span-6 sm:col-start-2 lg:col-start-2 lg:col-span-full xl:col-start-3"
         >
           <ul class="space-y-[30px]">
             <li>
@@ -197,7 +201,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
   <div class="mb-[100px] lg:mb-11">
     <div class="container">
       <Grid as="div" class="gap-y-4 lg:grid-rows-3">
-        <div class="col-span-full sm:col-span-6 lg:row-span-full">
+        <div class="col-span-full md:col-span-7 lg:col-span-6 lg:row-span-full">
           <ExternalActivity
             title="Certifications, formations et diplômes"
             items={[
@@ -291,7 +295,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
             ]}
           />
         </div>
-        <div class="col-span-full sm:col-span-6">
+        <div class="col-span-full md:col-span-7 lg:col-span-6">
           <ExternalActivity
             title="Interventions pédagogiques"
             items={[
@@ -308,7 +312,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
             ]}
           />
         </div>
-        <div class="col-span-full sm:col-span-6">
+        <div class="col-span-full md:col-span-7 lg:col-span-6">
           <ExternalActivity
             title="Prises de parole en public"
             items={[
