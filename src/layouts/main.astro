@@ -29,8 +29,31 @@ const { title, description, og_description, og_title } = Astro.props;
     <meta property="og:image" content={`${Astro.site}images/sn-share.jpg`} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="sitemap" href={`${Astro.site}sitemap-index.xml`} />
-
-    <!-- <link>'s favicons ? -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#fefaf5"
+    />
+    <meta name="msapplication-TileColor" content="#b7c5be" />
+    <meta name="theme-color" content="#ffffff" />
 
     <title>{title}</title>
   </head>
