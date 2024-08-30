@@ -74,12 +74,14 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
     {
       otherTestimonials.length > 0 ? (
         <details class="mt-[30px] lg:mt-[50px]">
-          <summary class="w-fit flex items-center px-5 py-2 space-x-[10px] rounded-full border-primary border-2 hover:bg-neutral3">
-            <span class="text-menu-label-highlight">
-              Voir plus de témoignages
-            </span>
-            <span class="flex items-center justify-center w-[22px] h-[22px]">
-              <Icon name="chevron_down" width={12} height={7} />
+          <summary class="w-fit rounded-full border-primary border-2 hover:bg-neutral3">
+            <span class="flex items-center px-5 py-2 space-x-[10px]">
+              <span class="text-menu-label-highlight">
+                Voir plus de témoignages
+              </span>
+              <span class="flex items-center justify-center w-[22px] h-[22px]">
+                <Icon name="chevron_down" width={12} height={7} />
+              </span>
             </span>
           </summary>
           <ul class="mt-10 space-y-10">
