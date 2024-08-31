@@ -70,27 +70,25 @@ const { view } = Astro.props;
         <DiscreetDots x={16} y={22} />
       </div>
       <section class="relative bg-primary text-neutral1 rounded-card pt-[30px] py-10 px-5 lg:pt-[50px] lg:pb-[60px] xl:pt-[50px] xl:pb-[70px] lg:px-0">
-        <Grid as="div">
-          <div class="col-span-full sm:col-span-6 lg:hidden">
+        <Grid as="div" class="lg:grid-rows-[auto_1fr]">
+          <div class="col-span-full sm:col-span-6">
             <h2 class="text-title-large mb-[25px]">Contactez-moi</h2>
           </div>
-          <div class="col-span-full lg:col-start-2 lg:col-span-2">
-            <div class="mb-[30px] lg:h-full lg:mb-0 lg:flex lg:items-center">
-              <Picture
-                densities={[1, 2]}
-                src={ImageContactYuna}
-                alt=""
-                width={193}
-                height={157}
-                formats={["avif", "webp"]}
-              />
-            </div>
+          <div class="col-span-full lg:col-start-2 lg:col-span-2 lg:row-span-full">
+            <Picture
+              densities={[1, 2]}
+              src={ImageContactYuna}
+              alt=""
+              width={193}
+              height={157}
+              pictureAttributes={{
+                class:
+                  "block mb-[30px] lg:h-full lg:mb-0 lg:flex lg:items-center",
+              }}
+              formats={["avif", "webp"]}
+            />
           </div>
           <div class="col-span-full sm:col-span-full md:col-span-7 lg:col-start-4 lg:col-span-8 2xl:col-span-6">
-            <h2 class="hidden lg:block text-title-normal xl:text-title-large mb-[25px] lg:mb-[15px]">
-              Contactez-moi
-            </h2>
-
             <h3 class="text-display-medium lg:text-headline-large xl:text-display-medium mb-[30px]">
               Une question, une proposition de mission ou de prise de parole ?
             </h3>
