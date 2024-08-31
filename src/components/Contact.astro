@@ -1,9 +1,9 @@
 ---
 import { Picture } from "astro:assets";
 import Grid from "./@common/Grid.astro";
-import Icon from "./@common/Icon.astro";
 import ImageContactYuna from "images/contact-yuna.png";
 import DiscreetDots from "./@common/DiscreetDots.astro";
+import IconOpenInNew from "./@common/IconOpenInNew.astro";
 
 interface Props {
   view: "inline" | "intermediary" | "full";
@@ -111,17 +111,8 @@ const { view } = Astro.props;
               >
                 <span class="underline space-x-2 inline-flex items-center">
                   <span>LinkedIn</span>
-                  <Icon
-                    class="inline lg:hidden xl:inline"
-                    size={22}
-                    name="open_in_new"
-                  />
-
-                  <Icon
-                    class="hidden lg:inline xl:hidden"
-                    size={20}
-                    name="open_in_new"
-                  />
+                  <IconOpenInNew class="inline lg:hidden xl:inline" size={22} />
+                  <IconOpenInNew class="hidden lg:inline xl:hidden" size={20} />
                 </span>
               </a>
             </p>

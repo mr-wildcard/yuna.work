@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import IconOpenInNew from "./IconOpenInNew.astro";
 
 interface Props {
   variant: "inline" | "inline-radius" | "full-radius";
@@ -32,7 +32,7 @@ const isExternal = to.startsWith("http");
         <span>
           <slot />
         </span>
-        <Icon name="open_in_new" size="18" />
+        <IconOpenInNew size="18" />
       </span>
     </a>
   )
