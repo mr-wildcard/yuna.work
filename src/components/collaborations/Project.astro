@@ -21,11 +21,11 @@ const { screenshot, tags, isOngoing, testimonials = [], title } = Astro.props;
 const [firstTestimonial, ...otherTestimonials] = testimonials;
 ---
 
-<Grid as="div">
+<Grid as="div" class="lg:grid-rows-[auto_1fr]">
   <div
-    class="col-span-full sm:col-span-7 lg:col-start-2 lg:col-span-4 xl:col-start-3"
+    class="col-span-full sm:col-span-7 lg:row-span-full lg:col-start-2 lg:col-span-4 xl:col-start-3"
   >
-    <div class="mb-[30px] relative">
+    <div class="relative mb-[30px] lg:mb-0">
       {
         isOngoing ? (
           <div class="absolute top-[12px] left-[9px]">
@@ -40,7 +40,7 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
     </div>
   </div>
 
-  <div class="col-span-full sm:col-span-7 lg:col-span-7 xl:col-span-6">
+  <div class="col-span-full sm:col-span-7 xl:col-span-6">
     <h3 class="text-display-small mb-5">
       {title}
     </h3>
@@ -56,11 +56,9 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
     </ul>
   </div>
 
-  <div
-    class="col-span-full sm:col-span-7 md:col-span-6 lg:col-start-6 lg:col-span-7 xl:col-start-7 xl:col-span-6"
-  >
-    {
-      firstTestimonial ? (
+  {
+    firstTestimonial ? (
+      <div class="col-span-full sm:col-span-7 md:col-span-6">
         <div class="mt-[30px] lg:mt-[50px]">
           <ProjectTestimonial
             quote={firstTestimonial.quote}
@@ -68,37 +66,35 @@ const [firstTestimonial, ...otherTestimonials] = testimonials;
             lang={firstTestimonial.lang}
           />
         </div>
-      ) : null
-    }
 
-    {
-      otherTestimonials.length > 0 ? (
-        <details class="mt-[30px] lg:mt-[50px]">
-          <summary class="w-fit rounded-full border-primary border-2 hover:bg-neutral3">
-            <span class="flex items-center px-5 py-2 space-x-[10px]">
-              <span class="text-menu-label-highlight">
-                Voir plus de témoignages
+        {otherTestimonials.length > 0 ? (
+          <details class="mt-[30px] lg:mt-[50px]">
+            <summary class="w-fit rounded-full border-primary border-2 hover:bg-neutral3">
+              <span class="flex items-center px-5 py-2 space-x-[10px]">
+                <span class="text-menu-label-highlight">
+                  Voir plus de témoignages
+                </span>
+                <span class="flex items-center justify-center w-[22px] h-[22px]">
+                  <Icon name="chevron_down" width={12} height={7} />
+                </span>
               </span>
-              <span class="flex items-center justify-center w-[22px] h-[22px]">
-                <Icon name="chevron_down" width={12} height={7} />
-              </span>
-            </span>
-          </summary>
-          <ul class="mt-10 space-y-10">
-            {otherTestimonials.map((testimonial) => (
-              <li>
-                <ProjectTestimonial
-                  author={testimonial.author}
-                  quote={testimonial.quote}
-                  lang={testimonial.lang}
-                />
-              </li>
-            ))}
-          </ul>
-        </details>
-      ) : null
-    }
-  </div>
+            </summary>
+            <ul class="mt-10 space-y-10">
+              {otherTestimonials.map((testimonial) => (
+                <li>
+                  <ProjectTestimonial
+                    author={testimonial.author}
+                    quote={testimonial.quote}
+                    lang={testimonial.lang}
+                  />
+                </li>
+              ))}
+            </ul>
+          </details>
+        ) : null}
+      </div>
+    ) : null
+  }
 </Grid>
 
 <style>
