@@ -23,92 +23,107 @@ const logos = [
   {
     src: ClientLogoElle,
     alt: "ELLE",
+    sizes: [`w-[51px]`, `lg:w-[72px]`],
   },
   {
     src: ClientLogoNeat,
     alt: "Neat",
+    sizes: [`w-[62px]`, `lg:w-[77px]`],
   },
   {
     src: ClientLogoSezane,
     alt: "Sézane",
+    sizes: [`w-[114px]`, `lg:w-[142px]`],
   },
   {
     src: ClientLogoOrange,
     alt: "Orange",
+    sizes: [`w-[41px]`, `lg:w-[51px]`],
   },
   {
     src: ClientLogoSSC,
     alt: "School of System Change",
+    sizes: [`w-[106px]`, `lg:w-[132px]`],
   },
   {
     src: ClientLogoEkino,
     alt: "Ekino",
+    sizes: [`w-[82px]`, `lg:w-[102px]`],
   },
   {
     src: ClientLogoInfopro,
     alt: "Infopro Digital",
+    sizes: [`w-[147px]`, `lg:w-[184px]`],
   },
   {
     src: ClientLogoWalter,
     alt: "Walter France",
+    sizes: [`w-[78px]`, `lg:w-[97px]`],
   },
   {
     src: ClientLogoDynamo,
     alt: "Dynamo",
+    sizes: [`w-[112px]`, `lg:w-[140px]`],
   },
   {
     src: ClientLogoJohnDeere,
     alt: "John Deere",
+    sizes: [`w-[133px]`, `lg:w-[166px]`],
   },
   {
     src: ClientLogoCanalPlus,
     alt: "Canal+",
+    sizes: [`w-[102px]`, `lg:w-[127px]`],
   },
   {
     src: ClientLogoVigiePorts,
     alt: "Vigie Ports",
+    sizes: [`w-[97px]`, `lg:w-[121px]`],
   },
   {
     src: ClientLogoSys1,
     alt: "Sys1",
+    sizes: [`w-[80px]`, `lg:w-[100px]`],
   },
   {
     src: ClientLogoDXOMARK,
     alt: "DXOMARK",
+    sizes: [`w-[136px]`, `lg:w-[170px]`],
   },
   {
     src: ClientLogoCapAtlantique,
     alt: "Cap Atlantique",
+    sizes: [`w-[116px]`, `lg:w-[146px]`],
   },
   {
     src: ClientLogoSFRBusiness,
     alt: "SFR Business",
+    sizes: [`w-[104px]`, `lg:w-[130px]`],
   },
   {
     src: ClientLogoImatech,
     alt: "Imatech",
+    sizes: [`w-[120px]`, `lg:w-[150px]`],
   },
 ];
 ---
 
 <Grid
   as="ul"
-  class="gap-y-[30px] md:grid-cols-5 xl:gap-0 xl:flex xl:justify-center xl:flex-wrap xl:-mx-9 xl:-my-4 2xl:-mx-10"
+  class="grid-cols-2 gap-y-[30px] gap-x-2.5 sm:grid-cols-4 md:grid-cols-5 xl:gap-0 xl:flex xl:justify-center xl:flex-wrap xl:-mx-9 xl:-my-4 2xl:-mx-10"
 >
   {
     logos.map((logo) => {
       return (
-        <li class="col-span-2 md:col-span-1 lg:col-span-2 h-[66px] flex justify-center items-center xl:mx-9 xl:my-4 2xl:mx-10">
-          <Picture src={logo.src} densities={[1, 2]} alt={logo.alt} />
+        <li class="md:col-span-1 lg:col-span-2 h-[66px] flex justify-center items-center xl:mx-9 xl:my-4 2xl:mx-10">
+          <Picture
+            src={logo.src}
+            densities={[1, 2]}
+            alt={logo.alt}
+            class:list={logo.sizes}
+          />
         </li>
       );
     })
   }
 </Grid>
-
-<style>
-  picture img {
-    width: inherit;
-    height: inherit;
-  }
-</style>
