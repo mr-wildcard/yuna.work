@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       astro:
-        specifier: ^4.4.15
+        specifier: 4.15.2
         version: 4.15.2(@types/node@20.16.3)(rollup@4.21.0)(typescript@5.5.4)
       astro-icon:
         specifier: 1.1.1
@@ -22,7 +22,7 @@ importers:
         specifier: 3.1.6
         version: 3.1.6
       '@astrojs/tailwind':
-        specifier: ^5.1.0
+        specifier: 5.1.0
         version: 5.1.0(astro@4.15.2(@types/node@20.16.3)(rollup@4.21.0)(typescript@5.5.4))(tailwindcss@3.4.10)
       '@astrojs/ts-plugin':
         specifier: 1.10.1
@@ -40,7 +40,7 @@ importers:
         specifier: 20.16.3
         version: 20.16.3
       autoprefixer:
-        specifier: ^10.4.18
+        specifier: 10.4.20
         version: 10.4.20(postcss@8.4.44)
       cssnano:
         specifier: 7.0.5
@@ -49,7 +49,7 @@ importers:
         specifier: 16.4.5
         version: 16.4.5
       postcss:
-        specifier: ^8.4.35
+        specifier: 8.4.44
         version: 8.4.44
       prettier:
         specifier: 3.3.3
@@ -61,7 +61,7 @@ importers:
         specifier: 0.33.5
         version: 0.33.5
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: 3.4.10
         version: 3.4.10
       typescript:
         specifier: 5.5.4
@@ -1641,10 +1641,6 @@ packages:
 
   micromark@4.0.0:
     resolution: {integrity: sha512-o/sd0nMof8kYff+TqcDx3VSrgBTcZpSvYcAHIfHhv5VAuNmisCxjhx6YmxS8PFEpb9z5WKWKPdzf0jM23ro3RQ==}
-
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
-    engines: {node: '>=8.6'}
 
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
@@ -3547,7 +3543,7 @@ snapshots:
       caniuse-lite: 1.0.30001651
       fraction.js: 4.3.7
       normalize-range: 0.1.2
-      picocolors: 1.0.1
+      picocolors: 1.1.0
       postcss: 8.4.44
       postcss-value-parser: 4.2.0
 
@@ -4608,11 +4604,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  micromatch@4.0.7:
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
-
   micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
@@ -5349,10 +5340,10 @@ snapshots:
       is-glob: 4.0.3
       jiti: 1.21.6
       lilconfig: 2.1.0
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       normalize-path: 3.0.0
       object-hash: 3.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
       postcss: 8.4.44
       postcss-import: 15.1.0(postcss@8.4.44)
       postcss-js: 4.0.1(postcss@8.4.44)
