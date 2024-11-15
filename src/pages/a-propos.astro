@@ -43,9 +43,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
         >
           <div class="mb-[60px] space-y-[30px] lg:mb-0">
             <section>
-              <h2 class="mb-5 text-headline-large-highlight">
-                Hello world!
-              </h2>
+              <h2 class="mb-5 text-headline-large-highlight">Hello world!</h2>
               <p class="text-body-normal">
                 J’ai toujours aimé apprendre. Au collège, je dévore les livres
                 et je me passionne pour chaque matière enseignée au point qu’au
@@ -82,7 +80,8 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
                 stratégique en agence de communication digitale.
                 <br />
                 <br />
-                Au bout de quelques années, le blabla des compétitions me fatigue un petit peu. Avec ma collègue Daniela, c’est le coup de foudre professionnel.
+                Au bout de quelques années, le blabla des compétitions me fatigue
+                un petit peu. Avec ma collègue Daniela, c’est le coup de foudre professionnel.
                 Nous nous passionnons pour l’UX design et le design thinking, plus
                 proches des gens, et nous développons ces expertises au sein de l’agence.
               </p>
@@ -93,9 +92,9 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
               </h2>
               <p class="text-body-normal">
                 En 2017, Daniela et moi sommes missionnées en freelance puis
-                débauchées par une startup tech où tout est à faire – c’est à
-                ce jour le leader du paywall en France. Encore quelques années
-                de kiff en tant que Head of UX puis nous nous lançons
+                débauchées par une startup tech où tout est à faire – c’est à ce
+                jour le leader du paywall en France. Encore quelques années de
+                kiff en tant que Head of UX puis nous nous lançons
                 officiellement en 2020 dans le grand bain du freelancing !
                 <br />
                 <br />
@@ -124,8 +123,8 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
               </li>
               <li>
                 <span class="text-title-small">Formée</span> au service design, à
-                l’éco-conception, à l’audit RGAA, aux tests d’utilisabilité, à la recherche UX et
-                au design thinking
+                l’éco-conception, à l’audit RGAA, aux tests d’utilisabilité, à la
+                recherche UX et au design thinking
               </li>
               <li>
                 <span class="text-title-small">Promue</span> maman en 2021 ❤️
@@ -319,14 +318,28 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
             title="Prises de parole en public"
             items={[
               {
-                title: "Dernière conférence donnée",
-                description:
-                  "“Au-delà des clichés sur l’éco-conception : des exemples créatifs pour changer notre vision” (BDX I/O 2023)",
+                title: "Dernières conférences données",
+                events: [
+                  {
+                    title: "Collaborating with freelance designers 101",
+                    date: "Back Market (2024)",
+                  },
+                  {
+                    title:
+                      "Au-delà des clichés sur l’éco-conception : des exemples créatifs pour changer notre vision",
+                    date: "BDX I/O (2023)",
+                  },
+                ],
               },
               {
                 title: "Dernière table ronde modérée",
-                description:
-                  "“Communautés éthiques : s'organiser pour ne plus nuire” (Reboot! 2023)",
+                events: [
+                  {
+                    title:
+                      "Communautés éthiques : s'organiser pour ne plus nuire",
+                    date: "Reboot! (2023)",
+                  },
+                ],
               },
             ]}
           />
