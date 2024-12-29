@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fontsource-variable/dm-sans':
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 5.1.1
+        version: 5.1.1
       astro:
         specifier: 4.16.18
         version: 4.16.18(@types/node@22.10.2)(rollup@4.21.0)(typescript@5.7.2)
@@ -381,8 +381,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/dm-sans@5.1.0':
-    resolution: {integrity: sha512-wPhOMY/3ipy0t5ZIQk7FTKd3uZqE1XP2Yd2oKe3HfMWCYkotbcoMLkBQXcZzf/SgdCdczSP/hiO/PAZb84Kbxw==}
+  '@fontsource-variable/dm-sans@5.1.1':
+    resolution: {integrity: sha512-oOroo1rQurZR8giuNLF64W+EqvZt6prsdJS6gGCAZgD/AMIHKmL6RzVjznGb8ZGXCeiJpVWO/xd4DPgMqr7ayQ==}
 
   '@iconify/tools@4.0.5':
     resolution: {integrity: sha512-l8KoA1lxlN/FFjlMd3vjfD7BtcX/QnFWtlBapILMlJSBgM5zhDYak/ldw/LkKG3258q/0YmXa48sO/QpxX7ptg==}
@@ -3055,7 +3055,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@fontsource-variable/dm-sans@5.1.0': {}
+  '@fontsource-variable/dm-sans@5.1.1': {}
 
   '@iconify/tools@4.0.5':
     dependencies:

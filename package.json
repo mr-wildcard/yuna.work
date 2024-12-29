@@ -13,7 +13,7 @@
   "dependencies": {
     "astro": "4.16.18",
     "astro-icon": "1.1.5",
-    "@fontsource-variable/dm-sans": "5.1.0"
+    "@fontsource-variable/dm-sans": "5.1.1"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
