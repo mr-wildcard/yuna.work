@@ -28,7 +28,7 @@
     "autoprefixer": "10.4.20",
     "cssnano": "7.0.6",
     "dotenv": "16.4.7",
-    "postcss": "8.5.0",
+    "postcss": "8.5.1",
     "prettier": "3.4.2",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "5.7.3",
