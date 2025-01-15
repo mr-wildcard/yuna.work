@@ -11,7 +11,7 @@
     "test:e2e:update:snapshots": "pnpm test:e2e --update-snapshots"
   },
   "dependencies": {
-    "astro": "5.1.6",
+    "astro": "5.1.7",
     "astro-icon": "1.1.5",
     "@fontsource-variable/dm-sans": "5.1.1"
   },
