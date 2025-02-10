@@ -21,7 +21,6 @@
     "@astrojs/tailwind": "5.1.5",
     "@astrojs/ts-plugin": "1.10.4",
     "@playwright/test": "1.50.1",
-    "@rollup/plugin-yaml": "4.1.2",
     "@types/node": "22.13.0",
     "sharp": "0.33.5",
     "tailwindcss": "3.4.17",
