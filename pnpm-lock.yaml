@@ -12,8 +12,8 @@ importers:
         specifier: 5.1.1
         version: 5.1.1
       astro:
-        specifier: 5.2.5
-        version: 5.2.5(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0)
+        specifier: 5.2.6
+        version: 5.2.6(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -26,7 +26,7 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.2.5(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.2.6(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0))(tailwindcss@3.4.17)
       '@astrojs/ts-plugin':
         specifier: 1.10.4
         version: 1.10.4
@@ -733,8 +733,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro@5.2.5:
-    resolution: {integrity: sha512-AYXyYkc+c5xbKTm48FyQA91y81nXyNPAaoyafR0LUugE4lAwuvIUcXDBfMzmbuP1lGRvsE33G2oypv6gbGaPFg==}
+  astro@5.2.6:
+    resolution: {integrity: sha512-CrTuJMwpWF9kmOhX+cl6uPqNbTRrHO7eXggFP9SK7+Bsen/7FpJtA6k1p/ALleuV5ndJLqn/9tpmP3qACHPjYA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2098,11 +2098,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.7.0:
-    resolution: {integrity: sha512-DrfFnPzblFmNrIZzg5RzHegbiRWg7KMR7btwi2yjHwx06zsUbO5g613sVwEV7FTwmzJu+Io0lJe2GJ3LxqpvBQ==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.1:
     resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
     engines: {node: '>=10'}
@@ -2747,9 +2742,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.5(astro@5.2.5(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.2.6(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.2.5(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0)
+      astro: 5.2.6(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0)
       autoprefixer: 10.4.20(postcss@8.5.2)
       postcss: 8.5.2
       postcss-load-config: 4.0.2(postcss@8.5.2)
@@ -3303,7 +3298,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@5.2.5(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0):
+  astro@5.2.6(@types/node@22.13.1)(jiti@1.21.6)(rollup@4.34.6)(typescript@5.7.3)(yaml@2.5.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
@@ -5031,8 +5026,6 @@ snapshots:
 
   semver@7.6.3: {}
 
-  semver@7.7.0: {}
-
   semver@7.7.1: {}
 
   sharp@0.33.5:
@@ -5239,7 +5232,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.3:
     dependencies:
-      semver: 7.7.0
+      semver: 7.7.1
 
   typescript@5.7.3: {}
 
@@ -5403,7 +5396,7 @@ snapshots:
   volar-service-typescript@0.0.62(@volar/language-service@2.4.10):
     dependencies:
       path-browserify: 1.0.1
-      semver: 7.7.0
+      semver: 7.7.1
       typescript-auto-import-cache: 0.3.3
       vscode-languageserver-textdocument: 1.0.11
       vscode-nls: 5.2.0
