@@ -1,0 +1,26 @@
+version: 2
+snapshot:
+  widths:
+    - 640
+    - 768
+    - 1024
+    - 1280
+    - 1512
+  minHeight: 1024
+  enableJavaScript: true
+  cliEnableJavaScript: true
+  disableShadowDOM: false
+  percy-css: |
+    #toast,
+    #team-ux-in-2024-disclaimer { 
+      display: none; 
+    }
+discovery:
+  allowedHostnames: []
+  disallowedHostnames: []
+  networkIdleTimeout: 100
+  captureMockedServiceWorker: false
+upload:
+  files: "**/*.{png,jpg,jpeg}"
+  ignore: ""
+  stripExtensions: false
