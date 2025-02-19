@@ -5,62 +5,51 @@ import ImageDesignersEthiques from "images/certifications/designers-ethiques.png
 import ImageIDF from "images/certifications/idf.png";
 import ImageINR from "images/certifications/inr.png";
 import ImageOpquast from "images/certifications/opquast.png";
+
+const certifications = [
+  {
+    src: ImageAccess42,
+    cssClasses: "w-[66px] h-[48px]",
+    alt: "Access42",
+  },
+  {
+    src: ImageIDF,
+    cssClasses: "w-[141px] h-[46px]",
+    alt: "Interaction Design Foundation",
+  },
+  {
+    src: ImageOpquast,
+    cssClasses: "w-[100px] h-[25px]",
+    alt: "Opquast",
+  },
+  {
+    src: ImageINR,
+    cssClasses: "w-[100px] h-[36px]",
+    alt: "Institut du Numérique Responsable",
+  },
+  {
+    src: ImageDesignersEthiques,
+    cssClasses: "w-[100px] h-[45px]",
+    alt: "Designers Éthiques",
+  },
+];
 ---
 
-<ul class="flex justify-around sm:justify-normal flex-wrap items-center">
-  <li>
-    <Picture
-      src={ImageAccess42}
-      class="w-[66px] h-[48px]"
-      densities={[1, 2]}
-      alt="Access42"
-    />
-  </li>
-  <li>
-    <Picture
-      src={ImageIDF}
-      class="w-[141px] h-[46px]"
-      densities={[1, 2]}
-      alt="Interaction Design Foundation"
-    />
-  </li>
-  <li>
-    <Picture
-      src={ImageOpquast}
-      class="w-[100px] h-[25px]"
-      densities={[1, 2]}
-      alt="Opquast"
-    />
-  </li>
-  <li>
-    <Picture
-      src={ImageINR}
-      class="w-[100px] h-[36px]"
-      densities={[1, 2]}
-      alt="Institut du Numérique Responsable"
-    />
-  </li>
-  <li>
-    <Picture
-      src={ImageDesignersEthiques}
-      class="w-[100px] h-[45px]"
-      densities={[1, 2]}
-      alt="Designers Éthiques"
-    />
-  </li>
+<ul
+  class="flex justify-around sm:justify-normal flex-wrap items-center -mx-4 sm:-mx-6 xl:-mx-10"
+>
+  {
+    certifications.map((certification) => {
+      return (
+        <li class="m-4 mb-[20px] sm:m-6 xl:mx-10">
+          <Picture
+            src={certification.src}
+            class:list={[certification.cssClasses, "mx-auto"]}
+            densities={[1, 2]}
+            alt={certification.alt}
+          />
+        </li>
+      );
+    })
+  }
 </ul>
-
-<style>
-  ul {
-    @apply -mx-4 sm:-mx-6 xl:-mx-10;
-  }
-
-  li {
-    @apply m-4 mb-[20px] sm:m-6 xl:mx-10;
-
-    img {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-</style>
