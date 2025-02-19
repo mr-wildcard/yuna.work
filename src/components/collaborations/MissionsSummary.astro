@@ -43,8 +43,8 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 
 <style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
   li {
-    @apply text-paragraph pl-[39px];
-
+    color: var(--color-paragraph);
+    padding-left: 39px;
     background-image: var(--url);
     background-repeat: no-repeat;
     background-position: 0 12px;
