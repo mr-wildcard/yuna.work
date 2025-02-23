@@ -7,11 +7,6 @@ snapshot:
   enableJavaScript: true
   cliEnableJavaScript: true
   disableShadowDOM: false
-  percy-css: |
-    #toast,
-    #team-ux-in-2024-disclaimer { 
-      display: none; 
-    }
 discovery:
   allowedHostnames: []
   disallowedHostnames: []
