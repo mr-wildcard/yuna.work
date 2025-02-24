@@ -100,15 +100,15 @@
   margin: 0 auto;
   max-width: calc(100% - 40px);
 
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     max-width: 904px;
   }
 
-  @media (width >= theme(--breakpoint-xl)) {
+  @variant xl {
     max-width: 1160px;
   }
 
-  @media (width >= theme(--breakpoint-2xl)) {
+  @variant 2xl {
     max-width: 1320px;
   }
 }
@@ -118,33 +118,33 @@
 }
 
 @utility text-display-large-highlight {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 60px;
   }
 
-  @media (width >= theme(--breakpoint-xl)) {
+  @variant xl {
     font-size: 72px;
   }
 }
 
 @utility text-display-large {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 60px;
   }
 
-  @media (width >= theme(--breakpoint-xl)) {
+  @variant xl {
     font-size: 72px;
   }
 }
 
 @utility text-display-medium {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 42px;
   }
 }
 
 @utility text-display-small {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     @apply font-sans;
 
     font-size: 30px;
@@ -152,43 +152,43 @@
 }
 
 @utility text-headline-small {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 24px;
   }
 }
 
 @utility text-headline-small-highlight {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 24px;
   }
 }
 
 @utility text-headline-large {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 30px;
   }
 }
 
 @utility text-headline-large-highlight {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 30px;
   }
 }
 
 @utility text-body-small {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 13px;
   }
 }
 
 @utility text-menu-label-highlight {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 16px;
   }
 }
 
 @utility text-menu-label {
-  @media (width >= theme(--breakpoint-lg)) {
+  @variant lg {
     font-size: 16px;
   }
 }
