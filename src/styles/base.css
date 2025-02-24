@@ -89,6 +89,15 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+  @font-face {
+    font-family: "DM Sans Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 1000;
+    src: url(@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2)
+      format("woff2-variations");
+  }
+
   *,
   ::after,
   ::before,
