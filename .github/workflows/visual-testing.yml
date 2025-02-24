@@ -2,7 +2,10 @@ name: Run visual testing
 
 on:
   pull_request:
-    types: [ opened, synchronize, reopened ]
+    types: [opened, synchronize, reopened]
+
+env:
+  ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
 
 jobs:
   visual-testing:
@@ -22,7 +25,7 @@ jobs:
       - name: Install corepack
         shell: "bash"
         run: npm install -g corepack@latest
-        
+
       - name: Setup PNPM using corepack
         shell: "bash"
         run: |
@@ -37,7 +40,12 @@ jobs:
         shell: "bash"
         run: pnpm build
 
-      - name: Take team-ux.com screenshots and upload them to Percy
-        run: pnpm percy snapshot dist/
+      - name: Start website preview server for visual testing
+        run: pnpm preview --port $ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING &
+
+      - name: Take yuna.work screenshots and upload them to Percy
+        run: |
+          pnpm wait-on tcp:$ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING 
+          pnpm percy snapshot .percy.mjs
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
