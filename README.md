@@ -9,6 +9,7 @@ Built using [Astro](https://astro.build/) ♥️ [Tailwind CSS](https://tailwind
 ---
 
 This project uses [PNPM](https://pnpm.io/) and is tested with [BrowserStack](https://www.browserstack.com/).
+Visual testing is automated with [Percy](https://percy.io/)
 
 --- 
 
