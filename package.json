@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@9.15.6",
+  "packageManager": "pnpm@10.4.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.2.1",
-    "@astrojs/tailwind": "5.1.5",
+    "@astrojs/tailwind": "6.0.0",
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.30.7",
     "@playwright/test": "1.50.1",
@@ -31,7 +31,7 @@
     "prettier": "3.5.2",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.33.5",
-    "tailwindcss": "3.4.17",
+    "tailwindcss": "4.0.8",
     "typescript": "5.7.3",
     "vite": "6.1.1",
     "wait-on": "8.0.2"
