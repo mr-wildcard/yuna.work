@@ -76,6 +76,8 @@
   --shadow-cta: 0 0 0 2px inset;
 
   --radius-card: 20px;
+
+  --spacing-link-underline-offset: calc(var(--spacing) / 2);
 }
 
 /*
