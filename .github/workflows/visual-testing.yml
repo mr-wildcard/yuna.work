@@ -46,6 +46,6 @@ jobs:
       - name: Take yuna.work screenshots and upload them to Percy
         run: |
           pnpm wait-on tcp:$ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING 
-          pnpm percy snapshot .percy.mjs
+          pnpm percy snapshot .percy.mjs --debug
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
