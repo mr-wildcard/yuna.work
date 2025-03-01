@@ -24,26 +24,20 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 <div
   class="col-span-full lg:col-start-9 lg:col-span-4 xl:col-start-10 xl:col-span-3"
 >
-  <ul>
+  <ul
+    style={{ "--bg-image-url": `url(${optimizedListStyle.src})` }}
+    class:list={[
+      "*:bg-[left_12px]",
+      `*:bg-(image:--bg-image-url)`,
+      "*:bg-no-repeat",
+    ]}
+  >
     {
       skills.map((skill) => (
         <li>
-          <p>{skill}</p>
+          <p class="pl-[43px] text-paragraph">{skill}</p>
         </li>
       ))
     }
   </ul>
 </div>
-
-<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
-  li {
-    background-image: var(--url);
-    background-repeat: no-repeat;
-    background-position: 0 12px;
-
-    p {
-      padding-left: 43px;
-      color: var(--color-paragraph);
-    }
-  }
-</style>

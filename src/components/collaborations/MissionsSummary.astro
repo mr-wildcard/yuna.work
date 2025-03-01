@@ -28,7 +28,19 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
     >
       <DiscreetDots x={16} y={16} />
     </div>
-    <ul class="space-y-4 lg:space-y-0 text-body-normal-highlight">
+    <ul
+      style={{ "--bg-image-url": `url(${optimizedListStyle.src})` }}
+      class:list={[
+        "space-y-4",
+        "lg:space-y-0",
+        "text-body-normal-highlight",
+        "*:pl-[39px]",
+        "*:text-paragraph",
+        "*:bg-[left_12px]",
+        `*:bg-(image:--bg-image-url)`,
+        "*:bg-no-repeat",
+      ]}
+    >
       <li>Refonte d’outils, de sites, d’applications métiers</li>
       <li>Recherche UX et développement de la connaissance “users”</li>
       <li>Conception UX et test de PoCs, de prototypes</li>
@@ -40,13 +52,3 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
     </ul>
   </div>
 </Grid>
-
-<style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
-  li {
-    color: var(--color-paragraph);
-    padding-left: 39px;
-    background-image: var(--url);
-    background-repeat: no-repeat;
-    background-position: 0 12px;
-  }
-</style>
