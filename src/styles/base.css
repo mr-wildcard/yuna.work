@@ -138,6 +138,10 @@
   }
 }
 
+@utility text-title-small {
+  @apply font-sans;
+}
+
 @utility text-body-normal {
   @apply font-arial;
 }
