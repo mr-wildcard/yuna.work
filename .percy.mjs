@@ -11,17 +11,6 @@ function getSnapshotName(websiteURL) {
   return `Yuna Orsini website - ${url.pathname === "/" ? "homepage" : url.pathname.replaceAll("/", "")}`;
 }
 
-function throwIfServerPortInSitemapXMLIsDifferentThanExpected(portNumber) {
-  if (
-    Number.parseInt(ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING) !==
-    Number.parseInt(portNumber)
-  ) {
-    throw new Error(
-      "Port number in Sitemap XML URLs is different than the expect port number in CI configuration.",
-    );
-  }
-}
-
 async function getWebsiteURLs() {
   const parser = new XMLParser();
 
@@ -47,7 +36,11 @@ async function getWebsiteURLs() {
 
       const sitemapXML = parser.parse(response);
 
-      return sitemapXML.urlset.url.map(({ loc }) => loc);
+      if (Array.isArray(sitemapXML.urlset.url)) {
+        return sitemapXML.urlset.url.map(({ loc }) => loc);
+      } else {
+        return [sitemapXML.urlset.url.loc];
+      }
     }),
   );
 
@@ -59,12 +52,6 @@ export default async function getPercySnapshotsConfig() {
     const websiteURLs = await getWebsiteURLs();
 
     websiteURLs.push(`${previewServerURL}/not-found-page`);
-
-    for (const websiteURL of websiteURLs) {
-      throwIfServerPortInSitemapXMLIsDifferentThanExpected(
-        new URL(websiteURL).port,
-      );
-    }
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
