@@ -1,92 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  @font-face {
-    font-family: "DM Sans Variable";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 1000;
-    src: url(@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2)
-      format("woff2-variations");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    @apply bg-neutral1 text-primary;
-  }
+@font-face {
+  font-family: "DM Sans Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url(@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@layer utilities {
-  .container {
-    margin: 0 auto;
-    max-width: calc(100% - 40px);
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    @screen lg {
-      max-width: 904px;
-    }
-
-    @screen xl {
-      max-width: 1160px;
-    }
-
-    @screen 2xl {
-      max-width: 1320px;
-    }
-  }
-
-  .text-body-normal {
-    @apply font-arial;
-  }
-
-  @screen lg {
-    .text-display-large-highlight,
-    .text-display-large {
-      font-size: 60px;
-    }
-
-    .text-display-medium {
-      font-size: 42px;
-    }
-
-    .text-display-small {
-      @apply font-sans;
-
-      font-size: 30px;
-    }
-
-    .text-headline-small,
-    .text-headline-small-highlight {
-      font-size: 24px;
-    }
-
-    .text-headline-large,
-    .text-headline-large-highlight {
-      font-size: 30px;
-    }
-
-    .text-body-small {
-      font-size: 13px;
-    }
-
-    .text-menu-label-highlight,
-    .text-menu-label {
-      font-size: 16px;
-    }
-  }
-
-  @screen xl {
-    .text-display-large-highlight,
-    .text-display-large {
-      font-size: 72px;
-    }
-  }
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family:
+    DM Sans Variable,
+    sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
 }

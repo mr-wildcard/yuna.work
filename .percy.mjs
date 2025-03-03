@@ -47,7 +47,11 @@ async function getWebsiteURLs() {
 
       const sitemapXML = parser.parse(response);
 
-      return sitemapXML.urlset.url.map(({ loc }) => loc);
+      if (Array.isArray(sitemapXML.urlset.url)) {
+        return sitemapXML.urlset.url.map(({ loc }) => loc);
+      } else {
+        return [sitemapXML.urlset.url.loc];
+      }
     }),
   );
 
