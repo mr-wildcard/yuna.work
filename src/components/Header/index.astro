@@ -86,14 +86,6 @@ import Contact from "../Contact.astro";
   </nav>
 </header>
 
-<script>
-  if (!CSS.supports("animation-timeline", "scroll(y root)")) {
-    import("./scripts/sticky-header.fallback").then(
-      ({ default: stickThatHeader }) => stickThatHeader(),
-    );
-  }
-</script>
-
 <style>
   .text-opened,
   #mobile-menu {
@@ -105,13 +97,13 @@ import Contact from "../Contact.astro";
   }
 
   #header[data-menu-opened="true"] {
-    @apply !bg-neutral3 z-10;
-
+    background-color: var(--color-neutral3) !important;
     height: 100vh;
     height: 100dvh;
+    z-index: 10;
 
     #mobile-menu {
-      @apply z-10;
+      z-index: 10;
     }
 
     .text-opened,
@@ -128,7 +120,9 @@ import Contact from "../Contact.astro";
     }
 
     #mobile-menu-opener {
-      @apply bg-neutral1 text-primary shadow-primary shadow-cta;
+      background-color: var(--color-neutral1);
+      color: var(--color-primary);
+      box-shadow: var(--shadow-cta) var(--color-primary);
     }
   }
 
@@ -148,13 +142,14 @@ import Contact from "../Contact.astro";
 
   @keyframes sticky-bg-header {
     from {
-      @apply bg-neutral1;
+      background-color: var(--color-neutral1);
     }
 
     to {
-      @apply bg-neutral2 border-b border-b-primary;
+      background-color: var(--color-neutral2);
+      border-bottom: 1px solid var(--color-primary);
     }
   }
 </style>
 
-<script src="./index.ts"></script>
+<script src="./scripts/index.ts"></script>

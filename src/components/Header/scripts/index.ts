@@ -1,3 +1,9 @@
+if (!CSS.supports("animation-timeline", "scroll(y root)")) {
+  import("./sticky-header.fallback").then(({ default: stickThatHeader }) =>
+    stickThatHeader(),
+  );
+}
+
 const header = document.querySelector<HTMLElement>("#header");
 
 const mobileMenuOpener = document.querySelector<HTMLElement>(

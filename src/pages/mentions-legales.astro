@@ -48,7 +48,7 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
                 <li>
                   Contacts : +33 642 29 86 31 - <a
                     href="mailto:hello@yuna.work"
-                    class="underline underline-offset-2 hover:text-neutral5"
+                    class="hover:text-neutral5"
                   >
                     hello@yuna.work
                   </a>
@@ -169,10 +169,13 @@ import DiscreetDots from "../components/@common/DiscreetDots.astro";
 
 <style>
   ul {
-    @apply list-disc list-outside  pl-[30px];
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 30px;
   }
 
   a {
-    @apply underline underline-offset-2;
+    text-decoration: underline;
+    text-underline-offset: var(--spacing-link-underline-offset);
   }
 </style>
