@@ -61,7 +61,9 @@ const { title, description, og_description, og_title } = Astro.props;
   <body>
     <Header />
 
-    <slot />
+    <main role="main">
+      <slot />
+    </main>
 
     <Footer />
   </body>
