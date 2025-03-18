@@ -39,25 +39,11 @@ const anchorCSSClasses = ["lg:rounded-full", "lg:hover:bg-neutral3"];
 >
   <span class:list={["relative", "content", { selected: isSelected }]}>
     <slot />
+
+    {
+      isSelected && (
+        <span class="bg-secondary absolute -bottom-[10px] left-0 w-full h-[4px] rounded-[4px]" />
+      )
+    }
   </span>
 </HTMLTag>
-
-<style>
-  .content {
-    &:after {
-      background-color: var(--color-secondary);
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      border-radius: 4px;
-    }
-
-    &:is(.selected) {
-      &:after {
-        content: "";
-      }
-    }
-  }
-</style>
