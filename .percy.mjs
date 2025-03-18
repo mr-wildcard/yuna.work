@@ -51,10 +51,9 @@ export default async function getPercySnapshotsConfig() {
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
+      percyCSS: `html { font-family: DM Sans Variable,sans-serif !important; }`,
       execute() {
-        window.scrollTo({
-          top: document.body.scrollHeight,
-        });
+        window.scrollTo({ top: document.body.scrollHeight });
       },
     };
 
