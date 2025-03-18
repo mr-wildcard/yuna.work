@@ -7,10 +7,6 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<h3 class="text-headline-large-highlight mb-5">
-  {title}
-</h3>
+<h3 set:html={title} class="text-headline-large-highlight mb-5" />
 
-<p class="text-body-normal text-paragraph">
-  {description}
-</p>
+<p set:html={description} class="text-body-normal text-paragraph" />

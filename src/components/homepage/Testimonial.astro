@@ -13,15 +13,13 @@ const { quote, author, context } = Astro.props;
 <figure class="px-5 py-[30px] space-y-5 rounded-card bg-neutral2 lg:px-14">
   <Icon name="quote" size={18} class="block" />
   <blockquote>
-    <p class="text-body-normal text-paragraph">
-      {quote}
-    </p>
+    <p set:html={quote} class="text-body-normal text-paragraph" />
   </blockquote>
 
   <figcaption class="text-body-small text-secondary">
     <cite class="text-title-normal text-paragraph not-italic mb-2.5 block">
       {author}
     </cite>
-    {context}
+    <span set:html={context} />
   </figcaption>
 </figure>

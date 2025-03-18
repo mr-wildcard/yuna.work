@@ -47,7 +47,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
               {item.events.map((event) => (
                 <li>
                   <p class="text-body-normal">
-                    {event.title}
+                    <span set:html={event.title} />
                     <span class="text-tag-label font-sans text-secondary">
                       -&nbsp;{event.date}
                     </span>
