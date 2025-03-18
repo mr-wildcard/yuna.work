@@ -39,7 +39,10 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
           <h3 class="text-title-small mb-1.5">{item.title}</h3>
 
           {item.description ? (
-            <p class="text-body-normal text-paragraph">{item.description}</p>
+            <p
+              set:html={item.description}
+              class="text-body-normal text-paragraph"
+            />
           ) : null}
 
           {item.events ? (
