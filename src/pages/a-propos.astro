@@ -112,7 +112,18 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 
         <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-4">
           <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
-            <ul class="about-me-enum space-y-[30px]">
+            <ul
+              style={{ "--bg-image-url": `url(${optimizedListStyle.src})` }}
+              class:list={[
+                "about-me",
+                "space-y-[30px]",
+                "text-body-normal",
+                "*:pl-[37px]",
+                "*:bg-[left_10px]",
+                `*:bg-(image:--bg-image-url)`,
+                "*:bg-no-repeat",
+              ]}
+            >
               <li>
                 <span class="text-title-small">Diplômée</span> d’un Master en Stratégies
                 et Produits de Communication
@@ -365,16 +376,4 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
       </Grid>
     </div>
   </div>
-
-  <style define:vars={{ url: `url(${optimizedListStyle.src})` }}>
-    .about-me-enum li {
-      @apply text-body-normal;
-
-      padding-left: 37px;
-
-      background-image: var(--url);
-      background-repeat: no-repeat;
-      background-position: 0 10px;
-    }
-  </style>
 </MainLayout>

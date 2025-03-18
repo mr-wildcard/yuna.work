@@ -1,18 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --font-*: initial;
+  --font-sans: DM Sans Variable, sans-serif;
+  --font-arial: Arial, sans-serif;
+
+  --text-*: initial;
+  --text-display-large-highlight: 36px;
+  --text-display-large-highlight--line-height: 120%;
+  --text-display-large-highlight--font-weight: 500;
+  --text-display-large: 36px;
+  --text-display-large--line-height: 120%;
+  --text-display-large--font-weight: 400;
+  --text-display-medium: 32px;
+  --text-display-medium--line-height: 120%;
+  --text-display-medium--font-weight: 400;
+  --text-display-small: 30px;
+  --text-display-small--line-height: 140%;
+  --text-display-small--font-weight: 700;
+  --text-headline-small: 24px;
+  --text-headline-small--line-height: 120%;
+  --text-headline-small--font-weight: 400;
+  --text-headline-small-highlight: 22px;
+  --text-headline-small-highlight--line-height: 120%;
+  --text-headline-small-highlight--font-weight: 700;
+  --text-headline-large: 26px;
+  --text-headline-large--line-height: 120%;
+  --text-headline-large--font-weight: 400;
+  --text-headline-large-highlight: 24px;
+  --text-headline-large-highlight--line-height: 140%;
+  --text-headline-large-highlight--font-weight: 700;
+  --text-title-small: 18px;
+  --text-title-small--line-height: 140%;
+  --text-title-small--font-weight: 700;
+  --text-title-normal: 20px;
+  --text-title-normal--line-height: 140%;
+  --text-title-normal--font-weight: 500;
+  --text-title-large: 20px;
+  --text-title-large--line-height: 140%;
+  --text-title-large--font-weight: 700;
+  --text-body-small: 15px;
+  --text-body-small--line-height: 140%;
+  --text-body-small--font-weight: 400;
+  --text-body-normal: 18px;
+  --text-body-normal--line-height: 140%;
+  --text-body-normal--font-weight: 400;
+  --text-body-normal-highlight: 18px;
+  --text-body-normal-highlight--line-height: 160%;
+  --text-body-normal-highlight--font-weight: 500;
+  --text-tag-label-highlight: 16px;
+  --text-tag-label-highlight--line-height: 140%;
+  --text-tag-label-highlight--font-weight: 500;
+  --text-tag-label: 16px;
+  --text-tag-label--line-height: 140%;
+  --text-tag-label--font-weight: 400;
+  --text-menu-label-highlight: 18px;
+  --text-menu-label-highlight--line-height: normal;
+  --text-menu-label-highlight--font-weight: 700;
+  --text-menu-label: 18px;
+  --text-menu-label--line-height: 140%;
+  --text-menu-label--font-weight: 400;
+
+  --color-*: initial;
+  --color-primary: #0f2e20;
+  --color-paragraph: #05100b;
+  --color-secondary: #3d4c5e;
+  --color-neutral1: #fefaf5;
+  --color-neutral2: #f4efea;
+  --color-neutral3: #d9e1dd;
+  --color-neutral4: #b7c5be;
+  --color-neutral5: #5e6b65;
+
+  --breakpoint-2xl: 90rem;
+
+  --shadow-cta: 0 0 0 2px inset;
+
+  --radius-card: 20px;
+
+  --spacing-link-underline-offset: calc(var(--spacing) / 2);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
 @layer base {
-  @font-face {
-    font-family: "DM Sans Variable";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 1000;
-    src: url(@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2)
-      format("woff2-variations");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
 
   html {
@@ -21,72 +103,108 @@
   }
 
   body {
-    @apply bg-neutral1 text-primary;
+    background-color: var(--color-neutral1);
+    color: var(--color-primary);
   }
 }
 
-@layer utilities {
-  .container {
-    margin: 0 auto;
-    max-width: calc(100% - 40px);
+@utility container {
+  margin: 0 auto;
+  max-width: calc(100% - 40px);
 
-    @screen lg {
-      max-width: 904px;
-    }
-
-    @screen xl {
-      max-width: 1160px;
-    }
-
-    @screen 2xl {
-      max-width: 1320px;
-    }
+  @variant lg {
+    max-width: 904px;
   }
 
-  .text-body-normal {
-    @apply font-arial;
+  @variant xl {
+    max-width: 1160px;
   }
 
-  @screen lg {
-    .text-display-large-highlight,
-    .text-display-large {
-      font-size: 60px;
-    }
+  @variant 2xl {
+    max-width: 1320px;
+  }
+}
 
-    .text-display-medium {
-      font-size: 42px;
-    }
+@utility text-title-small {
+  @apply font-sans;
+}
 
-    .text-display-small {
-      @apply font-sans;
+@utility text-body-normal {
+  @apply font-arial;
+}
 
-      font-size: 30px;
-    }
-
-    .text-headline-small,
-    .text-headline-small-highlight {
-      font-size: 24px;
-    }
-
-    .text-headline-large,
-    .text-headline-large-highlight {
-      font-size: 30px;
-    }
-
-    .text-body-small {
-      font-size: 13px;
-    }
-
-    .text-menu-label-highlight,
-    .text-menu-label {
-      font-size: 16px;
-    }
+@utility text-display-large-highlight {
+  @variant lg {
+    font-size: 60px;
   }
 
-  @screen xl {
-    .text-display-large-highlight,
-    .text-display-large {
-      font-size: 72px;
-    }
+  @variant xl {
+    font-size: 72px;
+  }
+}
+
+@utility text-display-large {
+  @variant lg {
+    font-size: 60px;
+  }
+
+  @variant xl {
+    font-size: 72px;
+  }
+}
+
+@utility text-display-medium {
+  @variant lg {
+    font-size: 42px;
+  }
+}
+
+@utility text-display-small {
+  @variant lg {
+    @apply font-sans;
+
+    font-size: 30px;
+  }
+}
+
+@utility text-headline-small {
+  @variant lg {
+    font-size: 24px;
+  }
+}
+
+@utility text-headline-small-highlight {
+  @variant lg {
+    font-size: 24px;
+  }
+}
+
+@utility text-headline-large {
+  @variant lg {
+    font-size: 30px;
+  }
+}
+
+@utility text-headline-large-highlight {
+  @variant lg {
+    font-size: 30px;
+  }
+}
+
+@utility text-body-small {
+  @variant lg {
+    font-size: 13px;
+  }
+}
+
+@utility text-menu-label-highlight {
+  @variant lg {
+    font-size: 16px;
+  }
+}
+
+@utility text-menu-label {
+  @variant lg {
+    font-size: 16px;
   }
 }
