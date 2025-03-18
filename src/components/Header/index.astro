@@ -16,26 +16,28 @@ import Contact from "../Contact.astro";
         <Logo />
       </div>
 
-      <ul class="hidden lg:flex lg:items-center">
-        <li>
-          <NavItem to="/" variant="primary">Mes expertises</NavItem>
-        </li>
-        <li>
-          <NavItem to="/collaborations" variant="primary">
-            Collaborations
-          </NavItem>
-        </li>
-        <li class="mr-[15px]">
-          <NavItem to="/a-propos" variant="primary">À propos</NavItem>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            class="text-menu-label-highlight text-neutral1 px-5 py-2 rounded-full bg-primary hover:shadow-cta hover:text-primary hover:bg-neutral3"
-            >Contactez-moi</a
-          >
-        </li>
-      </ul>
+      <nav role="navigation">
+        <ul class="hidden lg:flex lg:items-center">
+          <li>
+            <NavItem to="/" variant="primary">Mes expertises</NavItem>
+          </li>
+          <li>
+            <NavItem to="/collaborations" variant="primary">
+              Collaborations
+            </NavItem>
+          </li>
+          <li class="mr-[15px]">
+            <NavItem to="/a-propos" variant="primary">À propos</NavItem>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-menu-label-highlight text-neutral1 px-5 py-2 rounded-full bg-primary hover:shadow-cta hover:text-primary hover:bg-neutral3"
+              >Contactez-moi</a
+            >
+          </li>
+        </ul>
+      </nav>
 
       <button
         id="mobile-menu-opener"
