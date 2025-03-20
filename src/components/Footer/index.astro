@@ -3,9 +3,9 @@ import Link from "../@common/Link.astro";
 import NavItem from "./NavItem.astro";
 ---
 
-<footer class="border-t border-top-primary">
+<footer role="contentinfo" class="border-t border-top-primary">
   <div class="container">
-    <nav class="pt-[38px] pb-[50px] lg:py-5">
+    <nav role="navigation" class="pt-[38px] pb-[50px] lg:py-5">
       <ul
         class="flex flex-col items-center space-y-[44px] lg:flex-row lg:space-y-0 lg:justify-end"
       >
@@ -21,7 +21,7 @@ import NavItem from "./NavItem.astro";
             to="https://www.linkedin.com/in/yunaorsini/"
           >
             Retrouvez-moi sur LinkedIn
-            <span class="sr-only">(nouvelle fenêtre)</span>
+            <span class="sr-only">&nbsp;(nouvelle fenêtre)</span>
           </Link>
         </li>
       </ul>

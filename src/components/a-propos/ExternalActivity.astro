@@ -20,9 +20,9 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
 <div class="px-5 py-[30px] lg:px-[30px] rounded-card bg-neutral2">
-  <h3 class="text-headline-small-highlight mb-10">
+  <h2 class="text-headline-small-highlight mb-10">
     {title}
-  </h3>
+  </h2>
   <ul
     style={{ "--bg-image-url": `url(${optimizedListStyle.src})` }}
     class:list={[
@@ -36,10 +36,13 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
     {
       items.map((item) => (
         <li>
-          <h4 class="text-title-small mb-1.5">{item.title}</h4>
+          <h3 class="text-title-small mb-1.5">{item.title}</h3>
 
           {item.description ? (
-            <p class="text-body-normal text-paragraph">{item.description}</p>
+            <p
+              set:html={item.description}
+              class="text-body-normal text-paragraph"
+            />
           ) : null}
 
           {item.events ? (
@@ -47,7 +50,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
               {item.events.map((event) => (
                 <li>
                   <p class="text-body-normal">
-                    {event.title}
+                    <span set:html={event.title} />
                     <span class="text-tag-label font-sans text-secondary">
                       -&nbsp;{event.date}
                     </span>

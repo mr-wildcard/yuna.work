@@ -7,7 +7,6 @@ const { text } = Astro.props;
 ---
 
 <span
+  set:html={text}
   class="text-tag-label-highlight bg-neutral3 py-[3px] px-2.5 rounded-[10px]"
->
-  {text}
-</span>
+/>
