@@ -54,6 +54,10 @@ export default async function getPercySnapshotsConfig() {
       percyCSS: `html { font-family: DM Sans Variable,sans-serif !important; }`,
       execute() {
         window.scrollTo({ top: document.body.scrollHeight });
+
+        document
+          .querySelectorAll("summary")
+          .forEach((summary) => summary.click());
       },
     };
 
