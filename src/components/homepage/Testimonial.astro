@@ -20,6 +20,6 @@ const { quote, author, context } = Astro.props;
     <cite class="text-title-normal text-paragraph not-italic mb-2.5 block">
       {author}
     </cite>
-    <span set:html={context} />
+    <p set:html={context} />
   </figcaption>
 </figure>
