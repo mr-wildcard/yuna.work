@@ -61,7 +61,7 @@ const { title, description, og_description, og_title } = Astro.props;
   <body>
     <Header />
 
-    <main role="main">
+    <main data-inert-if-mobile-menu-opened="true" role="main">
       <slot />
     </main>
 
