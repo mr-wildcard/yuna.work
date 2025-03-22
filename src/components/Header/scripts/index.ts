@@ -17,6 +17,11 @@ function openMobileMenu() {
     header.setAttribute("data-menu-opened", "true");
     mobileMenuOpener.setAttribute("aria-expanded", "true");
     document.body.classList.add("overflow-hidden");
+    document
+      .querySelectorAll<HTMLElement>("[data-inert-if-mobile-menu-opened=true]")
+      .forEach((element) => {
+        element.inert = true;
+      });
   }
 }
 
@@ -25,6 +30,11 @@ function closeMobileMenu() {
     header.setAttribute("data-menu-opened", "false");
     mobileMenuOpener.setAttribute("aria-expanded", "false");
     document.body.classList.remove("overflow-hidden");
+    document
+      .querySelectorAll<HTMLElement>("[data-inert-if-mobile-menu-opened=true]")
+      .forEach((element) => {
+        element.inert = false;
+      });
   }
 }
 
