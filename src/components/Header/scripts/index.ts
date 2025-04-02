@@ -12,38 +12,16 @@ const mobileMenuOpener = document.querySelector<HTMLElement>(
 
 const mobileMenu = document.querySelector<HTMLElement>("#mobile-menu");
 
-const inertElements: HTMLElement[] = [];
-
-const elementsToIgnore = [mobileMenu, mobileMenuOpener];
-
-function inertChild(child: ChildNode) {
-  const childHTMLElements = child.childNodes;
-
-  for (const childHTMLElement of childHTMLElements) {
-    const htmlElement = childHTMLElement as HTMLElement;
-
-    if (elementsToIgnore.some((element) => element === htmlElement)) {
-      htmlElement.inert = false;
-
-      break;
-    }
-
-    if (elementsToIgnore.some((element) => htmlElement.contains(element))) {
-      inertChild(htmlElement);
-    } else {
-      htmlElement.inert = true;
-
-      inertElements.push(htmlElement);
-    }
-  }
-}
-
 function openMobileMenu() {
   if (header && mobileMenuOpener && mobileMenu) {
     header.setAttribute("data-menu-opened", "true");
     mobileMenuOpener.setAttribute("aria-expanded", "true");
     document.body.classList.add("overflow-hidden");
-    inertChild(document.body);
+    document
+      .querySelectorAll<HTMLElement>("[data-inert-if-mobile-menu-opened=true]")
+      .forEach((element) => {
+        element.inert = true;
+      });
   }
 }
 
@@ -52,11 +30,11 @@ function closeMobileMenu() {
     header.setAttribute("data-menu-opened", "false");
     mobileMenuOpener.setAttribute("aria-expanded", "false");
     document.body.classList.remove("overflow-hidden");
-
-    let inertElement: HTMLElement | undefined;
-    while ((inertElement = inertElements.pop())) {
-      inertElement.removeAttribute("inert");
-    }
+    document
+      .querySelectorAll<HTMLElement>("[data-inert-if-mobile-menu-opened=true]")
+      .forEach((element) => {
+        element.inert = false;
+      });
   }
 }
 
