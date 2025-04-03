@@ -21,7 +21,7 @@
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.30.9",
     "@playwright/test": "1.51.1",
-    "@tailwindcss/vite": "4.1.1",
+    "@tailwindcss/vite": "4.1.2",
     "@types/node": "22.14.0",
     "autoprefixer": "10.4.21",
     "cssnano": "7.0.6",
@@ -31,7 +31,7 @@
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.33.5",
-    "tailwindcss": "4.1.1",
+    "tailwindcss": "4.1.2",
     "typescript": "5.8.2",
     "vite": "6.2.5",
     "wait-on": "8.0.3"
