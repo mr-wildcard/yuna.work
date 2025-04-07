@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -30,7 +30,7 @@
     "postcss": "8.5.3",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
-    "sharp": "0.34.0",
+    "sharp": "0.34.1",
     "tailwindcss": "4.1.3",
     "typescript": "5.8.3",
     "vite": "6.2.5",
