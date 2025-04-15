@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.5",
-    "astro": "5.6.2",
+    "astro": "5.7.0",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
