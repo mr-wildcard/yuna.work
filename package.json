@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.5",
-    "astro": "5.7.0",
+    "astro": "5.7.2",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "sharp": "0.34.1",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3",
-    "vite": "6.2.6",
+    "vite": "6.3.0",
     "wait-on": "8.0.3"
   }
 }
