@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.5",
-    "astro": "5.7.2",
+    "astro": "5.7.3",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
@@ -20,7 +20,7 @@
     "@astrojs/sitemap": "3.3.0",
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.30.10",
-    "@playwright/test": "1.51.1",
+    "@playwright/test": "1.52.0",
     "@tailwindcss/vite": "4.1.4",
     "@types/node": "22.14.1",
     "autoprefixer": "10.4.21",
