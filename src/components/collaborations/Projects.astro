@@ -2,6 +2,7 @@
 import Grid from "../@common/Grid.astro";
 import Separator from "../@common/Separator.astro";
 import DiscreetDots from "../@common/DiscreetDots.astro";
+import ProjectScreenshotSnale from "images/collaborations/projects-screenshots/snale.jpg";
 import ProjectScreenshotElle from "images/collaborations/projects-screenshots/elle.jpg";
 import ProjectScreenshotDynamo from "images/collaborations/projects-screenshots/dynamo.jpg";
 import ProjectScreenshotSys1 from "images/collaborations/projects-screenshots/sys1.jpg";
@@ -37,6 +38,29 @@ import Project from "./Project.astro";
       <div class="mb-20 lg:mb-[50px]">
         <Project
           tags={[
+            "Refonte UX",
+            "Données complexes",
+            "Outil métier",
+          ]}
+          title="Repenser l’architecture UX de l’outil Snale Floods pour aider les collectivités à prendre des décisions concernant les inondations"
+          screenshot={ProjectScreenshotSnale}
+          testimonials={[
+            {
+              quote:
+                "Nous avons fait appel à Yuna pour la conception de notre application web à destination des collectivités sur la prévision des inondations. Le projet était particulier et complexe car il mélange des connaissances métier sur les inondations avec un outil d’aide à la décision simple, intuitif et surtout inclusif. Yuna a été très à l’aise avec cette complexité et a su proposer différentes pistes d'UX afin de répondre aux besoins des utilisateurs. Les maquettes livrées sont de très haute qualité avec des annotations qui ont permis à notre équipe de développement d’être efficace dans le développement.",
+              author: "Fabien Rétif, fondateur et directeur technique de Snale",
+            },
+        />
+      </div>
+      <Grid as="div">
+        <Separator
+          class="col-span-full sm:col-span-7 lg:col-start-2 lg:col-span-full xl:col-start-3"
+        />
+      </Grid>
+    </li><li>
+      <div class="mb-20 lg:mb-[50px]">
+        <Project
+          tags={[
             "Transformation produit",
             "<span lang='en'>Business model</span>",
             "Site éditorial",
@@ -47,7 +71,7 @@ import Project from "./Project.astro";
             {
               quote:
                 "Collaborer avec Yuna a été un réel plaisir, et sa mission s’est avérée très efficace. Elle sait avec beaucoup de vitalité, de clairvoyance et de calme écouter et saisir des enjeux produit, business ou organisationnels complexes. Elle revient avec des solutions concrètes et activables, alliant une vision globale autant que le souci du détail. Elle a, entre autre, particulièrement excellé à animer des ateliers aux parties prenantes nombreuses et diverses.",
-              author: "Sophie Rollin, Directrice Produit & Projets numériques chez CMI Media",
+              author: "Sophie Rollin, directrice produit & projets numériques chez CMI Media",
             },
         />
       </div>
