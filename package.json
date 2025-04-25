@@ -12,17 +12,17 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.5",
-    "astro": "5.7.4",
+    "astro": "5.7.5",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/sitemap": "3.3.0",
+    "@astrojs/sitemap": "3.3.1",
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.30.10",
     "@playwright/test": "1.52.0",
     "@tailwindcss/vite": "4.1.4",
-    "@types/node": "22.14.1",
+    "@types/node": "22.15.2",
     "autoprefixer": "10.4.21",
     "cssnano": "7.0.6",
     "dotenv": "16.5.0",
@@ -33,7 +33,7 @@
     "sharp": "0.34.1",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3",
-    "vite": "6.3.2",
+    "vite": "6.3.3",
     "wait-on": "8.0.3"
   }
 }
