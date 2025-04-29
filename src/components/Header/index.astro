@@ -50,48 +50,48 @@ import Contact from "../Contact.astro";
     </div>
   </div>
 
-  <nav
-    id="mobile-menu"
-    role="navigation"
-    class="fixed top-[75px] left-0 w-full h-[calc(100%-75px)] overflow-y-auto overflow-x-hidden bg-neutral3"
-  >
-    <div class="container">
+  <dialog id="mobile-menu" autofocus>
+    <nav
+      role="navigation"
+      class="fixed top-[75px] left-0 w-full h-[calc(100%-75px)] overflow-y-auto overflow-x-hidden bg-neutral3"
+    >
       <div class="container">
-        <ul class="pt-6">
-          <li class="mb-6">
-            <NavItem to="/" variant="primary">Mes expertises</NavItem>
-          </li>
-          <li class="mb-6">
-            <NavItem to="/collaborations" variant="primary">
-              Collaborations
-            </NavItem>
-          </li>
-          <li class="mb-12">
-            <NavItem to="/a-propos" variant="primary">À propos</NavItem>
-          </li>
-          <li class="mb-[30px]">
-            <NavItem to="/mentions-legales" variant="secondary">
-              Mentions légales
-            </NavItem>
-          </li>
-          <li>
-            <NavItem to="/plan-du-site" variant="secondary">
-              Plan du site
-            </NavItem>
-          </li>
-        </ul>
-      </div>
+        <div class="container">
+          <ul class="pt-6">
+            <li class="mb-6">
+              <NavItem to="/" variant="primary">Mes expertises</NavItem>
+            </li>
+            <li class="mb-6">
+              <NavItem to="/collaborations" variant="primary">
+                Collaborations
+              </NavItem>
+            </li>
+            <li class="mb-12">
+              <NavItem to="/a-propos" variant="primary">À propos</NavItem>
+            </li>
+            <li class="mb-[30px]">
+              <NavItem to="/mentions-legales" variant="secondary">
+                Mentions légales
+              </NavItem>
+            </li>
+            <li>
+              <NavItem to="/plan-du-site" variant="secondary">
+                Plan du site
+              </NavItem>
+            </li>
+          </ul>
+        </div>
 
-      <div class="mt-[50px] mb-5">
-        <Contact view="inline" />
+        <div class="mt-[50px] mb-5">
+          <Contact view="inline" />
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </dialog>
 </header>
 
 <style>
-  .text-opened,
-  #mobile-menu {
+  .text-opened {
     display: none;
   }
 
@@ -101,12 +101,7 @@ import Contact from "../Contact.astro";
     height: 100dvh;
     z-index: 10;
 
-    #mobile-menu {
-      z-index: 10;
-    }
-
-    .text-opened,
-    #mobile-menu {
+    .text-opened {
       display: block;
     }
 

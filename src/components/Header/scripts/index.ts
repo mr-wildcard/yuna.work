@@ -10,13 +10,14 @@ const mobileMenuOpener = document.querySelector<HTMLElement>(
   "#mobile-menu-opener",
 );
 
-const mobileMenu = document.querySelector<HTMLElement>("#mobile-menu");
+const mobileMenu = document.querySelector<HTMLDialogElement>("#mobile-menu");
 
 function openMobileMenu() {
   if (header && mobileMenuOpener && mobileMenu) {
     header.setAttribute("data-menu-opened", "true");
     mobileMenuOpener.setAttribute("aria-expanded", "true");
     document.body.classList.add("overflow-hidden");
+    mobileMenu.show();
   }
 }
 
@@ -25,6 +26,7 @@ function closeMobileMenu() {
     header.setAttribute("data-menu-opened", "false");
     mobileMenuOpener.setAttribute("aria-expanded", "false");
     document.body.classList.remove("overflow-hidden");
+    mobileMenu.close();
   }
 }
 
