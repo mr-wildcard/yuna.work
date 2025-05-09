@@ -2,7 +2,7 @@ name: Run visual testing
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, labeled]
 
 env:
   ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
@@ -46,6 +46,6 @@ jobs:
       - name: Take yuna.work screenshots and upload them to Percy
         run: |
           pnpm wait-on tcp:$ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING 
-          pnpm percy snapshot .percy.mjs --verbose
+          pnpm percy snapshot .percy.mjs
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
