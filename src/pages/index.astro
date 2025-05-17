@@ -65,38 +65,40 @@ import Tag from "components/@common/Tag.astro";
     </div>
   </div>
 
-  <div class="mb-5 sm:mb-20">
+  <div class="mb-5 sm:mb-25">
     <div class="container">
       <Grid as="div">
         <div
           class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-7 xl:col-start-2"
         >
           <p class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px]">
-            J’aime relever des défis complexes – UX, techniques,
-            organisationnels… J’élabore des stratégies adaptées, j’y aligne les
-            actions et j’architecture des produits et services numériques
-            efficaces, sobres et accessibles. Attentive aux détails et aux
-            autres, j'aide les équipes à concrétiser la vision produit et à
+            J’architecture des produits et services numériques efficaces, sobres
+            et accessibles. J’aime relever des défis complexes, élaborer des
+            stratégies adaptées, aligner les actions. Attentive aux détails et
+            aux autres, j'aide les équipes à concrétiser la vision produit et à
             grandir.
           </p>
           <p
-            class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px] lg:mb-0"
+            class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px] lg:mb-10"
           >
-            Je m’appuie sur 14 années d’expérience* où j’ai exploré plusieurs
-            facettes du design comme planneuse stratégique en agences,
+            En 14 années d’expérience*, j’ai exploré plusieurs facettes du
+            design en tant que planneuse stratégique en agences,
             <span lang="en">product designer</span> en <span lang="en"
               >freelance</span
             > ou responsable UX en startup tech.
           </p>
+          <a
+            href="#contact"
+            class="text-menu-label-highlight text-neutral1 inline-block px-5 py-2 rounded-full bg-primary hover:shadow-cta hover:text-primary hover:bg-neutral3"
+            >Faire appel à mes services 👋</a
+          >
         </div>
         <div class="col-span-3 sm:col-span-4 lg:col-span-full">
           <Grid as="div">
             <div
               class="col-span-full lg:col-start-10 lg:col-span-3 xl:col-start-10 xl:col-span-2"
             >
-              <p
-                class="text-body-small text-primary lg:mt-[90px] xl:mt-[50px] 2xl:mt-[140px]"
-              >
+              <p class="text-body-small text-primary mt-10 lg:mt-0">
                 *23 années, si créer des sites sur Dreamweaver à la sortie du
                 collège puis en coder pour le fun au lycée et à la fac, ça
                 compte.
@@ -110,6 +112,24 @@ import Tag from "components/@common/Tag.astro";
           <DiscreetDots x={6} y={6} />
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="mb-[120px] lg:mb-[143px]">
+    <div class="container">
+      <Grid as="div">
+        <div class="col-span-full lg:col-start-2">
+          <h2 class="text-title-small mb-2.5">
+            Je suis formée, certifiée ou diplômée par
+          </h2>
+        </div>
+
+        <div
+          class="col-span-full sm:col-span-6 md:col-span-full lg:col-start-2"
+        >
+          <Certifications />
+        </div>
+      </Grid>
     </div>
   </div>
 
