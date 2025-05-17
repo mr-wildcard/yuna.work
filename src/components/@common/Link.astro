@@ -5,16 +5,15 @@ interface Props {
   variant: "inline" | "inline-radius" | "full-radius";
   to: string;
   class?: string;
+  target?: string;
 }
 
-const { variant, to, class: cssClasses } = Astro.props;
-
-const isExternal = to.startsWith("http");
+const { variant, to, class: cssClasses, ...props } = Astro.props;
 ---
 
 {
   variant === "full-radius" && (
-    <a href={to} target={isExternal ? "_blank" : undefined}>
+    <a href={to} {...props}>
       <span
         class:list={[
           "text-menu-label-highlight",
@@ -33,7 +32,7 @@ const isExternal = to.startsWith("http");
         <span>
           <slot />
         </span>
-        <IconOpenInNew size="18" />
+        {props.target === "_blank" && <IconOpenInNew size="18" />}
       </span>
     </a>
   )
