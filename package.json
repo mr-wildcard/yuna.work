@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,27 +11,27 @@
     "test:e2e:update:snapshots": "pnpm test:e2e --update-snapshots"
   },
   "dependencies": {
-    "@fontsource-variable/dm-sans": "5.2.5",
-    "astro": "5.8.1",
+    "@fontsource-variable/dm-sans": "5.2.6",
+    "astro": "5.11.0",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/sitemap": "3.4.0",
+    "@astrojs/sitemap": "3.4.1",
     "@astrojs/ts-plugin": "1.10.4",
-    "@percy/cli": "1.30.11",
-    "@playwright/test": "1.52.0",
-    "@tailwindcss/vite": "4.1.8",
-    "@types/node": "22.15.29",
+    "@percy/cli": "1.31.0",
+    "@playwright/test": "1.53.2",
+    "@tailwindcss/vite": "4.1.11",
+    "@types/node": "22.16.0",
     "autoprefixer": "10.4.21",
     "cssnano": "7.0.7",
-    "dotenv": "16.5.0",
-    "fast-xml-parser": "5.2.3",
-    "postcss": "8.5.4",
-    "prettier": "3.5.3",
+    "dotenv": "16.6.1",
+    "fast-xml-parser": "5.2.5",
+    "postcss": "8.5.6",
+    "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.34.2",
-    "tailwindcss": "4.1.8",
+    "tailwindcss": "4.1.11",
     "typescript": "5.8.3",
     "vite": "6.3.5",
     "wait-on": "8.0.3"
