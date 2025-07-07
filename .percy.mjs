@@ -57,22 +57,24 @@ export default async function getPercySnapshotsConfig() {
           .querySelectorAll("summary")
           .forEach((summary) => summary.click());
 
-        await new Promise((resolve) => {
-          window.addEventListener(
-            "scrollend",
-            function () {
-              resolve();
-            },
-            {
-              once: true,
-            },
-          );
+        if (window.innerHeight < document.body.scrollHeight) {
+          await new Promise((resolve) => {
+            window.addEventListener(
+              "scrollend",
+              function () {
+                resolve();
+              },
+              {
+                once: true,
+              },
+            );
 
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: "smooth",
+            });
           });
-        });
+        }
       },
     };
 
