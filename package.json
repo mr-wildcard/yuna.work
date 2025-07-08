@@ -22,7 +22,7 @@
     "@percy/cli": "1.31.0",
     "@playwright/test": "1.53.2",
     "@tailwindcss/vite": "4.1.11",
-    "@types/node": "22.16.0",
+    "@types/node": "22.16.1",
     "autoprefixer": "10.4.21",
     "cssnano": "7.0.7",
     "dotenv": "17.1.0",
@@ -33,7 +33,7 @@
     "sharp": "0.34.2",
     "tailwindcss": "4.1.11",
     "typescript": "5.8.3",
-    "vite": "7.0.2",
+    "vite": "7.0.3",
     "wait-on": "8.0.3"
   }
 }
