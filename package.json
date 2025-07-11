@@ -22,7 +22,7 @@
     "@percy/cli": "1.31.0",
     "@playwright/test": "1.54.0",
     "@tailwindcss/vite": "4.1.11",
-    "@types/node": "22.16.2",
+    "@types/node": "22.16.3",
     "autoprefixer": "10.4.21",
     "cssnano": "7.0.7",
     "dotenv": "17.2.0",
