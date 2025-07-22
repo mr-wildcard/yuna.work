@@ -12,8 +12,8 @@ importers:
         specifier: 5.2.6
         version: 5.2.6
       astro:
-        specifier: 5.12.1
-        version: 5.12.1(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(typescript@5.8.3)(yaml@2.5.0)
+        specifier: 5.12.2
+        version: 5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(typescript@5.8.3)(yaml@2.5.0)
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
@@ -1051,8 +1051,8 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro@5.12.1:
-    resolution: {integrity: sha512-/gH9cLIp6UNdbJO1FPBVN/Ea+1I9hJdQoLJKYUsXIRIfHcyF/3NCg0QVDJGw1oWkyQT6x6poQsnbgY9UXitjiw==}
+  astro@5.12.2:
+    resolution: {integrity: sha512-/qTPSD8bSxjsh5KNXvOsf6Md7dqNuH3WSx6KLa1YbxPR2JZDgPWEKEyulS3/9L5h5aP0SkjONrqwOGdgWw97fg==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4195,7 +4195,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@5.12.1(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(typescript@5.8.3)(yaml@2.5.0):
+  astro@5.12.2(@types/node@22.16.5)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(typescript@5.8.3)(yaml@2.5.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
