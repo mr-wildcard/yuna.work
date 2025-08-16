@@ -12,17 +12,17 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.6",
-    "astro": "5.12.9",
+    "astro": "5.13.2",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/sitemap": "3.4.2",
+    "@astrojs/sitemap": "3.5.0",
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.31.1",
     "@playwright/test": "1.54.2",
-    "@tailwindcss/vite": "4.1.11",
-    "@types/node": "22.17.1",
+    "@tailwindcss/vite": "4.1.12",
+    "@types/node": "22.17.2",
     "autoprefixer": "10.4.21",
     "cssnano": "7.1.0",
     "dotenv": "17.2.1",
@@ -31,7 +31,7 @@
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.34.3",
-    "tailwindcss": "4.1.11",
+    "tailwindcss": "4.1.12",
     "typescript": "5.9.2",
     "vite": "7.1.2",
     "wait-on": "8.0.4"
