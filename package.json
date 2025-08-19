@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -33,7 +33,7 @@
     "sharp": "0.34.3",
     "tailwindcss": "4.1.12",
     "typescript": "5.9.2",
-    "vite": "7.1.2",
+    "vite": "7.1.3",
     "wait-on": "8.0.4"
   }
 }
