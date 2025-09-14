@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version-file: .nvmrc
+          package-manager-cache: false
 
       # should be temporary. fix: https://vercel.com/guides/corepack-errors-github-actions
       - name: Install corepack
