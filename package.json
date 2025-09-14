@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,18 +11,18 @@
     "test:e2e:update:snapshots": "pnpm test:e2e --update-snapshots"
   },
   "dependencies": {
-    "@fontsource-variable/dm-sans": "5.2.6",
-    "astro": "5.13.6",
+    "@fontsource-variable/dm-sans": "5.2.7",
+    "astro": "5.13.7",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.5.1",
     "@astrojs/ts-plugin": "1.10.4",
-    "@percy/cli": "1.31.1",
+    "@percy/cli": "1.31.2",
     "@playwright/test": "1.55.0",
     "@tailwindcss/vite": "4.1.13",
-    "@types/node": "22.18.1",
+    "@types/node": "22.18.3",
     "autoprefixer": "10.4.21",
     "cssnano": "7.1.1",
     "dotenv": "17.2.2",
@@ -34,6 +34,6 @@
     "tailwindcss": "4.1.13",
     "typescript": "5.9.2",
     "vite": "7.1.5",
-    "wait-on": "8.0.4"
+    "wait-on": "8.0.5"
   }
 }
