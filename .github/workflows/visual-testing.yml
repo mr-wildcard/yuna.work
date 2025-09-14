@@ -27,7 +27,7 @@ jobs:
 
       - name: Install
         shell: "bash"
-        run: pnpm i --frozen-lockfile
+        run: pnpm i
 
       - name: Build
         shell: "bash"
