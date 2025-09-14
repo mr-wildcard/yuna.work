@@ -33,6 +33,12 @@ jobs:
         shell: "bash"
         run: pnpm build
 
+      - name: Setup Chromium for Percy
+        id: chromium
+        uses: browser-actions/setup-chrome@v2
+        with:
+          chrome-version: stable
+
       - name: Start website preview server for visual testing
         run: pnpm preview --port $ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING &
 
@@ -42,3 +48,4 @@ jobs:
           pnpm percy snapshot .percy.mjs --verbose
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_BROWSER_EXECUTABLE: ${{ steps.chromium.outputs.chrome-path }}
