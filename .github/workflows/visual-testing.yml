@@ -39,6 +39,7 @@ jobs:
 
       - name: Take yuna.work screenshots and upload them to Percy
         run: |
+          pnpm wait-on "${CLOUDFLARE_PREVIEW_URL}" --timeout=2m
           pnpm percy snapshot .percy.mjs --verbose
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
