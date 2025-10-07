@@ -29,6 +29,7 @@ jobs:
         run: pnpm build
 
       - name: Deploy
+        id: cloudflare-preview-deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -37,8 +38,8 @@ jobs:
 
       - name: Print pages-deployment-alias-url
         env:
-          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
-          DEPLOYMENT_ALIAS_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+          DEPLOYMENT_URL: ${{ steps.cloudflare-preview-deploy.outputs.deployment-url }}
+          DEPLOYMENT_ALIAS_URL: ${{ steps.cloudflare-preview-deploy.outputs.pages-deployment-alias-url }}
         run: |
           echo $DEPLOYMENT_ALIAS_URL
           echo $DEPLOYMENT_ALIAS_URL
@@ -50,6 +51,6 @@ jobs:
       #  env:
       #    PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       #    DEPLOYMENT_ALIAS_URL:
-      #    CLOUDFLARE_PREVIEW_HOST: ${{ steps.cloudflare_preview.outputs.preview_host }}
-      #    CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare_preview.outputs.preview_url }}
+      #    CLOUDFLARE_PREVIEW_HOST: ${{ steps.cloudflare-preview-deploy.outputs.preview_host }}
+      #    CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare-preview-deploy.outputs.preview_url }}
       #    ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
