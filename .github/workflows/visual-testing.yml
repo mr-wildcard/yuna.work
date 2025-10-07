@@ -2,10 +2,7 @@ name: Run visual testing
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-
-env:
-  ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
+    types: [opened, synchronize, reopened, labeled]
 
 jobs:
   visual-testing:
@@ -26,19 +23,25 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install
-        shell: "bash"
         run: pnpm i
 
       - name: Build
-        shell: "bash"
         run: pnpm build
 
-      - name: Start website preview server for visual testing
-        run: pnpm preview --port $ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING &
+      - name: Deploy
+        id: cloudflare-preview-deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy dist --project-name=yuna-work --branch=${{ github.head_ref }}
 
       - name: Take yuna.work screenshots and upload them to Percy
         run: |
-          pnpm wait-on tcp:$ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING 
+          pnpm wait-on "${CLOUDFLARE_PREVIEW_URL}" --timeout=2m
           pnpm percy snapshot .percy.mjs --verbose
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare-preview-deploy.outputs.deployment-url }}
+          ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
