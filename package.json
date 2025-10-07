@@ -18,6 +18,7 @@
     "@astrojs/sitemap": "3.6.0",
     "@astrojs/ts-plugin": "1.10.4",
     "@percy/cli": "1.31.2",
+    "wrangler": "4.42.1",
     "@tailwindcss/vite": "4.1.14",
     "@types/node": "22.18.8",
     "autoprefixer": "10.4.21",
