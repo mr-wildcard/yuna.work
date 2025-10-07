@@ -5,8 +5,6 @@ const {
   ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING = 4321,
 } = process.env;
 
-console.log({ CLOUDFLARE_PREVIEW_URL });
-
 let previewServerURL = `http://localhost:${ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING}`;
 
 if (CLOUDFLARE_PREVIEW_URL) {

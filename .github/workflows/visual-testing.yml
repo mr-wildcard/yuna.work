@@ -35,22 +35,13 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=yuna-work
+          environment: preview
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Print pages-deployment-alias-url
-        env:
-          DEPLOYMENT_URL: ${{ steps.cloudflare-preview-deploy.outputs.deployment-url }}
-          DEPLOYMENT_ALIAS_URL: ${{ steps.cloudflare-preview-deploy.outputs.pages-deployment-alias-url }}
+      - name: Take yuna.work screenshots and upload them to Percy
         run: |
-          echo $DEPLOYMENT_URL
-          echo $DEPLOYMENT_ALIAS_URL
-
-      #- name: Take yuna.work screenshots and upload them to Percy
-      #  run: |
-      #    pnpm wait-on "https-get://${CLOUDFLARE_PREVIEW_HOST}" --httpTimeout=2m
-      #    pnpm percy snapshot .percy.mjs --verbose
-      #  env:
-      #    PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-      #    DEPLOYMENT_ALIAS_URL:
-      #    CLOUDFLARE_PREVIEW_HOST: ${{ steps.cloudflare-preview-deploy.outputs.preview_host }}
-      #    CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare-preview-deploy.outputs.preview_url }}
-      #    ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
+          pnpm percy snapshot .percy.mjs --verbose
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare-preview-deploy.outputs.deployment-url }}
+          ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
