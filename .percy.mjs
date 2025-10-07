@@ -8,9 +8,11 @@ const {
 let previewServerURL = `http://localhost:${ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING}`;
 
 if (CLOUDFLARE_PREVIEW_URL) {
+  console.info(`✅ Using Cloudflare preview URL: ${CLOUDFLARE_PREVIEW_URL}`);
+
   previewServerURL = CLOUDFLARE_PREVIEW_URL;
 } else {
-  console.log(
+  console.warn(
     "⚠️ Couldn’t reach Cloudflare preview URL, using local preview server instead.",
   );
 }
