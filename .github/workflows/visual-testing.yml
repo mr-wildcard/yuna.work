@@ -23,24 +23,33 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install
-        shell: bash
         run: pnpm i
 
-      - name: Derive Cloudflare latest preview build URL
-        id: cloudflare_preview
-        run: |
-          short_sha="${GITHUB_SHA::7}"
-          host="${short_sha}.yuna-work.pages.dev"
-          url="https://${host}"
-          echo "preview_host=${preview_host}" >> "$GITHUB_OUTPUT"
-          echo "preview_url=${preview_url}" >> "$GITHUB_OUTPUT"
+      - name: Build
+        run: pnpm build
 
-      - name: Take yuna.work screenshots and upload them to Percy
-        run: |
-          pnpm wait-on "https-get://${CLOUDFLARE_PREVIEW_HOST}" --httpTimeout=2m
-          pnpm percy snapshot .percy.mjs --verbose
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=yuna.work
+
+      - name: Print pages-deployment-alias-url
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          CLOUDFLARE_PREVIEW_HOST: ${{ steps.cloudflare_preview.outputs.preview_host }}
-          CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare_preview.outputs.preview_url }}
-          ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+          DEPLOYMENT_ALIAS_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+        run: |
+          echo $DEPLOYMENT_ALIAS_URL
+          echo $DEPLOYMENT_ALIAS_URL
+
+      #- name: Take yuna.work screenshots and upload them to Percy
+      #  run: |
+      #    pnpm wait-on "https-get://${CLOUDFLARE_PREVIEW_HOST}" --httpTimeout=2m
+      #    pnpm percy snapshot .percy.mjs --verbose
+      #  env:
+      #    PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      #    DEPLOYMENT_ALIAS_URL:
+      #    CLOUDFLARE_PREVIEW_HOST: ${{ steps.cloudflare_preview.outputs.preview_host }}
+      #    CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare_preview.outputs.preview_url }}
+      #    ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
