@@ -2,10 +2,7 @@ name: Run visual testing
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-
-env:
-  ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
+    types: [opened, synchronize, reopened, labeled]
 
 jobs:
   visual-testing:
@@ -26,19 +23,24 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install
-        shell: "bash"
+        shell: bash
         run: pnpm i
 
-      - name: Build
-        shell: "bash"
-        run: pnpm build
-
-      - name: Start website preview server for visual testing
-        run: pnpm preview --port $ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING &
+      - name: Derive Cloudflare latest preview build URL
+        id: cloudflare_preview
+        run: |
+          short_sha="${GITHUB_SHA::7}"
+          host="${short_sha}.yuna-work.pages.dev"
+          url="https://${host}"
+          echo "preview_host=${preview_host}" >> "$GITHUB_OUTPUT"
+          echo "preview_url=${preview_url}" >> "$GITHUB_OUTPUT"
 
       - name: Take yuna.work screenshots and upload them to Percy
         run: |
-          pnpm wait-on tcp:$ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING 
+          pnpm wait-on "https-get://${CLOUDFLARE_PREVIEW_HOST}" --httpTimeout=2m
           pnpm percy snapshot .percy.mjs --verbose
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          CLOUDFLARE_PREVIEW_HOST: ${{ steps.cloudflare_preview.outputs.preview_host }}
+          CLOUDFLARE_PREVIEW_URL: ${{ steps.cloudflare_preview.outputs.preview_url }}
+          ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING: 4321
