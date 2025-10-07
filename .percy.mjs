@@ -45,6 +45,7 @@ async function getWebsiteURLs() {
 
   const websiteURLs = await Promise.all(
     sitemapURLs.map(async (sitemapURL) => {
+      console.log({ sitemapURL });
       const request = await fetch(sitemapURL);
       const response = await request.text();
 
