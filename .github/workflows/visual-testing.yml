@@ -41,7 +41,7 @@ jobs:
           DEPLOYMENT_URL: ${{ steps.cloudflare-preview-deploy.outputs.deployment-url }}
           DEPLOYMENT_ALIAS_URL: ${{ steps.cloudflare-preview-deploy.outputs.pages-deployment-alias-url }}
         run: |
-          echo $DEPLOYMENT_ALIAS_URL
+          echo $DEPLOYMENT_URL
           echo $DEPLOYMENT_ALIAS_URL
 
       #- name: Take yuna.work screenshots and upload them to Percy
