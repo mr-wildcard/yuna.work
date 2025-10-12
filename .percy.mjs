@@ -105,6 +105,7 @@ export default async function getPercySnapshotsConfig() {
         additionalSnapshots: [
           {
             suffix: " - menu opened",
+            height: 700,
             execute() {
               document.querySelector("#mobile-menu-opener").click();
             },
