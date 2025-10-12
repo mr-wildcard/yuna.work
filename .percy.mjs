@@ -1,23 +1,10 @@
 import { XMLParser } from "fast-xml-parser";
 
-const {
-  CLOUDFLARE_PREVIEW_URL,
-  ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING = 4321,
-} = process.env;
+const { CLOUDFLARE_PREVIEW_URL } = process.env;
 
-let previewServerURL = `http://localhost:${ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING}`;
+const rootSitemapURL = `${CLOUDFLARE_PREVIEW_URL}/sitemap-index.xml`;
 
-if (CLOUDFLARE_PREVIEW_URL) {
-  console.info(`✅ Using Cloudflare preview URL: ${CLOUDFLARE_PREVIEW_URL}`);
-
-  previewServerURL = CLOUDFLARE_PREVIEW_URL;
-} else {
-  console.warn(
-    "⚠️ Couldn’t reach Cloudflare preview URL, using local preview server instead.",
-  );
-}
-
-const rootSitemapURL = `${previewServerURL}/sitemap-index.xml`;
+console.info(`✅ Using Cloudflare preview URL: ${rootSitemapURL}`);
 
 function getSnapshotName(websiteURL) {
   const url = new URL(websiteURL);
