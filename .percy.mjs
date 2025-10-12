@@ -1,9 +1,10 @@
 import { XMLParser } from "fast-xml-parser";
 
-const { ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING = 4321 } = process.env;
+const { CLOUDFLARE_PREVIEW_URL: previewUrl } = process.env;
 
-const previewServerURL = `http://localhost:${ASTRO_PREVIEW_SERVER_PORT_FOR_VISUAL_TESTING}`;
-const rootSitemapURL = `${previewServerURL}/sitemap-index.xml`;
+const rootSitemapURL = `${previewUrl}/sitemap-index.xml`;
+
+console.info(`✅ Using Cloudflare preview URL: ${rootSitemapURL}`);
 
 function getSnapshotName(websiteURL) {
   const url = new URL(websiteURL);
@@ -47,11 +48,19 @@ export default async function getPercySnapshotsConfig() {
   try {
     const websiteURLs = await getWebsiteURLs();
 
-    websiteURLs.push(`${previewServerURL}/not-found-page`);
+    websiteURLs.push(`${previewUrl}/not-found-page`);
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
-      percyCSS: `html { font-family: DM Sans Variable,sans-serif !important; }`,
+      percyCSS: `
+        html { 
+          font-family: DM Sans Variable,sans-serif !important; 
+        }
+        
+        .sticky {
+          position: relative;
+        }
+      `,
       async execute() {
         document
           .querySelectorAll("summary")
@@ -96,6 +105,7 @@ export default async function getPercySnapshotsConfig() {
         additionalSnapshots: [
           {
             suffix: " - menu opened",
+            height: "700px",
             execute() {
               document.querySelector("#mobile-menu-opener").click();
             },
