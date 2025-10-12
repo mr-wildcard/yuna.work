@@ -35,7 +35,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          command: pages deploy dist --project-name=yuna-work --branch=${{ github.head_ref }}
+          command: pages deploy dist --project-name=yuna-work --branch=${{ github.head_ref }} --commit-hash=${{ github.sha }}
 
       - name: Take yuna.work screenshots and upload them to Percy
         run: |
