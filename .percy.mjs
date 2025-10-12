@@ -52,7 +52,15 @@ export default async function getPercySnapshotsConfig() {
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
-      percyCSS: `html { font-family: DM Sans Variable,sans-serif !important; }`,
+      percyCSS: `
+        html { 
+          font-family: DM Sans Variable,sans-serif !important; 
+        }
+        
+        .sticky {
+          position: relative;
+        }
+      `,
       async execute() {
         document
           .querySelectorAll("summary")
