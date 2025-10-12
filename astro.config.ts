@@ -11,12 +11,10 @@ const { ASTRO_DEV_SERVER_LOCAL_HOST, ASTRO_DEV_SERVER_LOCAL_PORT } = loadEnv(
 );
 
 function getSiteURL() {
-  if (process.env.CF_PAGES) {
-    if (process.env.CF_PAGES_BRANCH === "master") {
-      return "https://yuna.work/";
-    } else {
-      return process.env.CF_PAGES_URL;
-    }
+  if (process.env.CF_PAGES_BRANCH === "master") {
+    return "https://yuna.work/";
+  } else if (process.env.CI === "true") {
+    return `https://${process.env.GITHUB_HEAD_REF}.yuna-work.pages.dev/`;
   } else {
     return `http://${ASTRO_DEV_SERVER_LOCAL_HOST}:${ASTRO_DEV_SERVER_LOCAL_PORT}/`;
   }
