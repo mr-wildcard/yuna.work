@@ -90,7 +90,7 @@ export default async function getPercySnapshotsConfig() {
     const snapshots = websiteURLs.map((websiteURL) => {
       return {
         ...basicSnapshotConfig,
-        name: `${getSnapshotName(websiteURL)} - desktop`,
+        name: getSnapshotName(websiteURL),
         url: websiteURL,
         widths: [1512, 640],
       };
