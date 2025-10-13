@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.18.1",
+  "packageManager": "pnpm@10.18.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -17,10 +17,10 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.6.0",
     "@astrojs/ts-plugin": "1.10.4",
-    "@percy/cli": "1.31.2",
-    "wrangler": "4.42.1",
+    "@percy/cli": "1.31.3",
+    "wrangler": "4.42.2",
     "@tailwindcss/vite": "4.1.14",
-    "@types/node": "22.18.8",
+    "@types/node": "22.18.10",
     "autoprefixer": "10.4.21",
     "cssnano": "7.1.1",
     "dotenv": "17.2.3",
