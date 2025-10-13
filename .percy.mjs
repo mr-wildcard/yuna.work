@@ -87,34 +87,29 @@ export default async function getPercySnapshotsConfig() {
       },
     };
 
-    const desktopSnapshots = websiteURLs.map((websiteURL) => {
+    const snapshots = websiteURLs.map((websiteURL) => {
       return {
         ...basicSnapshotConfig,
         name: `${getSnapshotName(websiteURL)} - desktop`,
         url: websiteURL,
-        widths: [1512],
+        widths: [1512, 640],
       };
     });
 
-    const mobileSnapshots = websiteURLs.map((websiteURL) => {
+    const mobileMenuSnapshots = websiteURLs.map((websiteURL) => {
       return {
         ...basicSnapshotConfig,
-        name: `${getSnapshotName(websiteURL)} - mobile`,
+        name: `${getSnapshotName(websiteURL)} - mobile menu opened`,
         url: websiteURL,
         widths: [640],
-        additionalSnapshots: [
-          {
-            suffix: " - menu opened",
-            height: "700px",
-            execute() {
-              document.querySelector("#mobile-menu-opener").click();
-            },
-          },
-        ],
+        scope: "header#header",
+        execute() {
+          document.querySelector("#mobile-menu-opener").click();
+        },
       };
     });
 
-    return [...desktopSnapshots, ...mobileSnapshots];
+    return [...snapshots, ...mobileMenuSnapshots];
   } catch (error) {
     console.error(error);
   }
