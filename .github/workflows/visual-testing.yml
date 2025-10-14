@@ -19,7 +19,7 @@ jobs:
         with:
           cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-pages-project: my-pages-project
+          cloudflare-pages-project: yuna-work
           branch-name: ${{ github.head_ref }}
 
       - uses: pnpm/action-setup@v4
