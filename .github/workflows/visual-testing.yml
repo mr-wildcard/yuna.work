@@ -44,5 +44,6 @@ jobs:
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm percy snapshot .percy.mjs --disable-cache
         env:
+          PERCY_TARGET_BRANCH: master
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           PREVIEW_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}
