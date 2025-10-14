@@ -15,14 +15,12 @@ jobs:
 
       - name: Get Cloudflare Pages preview URL
         id: wait-for-cloudflare-preview
-        uses: ./mr-wildcard/get-cloudflare-preview-url
+        uses: mr-wildcard/action-get-cloudflare-branch-preview-url@v1
         with:
           cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-pages-project: yuna-work
+          cloudflare-pages-project: my-pages-project
           branch-name: ${{ github.head_ref }}
-          timeout-secs: 900
-          poll-interval-secs: 10
 
       - uses: pnpm/action-setup@v4
         if: steps.wait-for-cloudflare-preview.outputs.status == 'success'
