@@ -13,72 +13,16 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
 
-      - name: Ensure jq is available
-        run: |
-          if ! command -v jq >/dev/null 2>&1; then
-            sudo apt-get update && sudo apt-get install -y jq
-          fi
-
-      - name: Wait for Cloudflare Pages preview deployment (and grab hash URL)
+      - name: Get Cloudflare Pages preview URL
         id: wait-for-cloudflare-preview
-        shell: bash
-        env:
-          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CF_PAGES_PROJECT: yuna-work
-          BRANCH_NAME: ${{ github.head_ref }}
-          TIMEOUT_SECS: 900
-          POLL_INTERVAL_SECS: 10
-        run: |
-          set -euo pipefail
-
-          echo "Waiting for preview deployment of branch: ${BRANCH_NAME}..."
-
-          start=$(date +%s)
-
-          while true; do
-            json=$(curl -fsS \
-              -H "Authorization: Bearer ${CF_API_TOKEN}" \
-              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PAGES_PROJECT}/deployments?env=preview")
-
-            item=$(jq -r --arg b "${BRANCH_NAME}" '
-              .result
-              | map(select(.deployment_trigger?.metadata?.branch | ascii_downcase == ($b | ascii_downcase)))
-              | sort_by(.created_on) | last
-            ' <<<"$json")
-
-            if [[ "$item" == "null" || -z "$item" ]]; then
-              echo "No preview deployment found yet for branch '${BRANCH_NAME}'. Retrying..."
-            else
-              status=$(jq -r '.latest_stage?.status // "unknown"' <<<"$item")
-              # URL immuable (hash) retournée par Pages pour ce déploiement
-              hash_url=$(jq -r '.url' <<<"$item")
-
-              echo "Current status: ${status} | hash URL: ${hash_url}"
-
-              if [[ "$status" == "success" ]]; then
-                echo "CF_PREVIEW_HASH_URL=${hash_url}" >> "$GITHUB_ENV"
-                echo "status=success" >> "$GITHUB_OUTPUT"
-                break
-              fi
-
-              if [[ "$status" == "failure" || "$status" == "failed" || "$status" == "canceled" ]]; then
-                echo "status=${status}" >> "$GITHUB_OUTPUT"
-                echo "CF_PREVIEW_HASH_URL=${hash_url}" >> "$GITHUB_ENV"
-                echo "Deployment failed (${status})."
-                exit 1
-              fi
-            fi
-
-            now=$(date +%s)
-            if (( now - start > TIMEOUT_SECS )); then
-              echo "Timeout waiting for successful preview deployment in ${TIMEOUT_SECS}s."
-              echo "status=timeout" >> "$GITHUB_OUTPUT"
-              exit 1
-            fi
-
-            sleep "${POLL_INTERVAL_SECS}"
-          done
+        uses: ./mr-wildcard/get-cloudflare-preview-url
+        with:
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-pages-project: yuna-work
+          branch-name: ${{ github.head_ref }}
+          timeout-secs: 900
+          poll-interval-secs: 10
 
       - uses: pnpm/action-setup@v4
         if: steps.wait-for-cloudflare-preview.outputs.status == 'success'
