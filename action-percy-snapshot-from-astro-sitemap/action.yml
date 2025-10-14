@@ -1,0 +1,56 @@
+name: Percy snapshots from Astro sitemap
+description: Runs Percy CLI with a sitemap-driven config for Astro sites.
+inputs:
+  percy-token:
+    description: Percy project token.
+    required: true
+  preview-url:
+    description: Base URL of the deployment used to fetch sitemaps.
+    required: true
+  snapshot-name-prefix:
+    description: Prefix used when naming Percy snapshots.
+    required: false
+    default: Website
+  include-not-found-page:
+    description: Set to "false" to skip the not-found page snapshot.
+    required: false
+    default: "true"
+  not-found-path:
+    description: Path appended to the preview URL for the not-found page snapshot.
+    required: false
+    default: /not-found-page
+  include-mobile-menu-variant:
+    description: Set to "false" to skip mobile menu snapshots.
+    required: false
+    default: "true"
+  mobile-menu-selector:
+    description: CSS selector used to open the mobile menu.
+    required: false
+    default: "#mobile-menu-opener"
+  mobile-menu-scope:
+    description: Percy scope used for mobile menu snapshots.
+    required: false
+    default: "header#header"
+  additional-percy-flags:
+    description: Extra flags appended to the Percy snapshot command.
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - name: Run Percy snapshots from Astro sitemap
+      shell: bash
+      env:
+        PERCY_TOKEN: ${{ inputs.percy-token }}
+        PREVIEW_URL: ${{ inputs.preview-url }}
+        CLOUDFLARE_DEPLOYMENT_URL: ${{ inputs.preview-url }}
+        CF_DEPLOYMENT_HASH_URL: ${{ inputs.preview-url }}
+        CF_PAGES_URL: ${{ inputs.preview-url }}
+        SNAPSHOT_NAME_PREFIX: ${{ inputs.snapshot-name-prefix }}
+        INCLUDE_NOT_FOUND_PAGE: ${{ inputs.include-not-found-page }}
+        NOT_FOUND_PATH: ${{ inputs.not-found-path }}
+        INCLUDE_MOBILE_MENU_VARIANT: ${{ inputs.include-mobile-menu-variant }}
+        MOBILE_MENU_SELECTOR: ${{ inputs.mobile-menu-selector }}
+        MOBILE_MENU_SCOPE: ${{ inputs.mobile-menu-scope }}
+      run: |
+        pnpm percy snapshot "$GITHUB_ACTION_PATH/percy-config.mjs" ${{ inputs.additional-percy-flags }}

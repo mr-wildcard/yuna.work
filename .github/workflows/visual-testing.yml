@@ -42,7 +42,8 @@ jobs:
 
       - name: Take yuna.work screenshots and upload them to Percy
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-        run: pnpm percy snapshot .percy.mjs --verbose
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          CLOUDFLARE_DEPLOYMENT_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}
+        uses: ./action-percy-snapshot-from-astro-sitemap
+        with:
+          percy-token: ${{ secrets.PERCY_TOKEN }}
+          preview-url: ${{ steps.wait-for-cloudflare-deployment-url.outputs.deployment-url }}
+          snapshot-name-prefix: Yuna Orsini website
