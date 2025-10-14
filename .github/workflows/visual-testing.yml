@@ -16,9 +16,9 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
 
-      - name: Get Cloudflare Pages preview URL
-        id: wait-for-cloudflare-preview
-        uses: mr-wildcard/action-get-cloudflare-branch-preview-url@v1
+      - name: Get Cloudflare Pages deployment URL
+        id: wait-for-cloudflare-deployment-url
+        uses: mr-wildcard/action-get-cloudflare-deployment-url@v2
         with:
           cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -26,10 +26,10 @@ jobs:
           branch-name: ${{ github.head_ref }}
 
       - uses: pnpm/action-setup@v4
-        if: steps.wait-for-cloudflare-preview.outputs.status == 'success'
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
 
       - name: Setup Node
-        if: steps.wait-for-cloudflare-preview.outputs.status == 'success'
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
@@ -37,12 +37,12 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install
-        if: steps.wait-for-cloudflare-preview.outputs.status == 'success'
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm i
 
       - name: Take yuna.work screenshots and upload them to Percy
-        if: steps.wait-for-cloudflare-preview.outputs.status == 'success'
+        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
         run: pnpm percy snapshot .percy.mjs --verbose
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          CLOUDFLARE_PREVIEW_URL: ${{ env.CF_PREVIEW_HASH_URL }}
+          CLOUDFLARE_DEPLOYMENT_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}

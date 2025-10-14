@@ -1,6 +1,6 @@
 import { XMLParser } from "fast-xml-parser";
 
-const { CLOUDFLARE_PREVIEW_URL: previewUrl } = process.env;
+const { CLOUDFLARE_DEPLOYMENT_URL: previewUrl } = process.env;
 
 const rootSitemapURL = `${previewUrl}/sitemap-index.xml`;
 
