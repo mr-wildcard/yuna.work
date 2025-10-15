@@ -96,16 +96,19 @@ export default async function getPercySnapshotsConfig() {
       };
     });
 
+    const mobileMenuElement = "header#header";
+    const mobileMenuOpener = "#mobile-menu-opener";
+
     const mobileMenuSnapshots = websiteURLs.map((websiteURL) => {
       return {
         ...basicSnapshotConfig,
         name: `${getSnapshotName(websiteURL)} - mobile menu opened`,
         url: websiteURL,
         widths: [640],
-        scope: "header#header",
-        execute() {
-          document.querySelector("#mobile-menu-opener").click();
-        },
+        scope: mobileMenuElement,
+        execute: `
+          document.querySelector("${mobileMenuOpener}").click();
+        `,
       };
     });
 
