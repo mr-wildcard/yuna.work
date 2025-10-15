@@ -45,4 +45,4 @@ jobs:
         run: pnpm percy snapshot .percy.mjs --disable-cache
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          CLOUDFLARE_DEPLOYMENT_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}
+          PREVIEW_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}

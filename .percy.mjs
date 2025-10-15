@@ -1,8 +1,8 @@
 import { XMLParser } from "fast-xml-parser";
 
-const { CLOUDFLARE_DEPLOYMENT_URL: previewUrl } = process.env;
+const { PREVIEW_URL } = process.env;
 
-const rootSitemapURL = `${previewUrl}/sitemap-index.xml`;
+const rootSitemapURL = `${PREVIEW_URL}/sitemap-index.xml`;
 
 console.info(`✅ Using Cloudflare preview URL: ${rootSitemapURL}`);
 
@@ -48,7 +48,7 @@ export default async function getPercySnapshotsConfig() {
   try {
     const websiteURLs = await getWebsiteURLs();
 
-    websiteURLs.push(`${previewUrl}/not-found-page`);
+    websiteURLs.push(`${PREVIEW_URL}/not-found-page`);
 
     const basicSnapshotConfig = {
       enableJavaScript: true,
