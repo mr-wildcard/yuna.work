@@ -42,7 +42,7 @@ jobs:
 
       - name: Take yuna.work screenshots and upload them to Percy
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-        run: pnpm percy snapshot .percy.mjs --verbose
+        run: pnpm percy snapshot .percy.mjs --disable-cache
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CLOUDFLARE_DEPLOYMENT_URL: ${{ env.CF_DEPLOYMENT_HASH_URL }}
