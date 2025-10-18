@@ -17,9 +17,10 @@ const { quote, author, context } = Astro.props;
   </blockquote>
 
   <figcaption class="text-body-small text-secondary">
-    <cite class="text-title-normal text-paragraph not-italic mb-2.5 block">
-      {author}
-    </cite>
-    <p set:html={context} />
+    <p class="text-title-normal text-paragraph not-italic block">
+      <strong class="font-medium">{author}</strong>
+      <br />
+      <small class="text-body-small text-secondary" set:html={context} />
+    </p>
   </figcaption>
 </figure>
