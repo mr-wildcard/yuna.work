@@ -1,0 +1,34 @@
+---
+const links = [
+  {
+    label: "Aller au contenu",
+    href: "#content",
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+  },
+];
+---
+
+<div class="fixed w-full z-20">
+  <div class="container">
+    <nav
+      class="sr-only focus-within:not-sr-only focus-within:absolute focus-within:top-[15px] focus-within:left-[310px] focus-within:w-fit focus-within:px-5 focus-within:py-3 bg-neutral3 border border-s rounded-[20px]"
+      role="navigation"
+      aria-label="Accès rapide"
+    >
+      <ul class="flex space-x-2.5">
+        {
+          links.map(({ label, href }) => (
+            <li>
+              <a href={href} class="underline">
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>
