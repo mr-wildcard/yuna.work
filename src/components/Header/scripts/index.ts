@@ -4,26 +4,49 @@ if (!CSS.supports("animation-timeline", "scroll(y root)")) {
   );
 }
 
-const header = document.querySelector<HTMLElement>("#header");
+const header = document.querySelector<HTMLElement>("header#header");
 
 const mobileMenuOpener = document.querySelector<HTMLElement>(
-  "#mobile-menu-opener",
+  "button#mobile-menu-opener",
 );
 
-const mobileMenu = document.querySelector<HTMLElement>("#mobile-menu");
+const mobileMenuCloser = document.querySelector<HTMLElement>(
+  "button#mobile-menu-closer",
+);
 
-if (header && mobileMenuOpener && mobileMenu) {
-  mobileMenuOpener.addEventListener("click", () => {
-    const { menuOpened } = header.dataset;
+const mobileMenu =
+  document.querySelector<HTMLDialogElement>("dialog#mobile-menu");
 
-    if (menuOpened === "true") {
-      header.setAttribute("data-menu-opened", "false");
-      mobileMenuOpener.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("overflow-hidden");
-    } else {
-      header.setAttribute("data-menu-opened", "true");
-      mobileMenuOpener.setAttribute("aria-expanded", "true");
-      document.body.classList.add("overflow-hidden");
-    }
-  });
+function openMobileMenu() {
+  if (mobileMenuOpener && mobileMenu && mobileMenuCloser) {
+    mobileMenu.showModal();
+
+    mobileMenuOpener.setAttribute("aria-expanded", "true");
+
+    mobileMenuCloser.addEventListener("click", closeMobileMenu, {
+      once: true,
+    });
+
+    document.body.classList.add("overflow-hidden");
+    document.body.addEventListener("keydown", onKeypress);
+  }
+}
+
+function closeMobileMenu() {
+  if (mobileMenuOpener && mobileMenu) {
+    mobileMenuOpener.setAttribute("aria-expanded", "false");
+
+    document.body.classList.remove("overflow-hidden");
+    document.body.removeEventListener("keydown", onKeypress);
+  }
+}
+
+function onKeypress(event: KeyboardEvent) {
+  if (event.key === "Escape") {
+    closeMobileMenu();
+  }
+}
+
+if (header && mobileMenuOpener) {
+  mobileMenuOpener.addEventListener("click", openMobileMenu);
 }

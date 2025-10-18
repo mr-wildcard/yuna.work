@@ -41,88 +41,68 @@ import Contact from "../Contact.astro";
 
       <button
         id="mobile-menu-opener"
+        aria-haspopup="dialog"
         aria-expanded="false"
         class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full lg:hidden"
       >
-        <span class="text-closed">Menu</span>
-        <span class="text-opened">Fermer</span>
+        Menu
       </button>
     </div>
   </div>
 
-  <nav
-    id="mobile-menu"
-    role="navigation"
-    class="fixed top-[75px] left-0 w-full h-[calc(100%-75px)] overflow-y-auto overflow-x-hidden bg-neutral3"
-  >
-    <div class="container">
+  <dialog id="mobile-menu" class="h-full max-w-none max-h-none bg-neutral3">
+    <nav role="navigation" class="overflow-y-auto overflow-x-hidden">
       <div class="container">
-        <ul class="pt-6">
-          <li class="mb-6">
-            <NavItem to="/" variant="primary">Mes expertises</NavItem>
-          </li>
-          <li class="mb-6">
-            <NavItem to="/collaborations" variant="primary">
-              Collaborations
-            </NavItem>
-          </li>
-          <li class="mb-12">
-            <NavItem to="/a-propos" variant="primary">À propos</NavItem>
-          </li>
-          <li class="mb-[30px]">
-            <NavItem to="/mentions-legales" variant="secondary">
-              Mentions légales
-            </NavItem>
-          </li>
-          <li>
-            <NavItem to="/plan-du-site" variant="secondary">
-              Plan du site
-            </NavItem>
-          </li>
-        </ul>
-      </div>
+        <div class="my-5 flex justify-end items-center">
+          <form method="dialog" autofocus>
+            <button
+              id="mobile-menu-closer"
+              class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
+            >
+              Fermer
+            </button>
+          </form>
+        </div>
 
-      <div class="mt-[50px] mb-5">
-        <Contact view="inline" />
+        <div class="container">
+          <ul class="pt-6">
+            <li class="mb-6">
+              <NavItem to="/" variant="primary">Mes expertises</NavItem>
+            </li>
+            <li class="mb-6">
+              <NavItem to="/collaborations" variant="primary">
+                Collaborations
+              </NavItem>
+            </li>
+            <li class="mb-12">
+              <NavItem to="/a-propos" variant="primary">À propos</NavItem>
+            </li>
+            <li class="mb-[30px]">
+              <NavItem to="/mentions-legales" variant="secondary">
+                Mentions légales
+              </NavItem>
+            </li>
+            <li>
+              <NavItem to="/plan-du-site" variant="secondary">
+                Plan du site
+              </NavItem>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-[50px] mb-5">
+          <Contact view="inline" />
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </dialog>
 </header>
 
 <style>
-  .text-opened,
-  #mobile-menu {
-    display: none;
-  }
-
-  #header[data-menu-opened="true"] {
-    background-color: var(--color-neutral3) !important;
-    height: 100vh;
-    height: 100dvh;
-    z-index: 10;
-
-    #mobile-menu {
-      z-index: 10;
-    }
-
-    .text-opened,
-    #mobile-menu {
-      display: block;
-    }
-
-    .text-closed {
-      display: none;
-    }
-
-    #logo {
-      visibility: hidden;
-    }
-
-    #mobile-menu-opener {
-      background-color: var(--color-neutral1);
-      color: var(--color-primary);
-      box-shadow: var(--shadow-cta) var(--color-primary);
-    }
+  #mobile-menu-closer {
+    background-color: var(--color-neutral1);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-cta) var(--color-primary);
   }
 
   @supports (animation-timeline: scroll(y root)) {

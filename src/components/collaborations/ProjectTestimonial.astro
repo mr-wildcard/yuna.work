@@ -17,6 +17,6 @@ const { quote, author, lang } = Astro.props;
   </blockquote>
 
   <figcaption class="text-title-normal text-paragraph">
-    <cite set:html={author} class="not-italic" lang={lang} />
+    <p set:html={author} class="not-italic" lang={lang} />
   </figcaption>
 </figure>
