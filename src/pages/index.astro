@@ -80,8 +80,16 @@ import Icon from "../components/@common/Icon.astro";
           <p
             class="text-body-normal text-paragraph mb-[25px] sm:mb-[30px] lg:mb-10"
           >
-            En 14 années d’expérience*, j’ai exploré plusieurs facettes du
-            design en tant que planneuse stratégique en agences,
+            En 14 années d’expérience<sup>
+              <a
+                class="underline"
+                id="ref-xp-note"
+                href="#xp-note"
+                role="doc-noteref"
+                aria-label="Note 1">*</a
+              >
+            </sup>, j’ai exploré plusieurs facettes du design en tant que
+            planneuse stratégique en agences,
             <span lang="en">product designer</span> en <span lang="en"
               >freelance</span
             > ou responsable UX en startup tech.
@@ -97,11 +105,21 @@ import Icon from "../components/@common/Icon.astro";
             <div
               class="col-span-full lg:col-start-10 lg:col-span-3 xl:col-start-10 xl:col-span-2"
             >
-              <p class="text-body-small text-primary mt-10 lg:mt-0 2xl:mt-12">
-                *23 années, si créer des sites sur Dreamweaver à la sortie du
-                collège puis en coder pour le fun au lycée et à la fac, ça
-                compte.
-              </p>
+              <aside role="doc-endnotes" aria-label="Notes">
+                <p
+                  id="xp-note"
+                  class="text-body-small text-primary mt-10 lg:mt-0 2xl:mt-12"
+                >
+                  *23 années, si créer des sites sur Dreamweaver à la sortie du
+                  collège puis en coder pour le fun au lycée et à la fac, ça
+                  compte. <a
+                    class="underline"
+                    href="#ref-xp-note"
+                    role="doc-backlink"
+                    aria-label="Retour à la référence">(retour)</a
+                  >
+                </p>
+              </aside>
             </div>
           </Grid>
         </div>
