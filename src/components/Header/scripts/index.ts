@@ -4,13 +4,14 @@ if (!CSS.supports("animation-timeline", "scroll(y root)")) {
   );
 }
 
-const header = document.querySelector<HTMLElement>("#header");
+const header = document.querySelector<HTMLElement>("header#header");
 
 const mobileMenuOpener = document.querySelector<HTMLElement>(
-  "#mobile-menu-opener",
+  "button#mobile-menu-opener",
 );
 
-const mobileMenu = document.querySelector<HTMLDialogElement>("#mobile-menu");
+const mobileMenu =
+  document.querySelector<HTMLDialogElement>("dialog#mobile-menu");
 
 function openMobileMenu() {
   if (header && mobileMenuOpener && mobileMenu) {
