@@ -10,24 +10,34 @@ const mobileMenuOpener = document.querySelector<HTMLElement>(
   "button#mobile-menu-opener",
 );
 
+const mobileMenuCloser = document.querySelector<HTMLElement>(
+  "button#mobile-menu-closer",
+);
+
 const mobileMenu =
   document.querySelector<HTMLDialogElement>("dialog#mobile-menu");
 
 function openMobileMenu() {
-  if (header && mobileMenuOpener && mobileMenu) {
-    header.setAttribute("data-menu-opened", "true");
-    mobileMenuOpener.setAttribute("aria-expanded", "true");
-    document.body.classList.add("overflow-hidden");
+  if (mobileMenuOpener && mobileMenu && mobileMenuCloser) {
     mobileMenu.showModal();
+
+    mobileMenuOpener.setAttribute("aria-expanded", "true");
+
+    mobileMenuCloser.addEventListener("click", closeMobileMenu, {
+      once: true,
+    });
+
+    document.body.classList.add("overflow-hidden");
+    document.body.addEventListener("keydown", onKeypress);
   }
 }
 
 function closeMobileMenu() {
-  if (header && mobileMenuOpener && mobileMenu) {
-    header.setAttribute("data-menu-opened", "false");
+  if (mobileMenuOpener && mobileMenu) {
     mobileMenuOpener.setAttribute("aria-expanded", "false");
+
     document.body.classList.remove("overflow-hidden");
-    mobileMenu.close();
+    document.body.removeEventListener("keydown", onKeypress);
   }
 }
 
@@ -37,18 +47,6 @@ function onKeypress(event: KeyboardEvent) {
   }
 }
 
-if (header && mobileMenuOpener && mobileMenu) {
-  mobileMenuOpener.addEventListener("click", () => {
-    const { menuOpened } = header.dataset;
-
-    if (menuOpened === "true") {
-      document.body.addEventListener("keydown", onKeypress);
-
-      closeMobileMenu();
-    } else {
-      document.body.addEventListener("keydown", onKeypress);
-
-      openMobileMenu();
-    }
-  });
+if (header && mobileMenuOpener) {
+  mobileMenuOpener.addEventListener("click", openMobileMenu);
 }

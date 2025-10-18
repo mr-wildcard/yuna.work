@@ -41,21 +41,29 @@ import Contact from "../Contact.astro";
 
       <button
         id="mobile-menu-opener"
+        aria-haspopup="dialog"
         aria-expanded="false"
         class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full lg:hidden"
       >
-        <span class="text-closed">Menu</span>
-        <span class="text-opened">Fermer</span>
+        Menu
       </button>
     </div>
   </div>
 
-  <dialog id="mobile-menu" autofocus>
-    <nav
-      role="navigation"
-      class="fixed top-[75px] left-0 w-full h-[calc(100%-75px)] overflow-y-auto overflow-x-hidden bg-neutral3"
-    >
+  <dialog id="mobile-menu" class="h-full max-w-none max-h-none bg-neutral3">
+    <nav role="navigation" class="overflow-y-auto overflow-x-hidden">
       <div class="container">
+        <div class="my-5 flex justify-end items-center">
+          <form method="dialog" autofocus>
+            <button
+              id="mobile-menu-closer"
+              class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
+            >
+              Fermer
+            </button>
+          </form>
+        </div>
+
         <div class="container">
           <ul class="pt-6">
             <li class="mb-6">
@@ -91,33 +99,10 @@ import Contact from "../Contact.astro";
 </header>
 
 <style>
-  .text-opened {
-    display: none;
-  }
-
-  #header[data-menu-opened="true"] {
-    background-color: var(--color-neutral3) !important;
-    height: 100vh;
-    height: 100dvh;
-    z-index: 10;
-
-    .text-opened {
-      display: block;
-    }
-
-    .text-closed {
-      display: none;
-    }
-
-    #logo {
-      visibility: hidden;
-    }
-
-    #mobile-menu-opener {
-      background-color: var(--color-neutral1);
-      color: var(--color-primary);
-      box-shadow: var(--shadow-cta) var(--color-primary);
-    }
+  #mobile-menu-closer {
+    background-color: var(--color-neutral1);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-cta) var(--color-primary);
   }
 
   @supports (animation-timeline: scroll(y root)) {
