@@ -18,7 +18,7 @@ function openMobileMenu() {
     header.setAttribute("data-menu-opened", "true");
     mobileMenuOpener.setAttribute("aria-expanded", "true");
     document.body.classList.add("overflow-hidden");
-    mobileMenu.show();
+    mobileMenu.showModal();
   }
 }
 
