@@ -96,7 +96,7 @@ export default async function getPercySnapshotsConfig() {
       };
     });
 
-    const mobileMenuElement = "header#header";
+    const mobileMenuElement = "dialog#mobile-menu";
     const mobileMenuOpener = "#mobile-menu-opener";
 
     const mobileMenuSnapshots = websiteURLs.map((websiteURL) => {
