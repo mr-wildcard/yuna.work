@@ -61,7 +61,7 @@ import Contact from "../Contact.astro";
           <form method="dialog" autofocus>
             <button
               id="mobile-menu-closer"
-              class="text-menu-label text-neutral1 px-5 py-[5px] bg-primary rounded-full"
+              class="text-menu-label bg-neutral1 px-5 py-[5px] text-primary rounded-full shadow-cta"
             >
               Fermer
             </button>
@@ -103,12 +103,6 @@ import Contact from "../Contact.astro";
 </header>
 
 <style>
-  #mobile-menu-closer {
-    background-color: var(--color-neutral1);
-    color: var(--color-primary);
-    box-shadow: var(--shadow-cta) var(--color-primary);
-  }
-
   @supports (animation-timeline: scroll(y root)) {
     #header {
       animation-duration: 1ms;
