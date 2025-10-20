@@ -9,6 +9,7 @@ import Separator from "../components/@common/Separator.astro";
 import Fierte from "../components/a-propos/Fierte.astro";
 import Link from "../components/@common/Link.astro";
 import ExternalActivity from "../components/a-propos/ExternalActivity.astro";
+import Certifications from "components/homepage/Certifications.astro";
 
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
@@ -37,7 +38,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 
   <div class="mb-[140px]">
     <div class="container">
-      <Grid as="div">
+      <Grid as="div" class="mb-[60px] xl:mb-[100px]">
         <div
           class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-7 xl:col-start-2 xl:col-span-6"
         >
@@ -154,6 +155,20 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
               </li>
             </ul>
           </div>
+        </div>
+      </Grid>
+
+      <Grid as="div">
+        <div class="col-span-full xl:col-start-2">
+          <h2 class="text-title-small mb-2.5">
+            Je suis certifiée et/ou formée par
+          </h2>
+        </div>
+
+        <div
+          class="col-span-full sm:col-span-6 md:col-span-full xl:col-start-2"
+        >
+          <Certifications />
         </div>
       </Grid>
     </div>
