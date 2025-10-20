@@ -8,6 +8,7 @@ import Service from "components/homepage/Service.astro";
 import Certifications from "components/homepage/Certifications.astro";
 import Testimonial from "components/homepage/Testimonial.astro";
 import Tag from "components/@common/Tag.astro";
+import LatestCollaborations from "components/homepage/LatestCollaborations.astro";
 import Icon from "../components/@common/Icon.astro";
 ---
 
@@ -130,14 +131,14 @@ import Icon from "../components/@common/Icon.astro";
       <Grid as="div">
         <div class="col-span-full xl:col-start-2">
           <h2 class="text-title-small mb-2.5">
-            Je suis certifiée et/ou formée par
+            On a récemment travaillé ensemble
           </h2>
         </div>
 
         <div
           class="col-span-full sm:col-span-6 md:col-span-full xl:col-start-2"
         >
-          <Certifications />
+          <LatestCollaborations />
         </div>
       </Grid>
     </div>
