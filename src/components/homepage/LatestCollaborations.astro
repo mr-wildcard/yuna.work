@@ -1,0 +1,56 @@
+---
+import { Picture } from "astro:assets";
+import Elle from "images/collaborations/clients-logos/elle.png";
+import Sys1 from "images/collaborations/clients-logos/sys1.png";
+import BonusReparation from "images/collaborations/clients-logos/bonus-reparation.png";
+import Agir from "images/collaborations/clients-logos/agir.png";
+import Link from "components/@common/Link.astro";
+
+const collaborations = [
+  {
+    src: Elle,
+    cssClasses: "w-[72px] h-[28px]",
+    alt: "Elle",
+  },
+  {
+    src: Sys1,
+    cssClasses: "w-[100px] h-[62px]",
+    alt: "Sys1",
+  },
+  {
+    src: BonusReparation,
+    cssClasses: "w-[116px] h-[66px]",
+    alt: "Sys1",
+  },
+  {
+    src: Agir,
+    cssClasses: "w-[84px] h-[58px]",
+    alt: "Sys1",
+  },
+];
+---
+
+<ul
+  class="flex justify-around sm:justify-normal flex-wrap items-center -mx-4 sm:-mx-6 xl:-mx-10"
+>
+  {
+    collaborations.map((collaboration) => {
+      return (
+        <li class="m-4 mb-[20px] sm:m-6 xl:mx-10">
+          <Picture
+            src={collaboration.src}
+            class:list={[collaboration.cssClasses, "mx-auto"]}
+            densities={[1, 2]}
+            alt={collaboration.alt}
+          />
+        </li>
+      );
+    })
+  }
+
+  <li class="m-4 mb-[20px] sm:m-6 xl:mx-10">
+    <a href="/collaborations" class="underline text-menu-label-highlight"
+      >Voir plus</a
+    >
+  </li>
+</ul>

@@ -9,6 +9,7 @@ import Separator from "../components/@common/Separator.astro";
 import Fierte from "../components/a-propos/Fierte.astro";
 import Link from "../components/@common/Link.astro";
 import ExternalActivity from "../components/a-propos/ExternalActivity.astro";
+import Certifications from "components/homepage/Certifications.astro";
 
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
@@ -37,7 +38,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 
   <div class="mb-[140px]">
     <div class="container">
-      <Grid as="div">
+      <Grid as="div" class="mb-[60px] xl:mb-[100px]">
         <div
           class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-7 xl:col-start-2 xl:col-span-6"
         >
@@ -53,8 +54,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
                 français et mon prof de maths me conseille de devenir prof... de
                 maths. C’est sans compter ma rencontre avec le Web : Windows 95,
                 le modem qui bippe et quelques années plus tard, les forums
-                phpBB de passionnés, Dreamweaver... À 12 ans, je crée mes
-                premiers sites.
+                phpBB, Dreamweaver... À 12 ans, je crée mes premiers sites.
                 <br />
                 <br />
                 Les années défilent. Au lycée, ma passion pour le numérique ne diminue
@@ -102,24 +102,26 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
                   >paywall</span
                 > en France. Encore quelques années de kiff en tant que <span
                   lang="en">Head of UX</span
-                > puis nous nous lançons officiellement en 2020 dans le grand bain
-                du freelancing !
+                > puis je me lance officiellement en 2020 dans le grand bain du freelancing
+                !
                 <br />
                 <br />
                 Aujourd’hui, mon profil stratégique et technique est un atout dans
                 les projets complexes. La diversité de mes expériences et mon attrait
                 pour les relations humaines me confèrent une haute capacité d’adaptation,
                 de compréhension et de résolution des problèmes. Mon expertise dans
-                les champs dits éthiques du design (inclusion, accessibilité, fair
-                patterns, éco-conception) est une force que je continue à nourrir
-                par des formations régulières.
+                les champs dits éthiques du design (inclusion, accessibilité, <span
+                  lang="en">fair patterns</span
+                >, éco-conception, <span lang="en">design fiction</span>) est
+                une force que je continue à nourrir par des formations
+                régulières.
               </p>
             </section>
           </div>
         </div>
 
         <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-4">
-          <div class="rounded-[20px] bg-neutral2 py-[30px] px-5">
+          <div class="rounded-[20px] bg-neutral2 py-[30px] px-5 xl:px-10">
             <ul
               style={{ "--bg-image-url": `url(${optimizedListStyle.src})` }}
               class:list={[
@@ -137,22 +139,39 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
                 et Produits de Communication
               </li>
               <li>
-                <span class="text-title-small">Certifiée</span> en audit d’accessibilité
-                RGAA, en numérique responsable et en assurance qualité Web Opquast
+                <span class="text-title-small">Certifiée</span> en <span
+                  lang="en">design fiction</span
+                >, en audit d’accessibilité RGAA, en numérique responsable et en
+                assurance qualité Web Opquast
               </li>
               <li>
                 <span class="text-title-small">Formée</span> au <span lang="en"
                   >service design</span
-                >, au design accessible, à l’éco-conception, aux tests
+                >, à l’éco-conception, au design accessible, aux tests
                 d’utilisabilité, à la recherche UX et au <span lang="en"
                   >design thinking</span
                 >
               </li>
               <li>
-                <span class="text-title-small">Promue</span> maman en 2021 ❤️
+                <span class="text-title-small">Promue</span> doublement maman en
+                2021 et en 2025 ❤️
               </li>
             </ul>
           </div>
+        </div>
+      </Grid>
+
+      <Grid as="div">
+        <div class="col-span-full xl:col-start-2">
+          <h2 class="text-title-small mb-2.5">
+            Je suis certifiée et/ou formée par
+          </h2>
+        </div>
+
+        <div
+          class="col-span-full sm:col-span-6 md:col-span-full xl:col-start-2"
+        >
+          <Certifications />
         </div>
       </Grid>
     </div>
