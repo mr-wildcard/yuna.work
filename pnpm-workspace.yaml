@@ -1,0 +1,12 @@
+ignoredBuiltDependencies:
+  - '@percy/core'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - sharp
+  - workerd
+
+onlyBuiltDependencies:
+  - '@apollo/protobufjs'
+  - '@prisma/client'
+  - '@prisma/engines'
+  - prisma

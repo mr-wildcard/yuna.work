@@ -11,6 +11,9 @@
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.8",
     "@keystone-6/core": "6.5.1",
+    "@keystone-6/document-renderer": "1.1.2",
+    "@keystone-6/fields-document": "9.1.1",
+    "@prisma/client": "5.22.0",
     "astro": "5.15.4",
     "astro-icon": "1.1.5"
   },
@@ -30,6 +33,7 @@
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.34.5",
     "tailwindcss": "4.1.17",
+    "tailwindcss": "4.1.14",
     "typescript": "5.9.3",
     "vite": "7.2.2",
     "wrangler": "4.46.0"

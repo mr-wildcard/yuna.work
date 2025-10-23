@@ -1,18 +1,24 @@
 import { config, list } from "@keystone-6/core";
 import { allowAll } from "@keystone-6/core/access";
-import { text } from "@keystone-6/core/fields";
+import { json } from "@keystone-6/core/fields";
+import { document } from "@keystone-6/fields-document";
 
 export default config({
   db: {
-    provider: "postgresql",
-    url: "",
+    provider: "sqlite",
+    url: `file:./database.db`,
   },
   lists: {
-    User: list({
+    CollaborationsPage: list({
+      isSingleton: true,
       access: allowAll,
       fields: {
-        name: text({ validation: { isRequired: true } }),
-        email: text({ validation: { isRequired: true }, isIndexed: "unique" }),
+        intro_paragraphe1: document({
+          formatting: true,
+        }),
+        intro_paragraphe2: document({
+          formatting: true,
+        }),
       },
     }),
   },
