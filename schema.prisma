@@ -15,4 +15,5 @@ model CollaborationsPage {
   id                Int     @id
   intro_paragraphe1 String  @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
   intro_paragraphe2 String  @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+  intro_highlights  String? @default("{\"title\":\"\",\"items\":[]}")
 }

@@ -5,6 +5,7 @@ type CollaborationsPage {
   id: ID!
   intro_paragraphe1: CollaborationsPage_intro_paragraphe1_Document
   intro_paragraphe2: CollaborationsPage_intro_paragraphe2_Document
+  intro_highlights: JSON
 }
 
 type CollaborationsPage_intro_paragraphe1_Document {
@@ -49,6 +50,7 @@ enum OrderDirection {
 input CollaborationsPageUpdateInput {
   intro_paragraphe1: JSON
   intro_paragraphe2: JSON
+  intro_highlights: JSON
 }
 
 input CollaborationsPageUpdateArgs {
@@ -59,6 +61,7 @@ input CollaborationsPageUpdateArgs {
 input CollaborationsPageCreateInput {
   intro_paragraphe1: JSON
   intro_paragraphe2: JSON
+  intro_highlights: JSON
 }
 
 """

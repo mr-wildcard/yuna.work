@@ -19,6 +19,12 @@ export default config({
         intro_paragraphe2: document({
           formatting: true,
         }),
+        intro_highlights: json({
+          defaultValue: { title: "", items: [] },
+          ui: {
+            views: "./src/admin/fields/title-list-field",
+          },
+        }),
       },
     }),
   },
