@@ -1,6 +1,6 @@
 import { config, list } from "@keystone-6/core";
 import { allowAll } from "@keystone-6/core/access";
-import { json } from "@keystone-6/core/fields";
+import { json, relationship } from "@keystone-6/core/fields";
 import { document } from "@keystone-6/fields-document";
 
 export default config({
@@ -9,15 +9,24 @@ export default config({
     url: `file:./database.db`,
   },
   lists: {
-    CollaborationsPage: list({
-      isSingleton: true,
+    testimonial: list({
       access: allowAll,
       fields: {
-        intro_paragraphe1: document({
-          formatting: true,
-        }),
-        intro_paragraphe2: document({
-          formatting: true,
+        content: document({ formatting: true }),
+        author: document({ formatting: true }),
+        context: document({ formatting: true }),
+      },
+    }),
+    Collaboration: list({
+      access: allowAll,
+      fields: {
+        testimonials: relationship({
+          ref: "testimonial",
+          many: true,
+          ui: {
+            labelField: "author",
+            searchFields: ["author"],
+          },
         }),
         intro_highlights: json({
           defaultValue: { title: "", items: [] },

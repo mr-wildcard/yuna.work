@@ -11,9 +11,16 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model CollaborationsPage {
-  id                Int     @id
-  intro_paragraphe1 String  @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
-  intro_paragraphe2 String  @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
-  intro_highlights  String? @default("{\"title\":\"\",\"items\":[]}")
+model testimonial {
+  id                              String          @id @default(cuid())
+  content                         String          @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+  author                          String          @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+  context                         String          @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+  from_Collaboration_testimonials Collaboration[] @relation("Collaboration_testimonials")
+}
+
+model Collaboration {
+  id               String        @id @default(cuid())
+  testimonials     testimonial[] @relation("Collaboration_testimonials")
+  intro_highlights String?       @default("{\"title\":\"\",\"items\":[]}")
 }
