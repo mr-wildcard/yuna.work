@@ -5,8 +5,8 @@ import { document } from "@keystone-6/fields-document";
 
 export default config({
   db: {
-    provider: "sqlite",
-    url: `file:./database.db`,
+    provider: "postgresql",
+    url: process.env.DATABASE_URL,
   },
   lists: {
     testimonial: list({

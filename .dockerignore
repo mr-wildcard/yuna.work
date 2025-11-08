@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+database.db
+pnpm-debug.log
+npm-debug.log
+coverage
+tmp
+.env
+.env.*

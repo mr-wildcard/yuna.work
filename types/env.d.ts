@@ -6,3 +6,9 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+namespace NodeJS {
+  interface ProcessEnv {
+    DATABASE_URL: string;
+  }
+}
