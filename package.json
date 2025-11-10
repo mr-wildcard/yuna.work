@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.8",
-    "astro": "5.15.4",
+    "astro": "5.15.5",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
@@ -20,7 +20,7 @@
     "@percy/cli": "1.31.4",
     "@tailwindcss/vite": "4.1.17",
     "@types/node": "24.10.0",
-    "autoprefixer": "10.4.21",
+    "autoprefixer": "10.4.22",
     "cssnano": "7.1.2",
     "dotenv": "17.2.3",
     "fast-xml-parser": "5.3.1",
