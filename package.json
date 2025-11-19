@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.8",
-    "astro": "5.15.8",
+    "astro": "5.15.9",
     "astro-icon": "1.1.5"
   },
   "devDependencies": {
@@ -31,6 +31,6 @@
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
     "vite": "7.2.2",
-    "wrangler": "4.47.0"
+    "wrangler": "4.49.0"
   }
 }
