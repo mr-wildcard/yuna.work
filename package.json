@@ -19,7 +19,7 @@
     "@astrojs/ts-plugin": "1.10.6",
     "@percy/cli": "1.31.5",
     "@tailwindcss/vite": "4.1.18",
-    "@types/node": "24.10.3",
+    "@types/node": "24.10.4",
     "autoprefixer": "10.4.22",
     "cssnano": "7.1.2",
     "dotenv": "17.2.3",
