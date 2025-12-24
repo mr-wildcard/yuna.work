@@ -17,6 +17,9 @@ importers:
       astro-icon:
         specifier: 1.1.5
         version: 1.1.5
+      tailwind-merge:
+        specifier: 3.4.0
+        version: 3.4.0
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.6
@@ -2937,6 +2940,9 @@ packages:
     engines: {node: '>=8.0.0'}
     os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos, android]
     hasBin: true
+
+  tailwind-merge@3.4.0:
+    resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
 
   tailwindcss@4.1.18:
     resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
@@ -6714,6 +6720,8 @@ snapshots:
       sax: 1.4.1
 
   systeminformation@5.25.11: {}
+
+  tailwind-merge@3.4.0: {}
 
   tailwindcss@4.1.18: {}
 

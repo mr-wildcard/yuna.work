@@ -1,5 +1,6 @@
 ---
 import { type HTMLTag, type Polymorphic } from "astro/types";
+import { twMerge } from "tailwind-merge";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{
   children: any;
@@ -10,8 +11,12 @@ type Props<Tag extends HTMLTag> = Polymorphic<{
 const { as: HTMLTag, class: cssClasses, ...props } = Astro.props;
 ---
 
+{
+  /* why twMerge: using grid-cols-4 here as default column numbers
+overrides grid-cols-* values passed to `cssClasses` prop */
+}
 <HTMLTag
-  class:list={[
+  class={twMerge(
     "grid",
     "grid-cols-4",
     "gap-x-2.5",
@@ -19,7 +24,7 @@ const { as: HTMLTag, class: cssClasses, ...props } = Astro.props;
     "sm:gap-x-5",
     "lg:grid-cols-12",
     cssClasses,
-  ]}
+  )}
   {...props}
 >
   <slot />
