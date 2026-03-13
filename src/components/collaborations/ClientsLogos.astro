@@ -1,34 +1,49 @@
 ---
 import { Picture } from "astro:assets";
 import Grid from "../@common/Grid.astro";
+import ClientLogoBonusReparation from "images/collaborations/clients-logos/bonus-reparation.png";
 import ClientLogoElle from "images/collaborations/clients-logos/elle.png";
+import ClientLogoChuBordeaux from "images/collaborations/clients-logos/chu-bdx.png";
+import ClientLogoAgir from "images/collaborations/clients-logos/agir.png";
 import ClientLogoNeat from "images/collaborations/clients-logos/neat.png";
 import ClientLogoSezane from "images/collaborations/clients-logos/sezane.png";
 import ClientLogoOrange from "images/collaborations/clients-logos/orange.png";
+import ClientLogoSnale from "images/collaborations/clients-logos/snale.png";
+import ClientLogoAuditionConseil from "images/collaborations/clients-logos/audition-conseil.png";
+import ClientLogoCertivet from "images/collaborations/clients-logos/certivet.png";
+import ClientLogoGie from "images/collaborations/clients-logos/gie.png";
 import ClientLogoSSC from "images/collaborations/clients-logos/school-of-system-change.png";
-import ClientLogoEkino from "images/collaborations/clients-logos/ekino.png";
-import ClientLogoInfopro from "images/collaborations/clients-logos/infopro.png";
-import ClientLogoWalter from "images/collaborations/clients-logos/walter-france.png";
-import ClientLogoDynamo from "images/collaborations/clients-logos/dynamo.png";
-import ClientLogoJohnDeere from "images/collaborations/clients-logos/john-deere.png";
 import ClientLogoCanalPlus from "images/collaborations/clients-logos/canalplus.png";
-import ClientLogoVigiePorts from "images/collaborations/clients-logos/vigie-ports.png";
 import ClientLogoSys1 from "images/collaborations/clients-logos/sys1.png";
 import ClientLogoDXOMARK from "images/collaborations/clients-logos/dxomark.png";
 import ClientLogoCapAtlantique from "images/collaborations/clients-logos/capatlantique.png";
 import ClientLogoSFRBusiness from "images/collaborations/clients-logos/sfr-business.png";
-import ClientLogoImatech from "images/collaborations/clients-logos/imatech.png";
 
 const logos = [
   {
-    src: ClientLogoElle,
-    alt: "ELLE",
-    sizes: [`w-[51px]`, `lg:w-[72px]`],
+    src: ClientLogoBonusReparation,
+    alt: "Bonus Réparation",
+    sizes: [`w-[105px]`, `lg:w-[116px]`],
   },
   {
-    src: ClientLogoNeat,
-    alt: "Neat",
-    sizes: [`w-[62px]`, `lg:w-[77px]`],
+    src: ClientLogoElle,
+    alt: "Elle",
+    sizes: [`w-[72px]`, `lg:w-[72px]`],
+  },
+  {
+    src: ClientLogoChuBordeaux,
+    alt: "CHU Bordeaux",
+    sizes: [`w-[110px]`, `lg:w-[125px]`],
+  },
+  {
+    src: ClientLogoAgir,
+    alt: "Agir pour l'environnement",
+    sizes: [`w-[90px]`, `lg:w-[95px]`],
+  },
+  {
+    src: ClientLogoOrange,
+    alt: "Orange",
+    sizes: [`w-[48px]`, `lg:w-[51px]`],
   },
   {
     src: ClientLogoSezane,
@@ -36,74 +51,59 @@ const logos = [
     sizes: [`w-[114px]`, `lg:w-[142px]`],
   },
   {
-    src: ClientLogoOrange,
-    alt: "Orange",
-    sizes: [`w-[41px]`, `lg:w-[51px]`],
+    src: ClientLogoSnale,
+    alt: "Snale",
+    sizes: [`w-[52px]`, `lg:w-[52px]`],
+  },
+  {
+    src: ClientLogoAuditionConseil,
+    alt: "Audition Conseil",
+    sizes: [`w-[125px]`, `lg:w-[130px]`],
+  },
+  {
+    src: ClientLogoSFRBusiness,
+    alt: "SFR Business",
+    sizes: [`w-[115px]`, `lg:w-[130px]`],
+  },
+  {
+    src: ClientLogoCertivet,
+    alt: "Certivet",
+    sizes: [`w-[135px]`, `lg:w-[145px]`],
+  },
+  {
+    src: ClientLogoCanalPlus,
+    alt: "Canal+",
+    sizes: [`w-[102px]`, `lg:w-[125px]`],
+  },
+  {
+    src: ClientLogoGie,
+    alt: "Canal+",
+    sizes: [`w-[100px]`, `lg:w-[100px]`],
+  },
+  {
+    src: ClientLogoSys1,
+    alt: "Sys1",
+    sizes: [`w-[90px]`, `lg:w-[100px]`],
+  },
+  {
+    src: ClientLogoNeat,
+    alt: "Neat",
+    sizes: [`w-[70px]`, `lg:w-[77px]`],
+  },
+  {
+    src: ClientLogoDXOMARK,
+    alt: "DXOMARK",
+    sizes: [`w-[140px]`, `lg:w-[170px]`],
+  },
+  {
+    src: ClientLogoCapAtlantique,
+    alt: "Cap Atlantique",
+    sizes: [`w-[130px]`, `lg:w-[146px]`],
   },
   {
     src: ClientLogoSSC,
     alt: "School of System Change",
     sizes: [`w-[106px]`, `lg:w-[132px]`],
-  },
-  {
-    src: ClientLogoEkino,
-    alt: "Ekino",
-    sizes: [`w-[82px]`, `lg:w-[102px]`],
-  },
-  {
-    src: ClientLogoInfopro,
-    alt: "Infopro Digital",
-    sizes: [`w-[147px]`, `lg:w-[184px]`],
-  },
-  {
-    src: ClientLogoWalter,
-    alt: "Walter France",
-    sizes: [`w-[78px]`, `lg:w-[97px]`],
-  },
-  {
-    src: ClientLogoDynamo,
-    alt: "Dynamo",
-    sizes: [`w-[112px]`, `lg:w-[140px]`],
-  },
-  {
-    src: ClientLogoJohnDeere,
-    alt: "John Deere",
-    sizes: [`w-[133px]`, `lg:w-[166px]`],
-  },
-  {
-    src: ClientLogoCanalPlus,
-    alt: "Canal+",
-    sizes: [`w-[102px]`, `lg:w-[127px]`],
-  },
-  {
-    src: ClientLogoVigiePorts,
-    alt: "Vigie Ports",
-    sizes: [`w-[97px]`, `lg:w-[121px]`],
-  },
-  {
-    src: ClientLogoSys1,
-    alt: "Sys1",
-    sizes: [`w-[80px]`, `lg:w-[100px]`],
-  },
-  {
-    src: ClientLogoDXOMARK,
-    alt: "DXOMARK",
-    sizes: [`w-[136px]`, `lg:w-[170px]`],
-  },
-  {
-    src: ClientLogoCapAtlantique,
-    alt: "Cap Atlantique",
-    sizes: [`w-[116px]`, `lg:w-[146px]`],
-  },
-  {
-    src: ClientLogoSFRBusiness,
-    alt: "SFR Business",
-    sizes: [`w-[104px]`, `lg:w-[130px]`],
-  },
-  {
-    src: ClientLogoImatech,
-    alt: "Imatech",
-    sizes: [`w-[120px]`, `lg:w-[150px]`],
   },
 ];
 ---
