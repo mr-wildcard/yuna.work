@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.8",
-    "astro": "6.1.4",
+    "astro": "6.1.5",
     "astro-icon": "1.1.5",
     "tailwind-merge": "3.5.0"
   },
@@ -24,7 +24,7 @@
     "autoprefixer": "10.4.27",
     "cssnano": "7.1.4",
     "dotenv": "17.4.1",
-    "fast-xml-parser": "5.5.10",
+    "fast-xml-parser": "5.5.11",
     "postcss": "8.5.9",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
