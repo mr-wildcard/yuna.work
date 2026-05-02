@@ -1,0 +1,29 @@
+media:
+  input: public/media
+  output: /media
+
+content:
+  - name: projects
+    label: Projets
+    type: collection
+    path: src/content/projects
+    filename: "{fields.order}-{fields.screenshotKey}"
+    view:
+      fields: [order, title]
+    fields:
+      - { name: order, label: Ordre, type: number }
+      - { name: title, label: Titre, type: string }
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - { name: screenshotKey, label: "Clé screenshot", type: string }
+      - { name: isOngoing, label: "Mission en cours", type: boolean }
+      - name: testimonials
+        label: Témoignages
+        type: object
+        list: true
+        fields:
+          - { name: quote, label: Citation, type: text }
+          - { name: author, label: Auteur, type: string }
+          - { name: lang, label: "Langue (en/fr)", type: string }
