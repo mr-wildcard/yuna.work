@@ -1,0 +1,9 @@
+allowBuilds:
+  '@percy/core': false
+  esbuild: false
+  sharp: false
+  workerd: false
+minimumReleaseAgeExclude:
+  - astro@6.4.3
+  - miniflare@4.20260601.0
+  - wrangler@4.97.0
