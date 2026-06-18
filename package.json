@@ -1,7 +1,7 @@
 {
   "name": "yuna.work",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.34.3",
+  "packageManager": "pnpm@11.8.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "24.13.2",
     "autoprefixer": "10.5.0",
-    "cssnano": "7.1.9",
+    "cssnano": "8.0.2",
     "dotenv": "17.4.2",
     "fast-xml-parser": "5.9.2",
     "postcss": "8.5.15",
