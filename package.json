@@ -21,7 +21,7 @@
     "@percy/cli": "1.32.2",
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "24.13.2",
-    "autoprefixer": "10.5.1",
+    "autoprefixer": "10.5.2",
     "cssnano": "7.1.9",
     "dotenv": "17.4.2",
     "fast-xml-parser": "5.9.3",
@@ -32,6 +32,6 @@
     "tailwindcss": "4.2.2",
     "typescript": "6.0.3",
     "vite": "8.1.0",
-    "wrangler": "4.104.0"
+    "wrangler": "4.105.0"
   }
 }
