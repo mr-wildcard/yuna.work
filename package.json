@@ -26,12 +26,12 @@
     "dotenv": "17.4.2",
     "fast-xml-parser": "5.9.3",
     "postcss": "8.5.16",
-    "prettier": "3.9.4",
+    "prettier": "3.9.5",
     "prettier-plugin-astro": "0.14.1",
     "sharp": "0.35.3",
     "tailwindcss": "4.2.2",
     "typescript": "6.0.3",
     "vite": "8.1.4",
-    "wrangler": "4.108.0"
+    "wrangler": "4.110.0"
   }
 }
