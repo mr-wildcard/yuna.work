@@ -15,6 +15,11 @@
       "groupName": "all major dependencies",
       "groupSlug": "all-major",
       "matchPackageNames": ["*"]
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7.0.0",
+      "description": "TS 7 removes the programmatic API astro check needs; unpin once https://github.com/withastro/roadmap/discussions/1321 lands"
     }
   ]
 }
