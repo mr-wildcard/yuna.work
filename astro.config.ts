@@ -26,7 +26,6 @@ export default defineConfig({
   integrations: [icon(), sitemap()],
   site: getSiteURL(),
   vite: {
-    // @ts-expect-error Astro will probably support Vite 7 typings in a new major version later in 2025: https://github.com/withastro/astro/issues/14030#issuecomment-3027129338
     plugins: [tailwindcss()],
     build: {
       // mainly for transpiling optional chaining for iOS 12
