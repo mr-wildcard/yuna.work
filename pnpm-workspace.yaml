@@ -8,3 +8,33 @@ minimumReleaseAgeExclude:
   - astro@6.4.3
   - miniflare@4.20260601.0 || 4.20260710.0
   - wrangler@4.97.0 || 4.111.0
+  - cssnano-preset-default@8.0.3
+  - cssnano-utils@6.0.2
+  - cssnano@8.0.3
+  - postcss-colormin@8.0.2
+  - postcss-convert-values@8.0.2
+  - postcss-discard-comments@8.0.2
+  - postcss-discard-duplicates@8.0.2
+  - postcss-discard-empty@8.0.2
+  - postcss-discard-overridden@8.0.2
+  - postcss-merge-longhand@8.0.2
+  - postcss-merge-rules@8.0.2
+  - postcss-minify-font-values@8.0.2
+  - postcss-minify-gradients@8.0.2
+  - postcss-minify-params@8.0.2
+  - postcss-minify-selectors@8.0.3
+  - postcss-normalize-charset@8.0.2
+  - postcss-normalize-display-values@8.0.2
+  - postcss-normalize-positions@8.0.2
+  - postcss-normalize-repeat-style@8.0.2
+  - postcss-normalize-string@8.0.2
+  - postcss-normalize-timing-functions@8.0.2
+  - postcss-normalize-unicode@8.0.2
+  - postcss-normalize-url@8.0.2
+  - postcss-normalize-whitespace@8.0.2
+  - postcss-ordered-values@8.0.2
+  - postcss-reduce-initial@8.0.2
+  - postcss-reduce-transforms@8.0.2
+  - postcss-svgo@8.0.2
+  - postcss-unique-selectors@8.0.2
+  - stylehacks@8.0.2
