@@ -3,6 +3,7 @@
   "extends": ["config:recommended"],
   "ignoreDeps": ["tailwindcss", "@tailwindcss/vite"],
   "rangeStrategy": "pin",
+  "minimumReleaseAge": "2 days",
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
