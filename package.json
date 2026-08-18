@@ -24,7 +24,7 @@
     "autoprefixer": "10.5.4",
     "cssnano": "8.0.5",
     "dotenv": "17.4.2",
-    "fast-xml-parser": "5.10.1",
+    "fast-xml-parser": "5.11.0",
     "postcss": "8.5.26",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
