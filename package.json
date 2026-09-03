@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.3.0",
-    "astro": "7.2.9",
+    "astro": "7.2.10",
     "astro-icon": "1.2.0",
     "tailwind-merge": "3.6.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
-    "@astrojs/sitemap": "3.7.3",
+    "@astrojs/sitemap": "3.7.4",
     "@astrojs/ts-plugin": "1.10.11",
     "@percy/cli": "1.32.7",
     "@tailwindcss/vite": "4.2.2",
