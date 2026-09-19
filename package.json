@@ -18,7 +18,7 @@
     "@astrojs/check": "0.9.10",
     "@astrojs/sitemap": "3.7.4",
     "@astrojs/ts-plugin": "1.10.12",
-    "@percy/cli": "1.32.9",
+    "@percy/cli": "1.32.10",
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "24.13.5",
     "autoprefixer": "10.6.1",
