@@ -25,20 +25,10 @@ jobs:
           cloudflare-pages-project: yuna-work
           branch-name: ${{ github.head_ref }}
 
-      - uses: pnpm/action-setup@v6.1.0
+      - uses: pnpm/setup@v2.1.0
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-
-      - name: Setup Node
-        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-        uses: actions/setup-node@v7.0.0
         with:
-          node-version-file: .nvmrc
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install
-        if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
-        run: pnpm i
+          cache: true
 
       - name: Take yuna.work screenshots and upload them to Percy
         if: steps.wait-for-cloudflare-deployment-url.outputs.status == 'success'
