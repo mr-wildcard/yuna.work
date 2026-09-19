@@ -24,6 +24,6 @@ content:
         type: object
         list: true
         fields:
-          - { name: quote, label: Citation, type: text }
+          - { name: quote, label: Citation, type: rich-text }
           - { name: author, label: Auteur, type: string }
           - { name: lang, label: "Langue (en/fr)", type: string }
