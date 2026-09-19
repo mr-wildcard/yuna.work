@@ -28,6 +28,13 @@
       "description": "Keep pnpm bumps off the grouped dep PRs; they change the tool, not a library"
     },
     {
+      "matchPackageNames": ["node"],
+      "groupName": "node",
+      "groupSlug": "node",
+      "automerge": false,
+      "description": "Bump .nvmrc and devEngines together: Cloudflare Pages reads .nvmrc, pnpm reads devEngines"
+    },
+    {
       "matchPackageNames": ["typescript"],
       "allowedVersions": "<7.0.0",
       "description": "TS 7 removes the programmatic API astro check needs; unpin once https://github.com/withastro/roadmap/discussions/1321 lands"
