@@ -2,6 +2,13 @@
   "name": "yuna.work",
   "version": "0.0.1",
   "packageManager": "pnpm@12.4.2",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.21.0",
+      "onFail": "download"
+    }
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
