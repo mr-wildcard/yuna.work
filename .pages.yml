@@ -7,7 +7,6 @@ content:
     label: Projets
     type: collection
     path: src/content/projects
-    filename: "{fields.order}-{fields.screenshotKey}"
     view:
       fields: [order, title]
     fields:
