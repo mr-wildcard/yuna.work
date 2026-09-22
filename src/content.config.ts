@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 
 const projects = defineCollection({
   type: "data",
@@ -14,7 +15,7 @@ const projects = defineCollection({
           quote: z.string(),
           author: z.string(),
           lang: z.string().optional(),
-        })
+        }),
       )
       .optional(),
   }),
