@@ -2,6 +2,7 @@
 order: 7
 title: Accompagner l'équipe design d'Infopro Digital dans la mise en conformité
   RGAA de leurs productions design
+cover: /media/projects/elle.jpg
 tags:
   - Design accessible
   - <span lang='en'>Design review</span>
