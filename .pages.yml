@@ -12,6 +12,12 @@ content:
     fields:
       - { name: order, label: Ordre, type: number }
       - { name: title, label: Titre, type: string }
+      - name: cover
+        label: Image
+        type: image
+        options:
+          media: images
+          path: cms/content/images/projects
       - name: tags
         label: Tags
         type: string
