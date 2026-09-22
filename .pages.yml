@@ -19,7 +19,6 @@ content:
         label: Tags
         type: string
         list: true
-      - { name: screenshotKey, label: "Clé screenshot", type: string }
       - { name: isOngoing, label: "Mission en cours", type: boolean }
       - name: testimonials
         label: Témoignages
