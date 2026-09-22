@@ -2,6 +2,7 @@
 order: 1
 title: Repenser l'architecture UX de l'outil Snale Floods pour aider les
   collectivités à prendre des décisions concernant les inondations
+cover: /media/snale-floods.jpg
 tags:
   - Refonte UX
   - Données complexes
