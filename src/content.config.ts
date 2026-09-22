@@ -1,13 +1,13 @@
 import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
 const projects = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
   schema: z.object({
     order: z.number(),
     title: z.string(),
     tags: z.array(z.string()),
-    screenshotKey: z.string(),
     isOngoing: z.boolean().optional(),
     testimonials: z
       .array(
