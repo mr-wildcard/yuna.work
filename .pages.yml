@@ -6,7 +6,7 @@ content:
   - name: projects
     label: Projets
     type: collection
-    path: cms/content/projects
+    path: src/content/projects
     view:
       fields: [order, title]
     fields:
