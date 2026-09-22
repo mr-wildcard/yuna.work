@@ -1,7 +1,4 @@
 media:
-  - name: media
-    input: public/media
-    output: /media
   - name: project-images
     label: Images projets
     input: src/content/media/images/projects
