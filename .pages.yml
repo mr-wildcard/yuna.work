@@ -10,6 +10,8 @@ content:
     filename: "{order}-{slug}.md"
     view:
       fields: [order, title]
+      sort:
+        - order
     fields:
       - { name: order, label: Ordre, type: number }
       - { name: title, label: Titre, type: string }
