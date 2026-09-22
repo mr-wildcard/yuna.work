@@ -12,8 +12,10 @@ content:
     filename: "{slug}.md"
     view:
       fields: [order, title]
-      sort:
-        - order
+      sort: [order, title]
+      default:
+        sort: order
+        order: desc
     fields:
       - { name: order, label: Ordre, type: number }
       - { name: title, label: Titre, type: string }
