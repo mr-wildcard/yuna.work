@@ -2,6 +2,7 @@
 order: 3
 title: Repenser la stratégie UX du <span lang='en'>leader</span> de l'évaluation
   DXOMARK pour parler à un public aussi bien technophile que novice
+cover: ../media/images/projects/dxomark.jpg
 tags:
   - Stratégie UX
   - Données complexes

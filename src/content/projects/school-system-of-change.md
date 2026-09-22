@@ -2,6 +2,7 @@
 order: 5
 title: Concevoir le nouveau site Web et le discours de la School of System Change
   pour en recruter les futures promotions
+cover: ../media/images/projects/school-system-of-change.jpg
 tags:
   - Stratégie UX
   - Changement systémique

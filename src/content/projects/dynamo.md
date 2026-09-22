@@ -2,6 +2,7 @@
 order: 9
 title: Faire monter en compétences les <span lang='en'>designers</span> de dynamo
   avec des revues de design orientées accessibilité et éco-conception
+cover: ../media/images/projects/dynamo.jpg
 tags:
   - <span lang='en'>Design review</span>
   - Mentorat

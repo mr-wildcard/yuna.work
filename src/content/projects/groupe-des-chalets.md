@@ -2,6 +2,7 @@
 order: 2
 title: Refondre le site et les espaces connectés du bailleur social Groupe Des
   Chalets pour le rapprocher de ses cibles multiples
+cover: ../media/images/projects/groupe-des-chalets.jpg
 tags:
   - Refonte UX
   - Habitat social

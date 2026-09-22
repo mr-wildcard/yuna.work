@@ -2,6 +2,7 @@
 order: 4
 title: Développer l'empathie des équipes avec un outil de cartographie des
   parcours des usagères et usagers de l'agglomération
+cover: ../media/images/projects/cap-atlantique.jpg
 tags:
   - <span lang='en'>Design thinking</span>
   - Relation usagères et usagers

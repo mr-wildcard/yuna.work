@@ -2,6 +2,7 @@
 order: 1
 title: Concevoir la nouvelle appli de domotique MeyerDom pour les personnes
   handicapées et les institutions médicalisées
+cover: ../media/images/projects/meyer-dom.jpg
 tags:
   - Conception UX
   - Design accessible

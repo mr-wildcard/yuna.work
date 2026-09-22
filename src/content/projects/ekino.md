@@ -2,6 +2,7 @@
 order: 6
 title: Refondre le système d'information d'un <span lang='en'>leader</span> du
   transport pour faciliter les échanges internes et externes
+cover: ../media/images/projects/ekino.jpg
 tags:
   - Transformation numérique
   - Système d'information

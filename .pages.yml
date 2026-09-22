@@ -1,6 +1,11 @@
 media:
-  input: public/media
-  output: /media
+  - name: media
+    input: public/media
+    output: /media
+  - name: project-images
+    label: Images projets
+    input: src/content/media/images/projects
+    output: ../media/images/projects
 
 content:
   - name: projects
@@ -18,6 +23,9 @@ content:
       - name: cover
         label: Image
         type: image
+        options:
+          media: project-images
+          path: src/content/media/images/projects
       - name: tags
         label: Tags
         type: string

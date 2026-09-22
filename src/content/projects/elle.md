@@ -2,6 +2,7 @@
 order: 10
 title: Accompagner les équipes du magazine ELLE dans leur transformation produit
   et co-construire la future expérience en ligne
+cover: ../media/images/projects/elle.jpg
 tags:
   - Transformation produit
   - <span lang='en'>Business model</span>

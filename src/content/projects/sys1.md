@@ -2,6 +2,7 @@
 order: 8
 title: Refondre la solution Logus pour faciliter le suivi des dossiers usagères
   et usagers au sein des établissements médico-sociaux
+cover: ../media/images/projects/sys1.jpg
 tags:
   - Refonte UX
   - Données de santé
