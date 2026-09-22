@@ -7,7 +7,7 @@ content:
     label: Projets
     type: collection
     path: src/content/projects
-    filename: "{order}-{slug}.md"
+    filename: "{slug}.md"
     view:
       fields: [order, title]
       sort:

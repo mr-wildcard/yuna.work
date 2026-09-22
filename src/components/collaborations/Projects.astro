@@ -36,7 +36,7 @@ const projects = projectEntries
   .sort((a, b) => a.data.order - b.data.order)
   .map((entry) => ({
     ...entry.data,
-    screenshot: screenshotMap[entry.data.screenshotKey],
+    screenshot: screenshotMap[entry.id],
   }));
 ---
 
