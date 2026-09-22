@@ -15,9 +15,6 @@ content:
       - name: cover
         label: Image
         type: image
-        options:
-          media: images
-          path: cms/content/images/projects
       - name: tags
         label: Tags
         type: string
