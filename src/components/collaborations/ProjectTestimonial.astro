@@ -12,9 +12,11 @@ const { quote, author, lang } = Astro.props;
 
 <figure class="space-y-5">
   <Icon name="quote" size={18} class="block" />
-  <blockquote>
-    <p class="text-body-normal text-paragraph" lang={lang} set:html={quote} />
-  </blockquote>
+  <blockquote
+    class="text-body-normal text-paragraph"
+    lang={lang}
+    set:html={quote}
+  />
 
   <figcaption class="text-title-normal text-paragraph">
     <p set:html={author} class="not-italic" lang={lang} />
