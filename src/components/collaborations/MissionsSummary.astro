@@ -4,6 +4,13 @@ import ListStyle from "images/list-style.svg";
 import Grid from "../@common/Grid.astro";
 import DiscreetDots from "../@common/DiscreetDots.astro";
 
+interface Props {
+  title: string;
+  items: string[];
+}
+
+const { title, items } = Astro.props;
+
 const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
 ---
 
@@ -11,7 +18,7 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
   <h2
     class="col-span-full sm:col-start-2 lg:col-start-5 text-headline-small-highlight mb-5 lg:mb-6"
   >
-    Exemples de missions
+    {title}
   </h2>
 
   <div
@@ -41,46 +48,13 @@ const optimizedListStyle = await getImage({ src: ListStyle, format: "svg" });
         "*:bg-no-repeat",
       ]}
     >
-      <li>
-        <p>
-          Audit, refonte ou création d’outils, de sites, d’applications métiers
-        </p>
-      </li>
-      <li>
-        <p>
-          <span lang="en">Consulting</span> en design UX, accessibilité et standards
-          de qualité Web
-        </p>
-      </li>
-      <li>
-        <p>
-          Accompagnement d’équipes dirigeantes, <span lang="en">design ops</span
-          > et <span lang="en">design fiction</span>
-        </p>
-      </li>
-      <li>
-        <p>
-          Recherche UX et développement de la connaissance “<span lang="en"
-            >users</span
-          >”
-        </p>
-      </li>
-      <li>
-        <p>
-          Animation de processus de <span lang="en">design thinking</span>, de <span
-            lang="en">design sprints</span
-          >
-        </p>
-      </li>
-      <li>
-        <p>Conception UX et test de PoCs, de prototypes</p>
-      </li>
-      <li>
-        <p>
-          <span lang="en">Design review</span>, mentorat et structuration des
-          processus design
-        </p>
-      </li>
+      {
+        items.map((item) => (
+          <li>
+            <p set:html={item} />
+          </li>
+        ))
+      }
     </ul>
   </div>
 </Grid>

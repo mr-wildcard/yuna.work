@@ -1,111 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 import Grid from "../@common/Grid.astro";
-import ClientLogoBonusReparation from "images/collaborations/clients-logos/bonus-reparation.png";
-import ClientLogoElle from "images/collaborations/clients-logos/elle.png";
-import ClientLogoChuBordeaux from "images/collaborations/clients-logos/chu-bdx.png";
-import ClientLogoAgir from "images/collaborations/clients-logos/agir.png";
-import ClientLogoNeat from "images/collaborations/clients-logos/neat.png";
-import ClientLogoSezane from "images/collaborations/clients-logos/sezane.png";
-import ClientLogoOrange from "images/collaborations/clients-logos/orange.png";
-import ClientLogoSnale from "images/collaborations/clients-logos/snale.png";
-import ClientLogoAuditionConseil from "images/collaborations/clients-logos/audition-conseil.png";
-import ClientLogoCertivet from "images/collaborations/clients-logos/certivet.png";
-import ClientLogoGie from "images/collaborations/clients-logos/gie.png";
-import ClientLogoSSC from "images/collaborations/clients-logos/school-of-system-change.png";
-import ClientLogoCanalPlus from "images/collaborations/clients-logos/canalplus.png";
-import ClientLogoSys1 from "images/collaborations/clients-logos/sys1.png";
-import ClientLogoDXOMARK from "images/collaborations/clients-logos/dxomark.png";
-import ClientLogoCapAtlantique from "images/collaborations/clients-logos/capatlantique.png";
-import ClientLogoSFRBusiness from "images/collaborations/clients-logos/sfr-business.png";
 
-const logos = [
-  {
-    src: ClientLogoBonusReparation,
-    alt: "Bonus Réparation",
-    sizes: [`w-[105px]`, `lg:w-[116px]`],
-  },
-  {
-    src: ClientLogoElle,
-    alt: "ELLE",
-    sizes: ["w-[72px]"],
-  },
-  {
-    src: ClientLogoChuBordeaux,
-    alt: "CHU Bordeaux",
-    sizes: [`w-[110px]`, `lg:w-[125px]`],
-  },
-  {
-    src: ClientLogoAgir,
-    alt: "Agir pour l'environnement",
-    sizes: [`w-[90px]`, `lg:w-[95px]`],
-  },
-  {
-    src: ClientLogoOrange,
-    alt: "Orange",
-    sizes: [`w-[48px]`, `lg:w-[51px]`],
-  },
-  {
-    src: ClientLogoSezane,
-    alt: "Sézane",
-    sizes: [`w-[114px]`, `lg:w-[142px]`],
-  },
-  {
-    src: ClientLogoSnale,
-    alt: "Snale",
-    sizes: [`w-[52px]`, `lg:w-[52px]`],
-  },
-  {
-    src: ClientLogoAuditionConseil,
-    alt: "Audition Conseil",
-    sizes: [`w-[125px]`, `lg:w-[130px]`],
-  },
-  {
-    src: ClientLogoSFRBusiness,
-    alt: "SFR Business",
-    sizes: [`w-[115px]`, `lg:w-[130px]`],
-  },
-  {
-    src: ClientLogoCertivet,
-    alt: "Certivet",
-    sizes: [`w-[135px]`, `lg:w-[145px]`],
-  },
-  {
-    src: ClientLogoCanalPlus,
-    alt: "Canal+",
-    sizes: [`w-[102px]`, `lg:w-[125px]`],
-  },
-  {
-    src: ClientLogoGie,
-    alt: "GIE Qualité Entreprises",
-    sizes: [`w-[100px]`, `lg:w-[100px]`],
-  },
-  {
-    src: ClientLogoSys1,
-    alt: "Sys1",
-    sizes: [`w-[90px]`, `lg:w-[100px]`],
-  },
-  {
-    src: ClientLogoNeat,
-    alt: "Neat",
-    sizes: [`w-[70px]`, `lg:w-[77px]`],
-  },
-  {
-    src: ClientLogoDXOMARK,
-    alt: "DXOMARK",
-    sizes: [`w-[140px]`, `lg:w-[170px]`],
-  },
-  {
-    src: ClientLogoCapAtlantique,
-    alt: "Cap Atlantique",
-    sizes: [`w-[130px]`, `lg:w-[146px]`],
-  },
-  {
-    src: ClientLogoSSC,
-    alt: "School of System Change",
-    sizes: [`w-[106px]`, `lg:w-[132px]`],
-  },
-];
+interface Props {
+  clients: {
+    logo: ImageMetadata;
+    name: string;
+    width: number;
+    widthLg?: number;
+  }[];
+}
+
+const { clients } = Astro.props;
 ---
 
 <Grid
@@ -113,17 +19,19 @@ const logos = [
   class="gap-y-7.5 gap-x-2.5 grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:gap-0 lg:flex lg:justify-center lg:flex-wrap lg:-mx-8.5 lg:-my-4 2xl:-mx-10"
 >
   {
-    logos.map((logo) => {
-      return (
-        <li class="md:col-span-1 lg:col-span-2 h-16.5 flex justify-center items-center lg:mx-8.5 lg:my-4 2xl:mx-10">
-          <Picture
-            src={logo.src}
-            densities={[1, 2]}
-            alt={logo.alt}
-            class:list={logo.sizes}
-          />
-        </li>
-      );
-    })
+    clients.map((client) => (
+      <li class="md:col-span-1 lg:col-span-2 h-16.5 flex justify-center items-center lg:mx-8.5 lg:my-4 2xl:mx-10">
+        <Picture
+          src={client.logo}
+          densities={[1, 2]}
+          alt={client.name}
+          class="w-(--logo-width) lg:w-(--logo-width-lg)"
+          style={{
+            "--logo-width": `${client.width}px`,
+            "--logo-width-lg": `${client.widthLg ?? client.width}px`,
+          }}
+        />
+      </li>
+    ))
   }
 </Grid>

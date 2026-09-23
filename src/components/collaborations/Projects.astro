@@ -1,25 +1,28 @@
 ---
-import { getCollection } from "astro:content";
+import type { ComponentProps } from "astro/types";
 import Grid from "../@common/Grid.astro";
 import Separator from "../@common/Separator.astro";
 import DiscreetDots from "../@common/DiscreetDots.astro";
 import Project from "./Project.astro";
 
-const projectEntries = await getCollection("projects");
+interface Props {
+  title: string;
+  text: string;
+  projects: ComponentProps<typeof Project>[];
+}
 
-const projects = projectEntries.sort((a, b) => b.data.order - a.data.order);
+const { title, text, projects } = Astro.props;
 ---
 
 <Grid as="div">
   <h2 class="col-span-full text-title-large mb-[50px] lg:mb-4">
-    Sélection de projets
+    {title}
   </h2>
 
   <p
     class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-full text-body-normal mb-20 lg:mb-[120px]"
   >
-    Mes collaborations sont majoritairement placées sous clause de
-    confidentialité.
+    {text}
   </p>
 </Grid>
 
@@ -33,11 +36,11 @@ const projects = projectEntries.sort((a, b) => b.data.order - a.data.order);
         <li>
           <div class="mb-20 lg:mb-[50px]">
             <Project
-              tags={project.data.tags}
-              title={project.data.title}
-              cover={project.data.cover}
-              testimonials={project.data.testimonials}
-              isOngoing={project.data.isOngoing}
+              tags={project.tags}
+              title={project.title}
+              cover={project.cover}
+              testimonials={project.testimonials}
+              isOngoing={project.isOngoing}
             />
           </div>
           {index < projects.length - 1 && (
