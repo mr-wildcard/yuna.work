@@ -1,4 +1,5 @@
 ---
+import { getEntry } from "astro:content";
 import MainLayout from "layouts/main.astro";
 import Grid from "components/@common/Grid.astro";
 import DiscreetDots from "components/@common/DiscreetDots.astro";
@@ -7,6 +8,14 @@ import Contact from "../components/Contact.astro";
 import MissionsSummary from "components/collaborations/MissionsSummary.astro";
 import ClientsLogos from "../components/collaborations/ClientsLogos.astro";
 import Projects from "../components/collaborations/Projects.astro";
+
+const page = await getEntry("collaborations", "collaborations");
+
+if (!page) {
+  throw new Error("Missing src/content/pages/collaborations.yml");
+}
+
+const { intro, missions, clients, projectsSection, projects } = page.data;
 ---
 
 <MainLayout
@@ -19,15 +28,12 @@ import Projects from "../components/collaborations/Projects.astro";
     <div class="container">
       <Grid as="div">
         <div class="col-span-full xl:col-start-2">
-          <h1 class="text-display-large mb-[30px] lg:mb-10">Collaborations</h1>
+          <h1 class="text-display-large mb-[30px] lg:mb-10">{intro.title}</h1>
         </div>
         <div
           class="col-span-full sm:col-span-7 md:col-span-6 lg:col-span-7 xl:col-start-2"
         >
-          <p class="text-body-normal text-paragraph lg:mb-20">
-            J’accompagne des équipes de toutes tailles, provenant de nombreux
-            secteurs et sur des périmètres riches et variés.
-          </p>
+          <p class="text-body-normal text-paragraph lg:mb-20">{intro.text}</p>
         </div>
       </Grid>
     </div>
@@ -42,14 +48,14 @@ import Projects from "../components/collaborations/Projects.astro";
   <div class="mb-[100px] lg:mb-[140px] xl:mb-[170px]">
     <div class="container">
       <div class="lg:pt-4">
-        <MissionsSummary />
+        <MissionsSummary title={missions.title} items={missions.items} />
       </div>
     </div>
   </div>
 
   <div class="mb-40 lg:mb-[207px]">
     <div class="container">
-      <ClientsLogos />
+      <ClientsLogos clients={clients} />
     </div>
   </div>
 
@@ -59,7 +65,11 @@ import Projects from "../components/collaborations/Projects.astro";
 
   <div class="mb-[100px] lg:mb-12">
     <div class="container">
-      <Projects />
+      <Projects
+        title={projectsSection.title}
+        text={projectsSection.text}
+        projects={projects}
+      />
     </div>
   </div>
 

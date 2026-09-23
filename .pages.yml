@@ -1,0 +1,89 @@
+media:
+  - name: project-images
+    label: Images projets
+    input: src/content/media/images/projects
+    output: ../media/images/projects
+  - name: client-logos
+    label: Logos clients
+    input: src/content/media/images/clients
+    output: ../media/images/clients
+    extensions: [png, jpg, jpeg, webp, svg]
+
+content:
+  - name: collaborations
+    label: Page Collaborations
+    type: file
+    path: src/content/pages/collaborations.yml
+    format: yaml
+    fields:
+      - name: intro
+        label: Introduction
+        type: object
+        fields:
+          - { name: title, label: Titre, type: string, required: true }
+          - { name: text, label: Texte, type: text, required: true }
+      - name: missions
+        label: Exemples de missions
+        type: object
+        fields:
+          - { name: title, label: Titre, type: string, required: true }
+          - { name: items, label: Missions, type: string, list: true }
+      - name: clients
+        label: Logos clients
+        type: object
+        list: true
+        fields:
+          - name: logo
+            label: Logo
+            type: image
+            required: true
+            options:
+              media: client-logos
+              path: src/content/media/images/clients
+          - { name: name, label: Nom du client, type: string, required: true }
+          - {
+              name: width,
+              label: Largeur mobile (px),
+              type: number,
+              required: true,
+            }
+          - { name: widthLg, label: Largeur desktop (px), type: number }
+      - name: projectsSection
+        label: Section projets
+        type: object
+        fields:
+          - { name: title, label: Titre, type: string, required: true }
+          - { name: text, label: Texte, type: text, required: true }
+      - name: projects
+        label: Projets
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Titre, type: string, required: true }
+          - name: cover
+            label: Image
+            type: image
+            required: true
+            options:
+              media: project-images
+              path: src/content/media/images/projects
+          - { name: tags, label: Tags, type: string, list: true }
+          - { name: isOngoing, label: "Mission en cours", type: boolean }
+          - name: testimonials
+            label: Témoignages
+            type: object
+            list: true
+            fields:
+              - name: quote
+                label: Citation
+                type: rich-text
+                required: true
+                options: { format: html }
+              - { name: author, label: Auteur, type: string, required: true }
+              - name: lang
+                label: Langue
+                type: select
+                options:
+                  values:
+                    - { name: fr, label: Français }
+                    - { name: en, label: Anglais }
