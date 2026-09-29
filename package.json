@@ -29,16 +29,16 @@
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "24.19.0",
     "autoprefixer": "10.6.1",
-    "cssnano": "9.0.5",
+    "cssnano": "9.1.0",
     "dotenv": "18.0.4",
     "fast-xml-parser": "5.11.1",
     "postcss": "8.5.28",
     "prettier": "3.9.9",
     "prettier-plugin-astro": "1.1.0",
-    "sharp": "0.35.4",
+    "sharp": "0.35.5",
     "tailwindcss": "4.2.2",
     "typescript": "6.0.3",
     "vite": "8.3.1",
-    "wrangler": "4.141.0"
+    "wrangler": "4.142.0"
   }
 }
