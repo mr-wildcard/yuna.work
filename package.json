@@ -17,20 +17,20 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.3.0",
-    "astro": "7.4.0",
+    "astro": "7.4.2",
     "astro-icon": "1.2.0",
     "tailwind-merge": "3.7.0"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.10",
+    "@astrojs/check": "0.9.12",
     "@astrojs/sitemap": "3.7.4",
     "@astrojs/ts-plugin": "1.10.12",
-    "@percy/cli": "1.32.11",
+    "@percy/cli": "1.32.12",
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "24.19.2",
     "autoprefixer": "10.6.1",
     "cssnano": "9.9.0",
-    "dotenv": "18.0.8",
+    "dotenv": "18.0.9",
     "fast-xml-parser": "5.11.2",
     "postcss": "8.5.31",
     "prettier": "3.9.10",
@@ -38,7 +38,7 @@
     "sharp": "0.35.5",
     "tailwindcss": "4.2.2",
     "typescript": "6.0.3",
-    "vite": "8.3.4",
-    "wrangler": "4.151.2"
+    "vite": "8.3.5",
+    "wrangler": "4.152.0"
   }
 }
