@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.3.0",
-    "astro": "7.4.12",
+    "astro": "7.4.13",
     "astro-icon": "1.2.0",
     "tailwind-merge": "3.7.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
-    "@astrojs/sitemap": "3.7.5",
+    "@astrojs/sitemap": "3.7.6",
     "@astrojs/ts-plugin": "1.11.0",
     "@percy/cli": "1.32.12",
     "@tailwindcss/vite": "4.2.2",
@@ -39,6 +39,6 @@
     "tailwindcss": "4.2.2",
     "typescript": "6.0.3",
     "vite": "8.3.8",
-    "wrangler": "4.164.0"
+    "wrangler": "4.165.0"
   }
 }
